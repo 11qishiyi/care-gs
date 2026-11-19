@@ -70,3 +70,25 @@ bash experiments/j7_all.sh            # gate -> deps -> data -> archives -> j7_r
 pwsh -File tools/pull_j6.ps1 -NodeId <id> -Remote /root/res/j7/j7.json -Local _pull_j7/j7.json
 python experiments/j7_report.py       # the verdict + tab_prune_cov.tex
 ```
+
+## 附录：把 proximity 项去掉（2026-11-20 02:0x，实例 2143972，40 min ≈ ¥1.5）
+
+问题：上一轮的失败是"覆盖率思路不行"，还是"我把 proximity 那一项写错了"？做一个去掉 proximity 的消融：
+只按 $\alpha\times$ 屏幕足迹排序，仍与 opacity 同 keep 率对比。本轮只拿到 bicycle 的归档（stump 的 archive 步骤
+在 PLY 落盘前就跑了，属驱动脚本的竞态），所以是 3 个 keep 率。
+
+| keep | opacity 损失 (pp) | coverage-risk (pp) | alpha×area (pp) |
+|---|---|---|---|
+| 0.9 | 0.00 | 1.48 | 0.60 |
+| 0.7 | 0.27 | 6.67 | 2.93 |
+| 0.5 | 5.75 | 14.31 | 7.15 |
+
+读法：**去掉 proximity 能收回一部分，但收不回来。** 与 opacity 的比值从 coverage-risk 的 2.5–25× 降到
+alpha×area 的 1.2–11×，**仍然在每个 keep 率上都输**。
+
+机制解释（写进 §5.10）：$\alpha\times$面积按 $1/z^2$ 偏向近处/大图元，于是它保护大的、删掉大量小的——而删掉大量小图元
+会让很多像素各自轻微变化，正好把一批像素推过 $q$。opacity 已经编码了"这个图元贡献多少"，再乘面积等于重复计一次大小。
+
+两轮的 $q$ 不同（0.0608 vs 0.0508，因为图像集与划分略有差异），所以**只在轮内比较**，不跨轮配对。
+
+**驱动的竞态已记录**：`j7_all.sh` 的 archive 循环应在两个 PLY 都就绪后再跑；下次改成"等两个 .ply 都存在"。
