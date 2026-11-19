@@ -19,7 +19,7 @@ recipient can audit the carrier for the price of one render pass.
 | `tools/` | table and figure generators, the compliance helper, the reference verifier and the submission gate |
 | `experiments/` | the measurement scripts, their results notes (`J1`–`J6`), and the artifact JSON every number in the paper is regenerated from |
 | `review/` | the venue survey, the gap analyses, the design notes and the citation-verification output |
-| `data/` | the small pulled artifacts the figures are built from (magnification patches, per-split audit pairs) |
+| `_pull_j5/`, `_pull_j6/` | the small pulled artifacts two figures and two tables are built from (magnification patches, per-split audit pairs) |
 | `research/code/calib/` | the renderer wrappers and COLMAP I/O the measurement scripts import |
 
 ## Reproduce
@@ -30,11 +30,11 @@ Everything that produces a **number in the paper** runs on CPU from the artifact
 python experiments/j3_ablations.py --check     # every printed number traced to its artifact
 python tools/jvcir_tables.py                   # the 13 artifact-backed tables
 python tools/jvcir_resolution.py               # the audit-resolution tables
-python tools/j6_singlepass_analyse.py          # the measured single-pass tables (needs data/pull_j6)
+python tools/j6_singlepass_analyse.py          # the measured single-pass tables (needs _pull_j6)
 python tools/jvcir_fig_frontier.py             # Fig. 2
 python tools/jvcir_fig_audit.py                # Fig. 3
 python tools/jvcir_fig_decibel.py              # Fig. 4
-python tools/jvcir_fig_qual.py                 # Fig. 6 (needs data/pull_j5)
+python tools/jvcir_fig_qual.py                 # Fig. 6 (needs _pull_j5)
 cd submission/jvcir && pdflatex main && bibtex main && pdflatex main && pdflatex main
 cd ../.. && python tools/verify_jvcir.py       # the gate: 11 sections, exit 0 required
 ```
