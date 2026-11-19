@@ -1,0 +1,62 @@
+{
+ "source": "j2_audit_decision.json + audit_bound_nobonsai.json",
+ "note": "single pass = truth + N(0, k * sigma_cell); k rewrites the noise assumption",
+ "rows": [
+  {
+   "sigma_scale": 0.75,
+   "eps": 1.0,
+   "expected_false_accept": 1.05,
+   "expected_false_reject": 6.42,
+   "expected_accuracy": 0.867
+  },
+  {
+   "sigma_scale": 0.75,
+   "eps": 2.0,
+   "expected_false_accept": 1.35,
+   "expected_false_reject": 2.97,
+   "expected_accuracy": 0.923
+  },
+  {
+   "sigma_scale": 1.0,
+   "eps": 1.0,
+   "expected_false_accept": 1.59,
+   "expected_false_reject": 7.98,
+   "expected_accuracy": 0.829
+  },
+  {
+   "sigma_scale": 1.0,
+   "eps": 2.0,
+   "expected_false_accept": 1.95,
+   "expected_false_reject": 4.58,
+   "expected_accuracy": 0.883
+  },
+  {
+   "sigma_scale": 1.25,
+   "eps": 1.0,
+   "expected_false_accept": 2.15,
+   "expected_false_reject": 9.04,
+   "expected_accuracy": 0.8
+  },
+  {
+   "sigma_scale": 1.25,
+   "eps": 2.0,
+   "expected_false_accept": 2.52,
+   "expected_false_reject": 5.94,
+   "expected_accuracy": 0.849
+  },
+  {
+   "sigma_scale": 1.5,
+   "eps": 1.0,
+   "expected_false_accept": 2.7,
+   "expected_false_reject": 9.8,
+   "expected_accuracy": 0.777
+  },
+  {
+   "sigma_scale": 1.5,
+   "eps": 2.0,
+   "expected_false_accept": 3.03,
+   "expected_false_reject": 7.04,
+   "expected_accuracy": 0.82
+  }
+ ]
+}

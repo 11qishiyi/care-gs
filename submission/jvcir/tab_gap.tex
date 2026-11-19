@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Our best row at or below each published file size. Positive gap = we are behind. The published numbers are transcribed in \texttt{experiments/published\_3dgs.json}; the 0.55 dB protocol bias measured in M16 is stated, not folded in.}
+\label{tab:gap}
+\begin{tabular}{llrrrrr}
+\toprule
+scene & method & their file & their PSNR & our file & our PSNR & gap (dB) \\
+\midrule
+bicycle & 3DGS & 1336.45 MB & 25.11 & 278.50 MB & 24.49 & +0.62 \\
+bicycle & HAC & 27.54 MB & 25.05 & 25.67 MB & 22.08 & +2.97 \\
+bicycle & PCGS & 19.09 MB & 25.12 & 18.40 MB & 21.50 & +3.62 \\
+stump & HAC & 18.11 MB & 26.58 & 17.61 MB & 20.33 & +6.25 \\
+bicycle & CompGS & 47.15 MB & 24.97 & 25.67 MB & 22.08 & +2.89 \\
+bicycle & EAGLES & 104.00 MB & 25.04 & 83.41 MB & 24.08 & +0.96 \\
+\bottomrule
+\end{tabular}
+\end{table}

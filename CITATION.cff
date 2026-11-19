@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or its artifacts, please cite the paper."
+title: "CARE-GS: coverage-aware rate reduction for 3D Gaussian Splatting assets"
+abstract: >-
+  Measures what a re-compression does to a per-pixel quality guarantee that travels with a 3D Gaussian Splatting
+  asset, gives the recipient a one-render-pass audit, and shows that the action family (quantisation vs pruning)
+  rather than the compression strength decides whether the guarantee survives.
+authors:
+  - family-names: Su
+    given-names: Tianji
+    affiliation: Ningbo University
+year: 2026
+version: 1.0.0
+license: MIT
+type: software
+repository-code: "https://github.com/11qishiyi/care-gs"
+keywords:
+  - 3D Gaussian Splatting
+  - rate reduction
+  - coverage guarantee
+  - quality audit
+  - visual data reduction

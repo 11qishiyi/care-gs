@@ -1,0 +1,109 @@
+{
+ "level": 12,
+ "rows": [
+  {
+   "scene": "bicycle",
+   "spec": "c10_o8_sh3",
+   "layout": "bits",
+   "n": 6131954,
+   "file": 151717692,
+   "bytes_per_prim": 24.742144510542644,
+   "ratio": 9.538380955597452,
+   "encode_s": 52.6,
+   "decode_s": 8.05,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 18793.0
+  },
+  {
+   "scene": "bicycle",
+   "spec": "c10_o8_sh3",
+   "layout": "bytes",
+   "n": 6131954,
+   "file": 144548194,
+   "bytes_per_prim": 23.572941675687716,
+   "ratio": 10.011478552267489,
+   "encode_s": 63.4,
+   "decode_s": 5.33,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 18793.0
+  },
+  {
+   "scene": "bicycle",
+   "spec": "c8_o8_sh3",
+   "layout": "bits",
+   "n": 6131954,
+   "file": 146932215,
+   "bytes_per_prim": 23.961728186480197,
+   "ratio": 9.849039191303282,
+   "encode_s": 52.4,
+   "decode_s": 5.94,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  },
+  {
+   "scene": "bicycle",
+   "spec": "c8_o8_sh3",
+   "layout": "bytes",
+   "n": 6131954,
+   "file": 139762717,
+   "bytes_per_prim": 22.792525351625272,
+   "ratio": 10.354271690353587,
+   "encode_s": 61.6,
+   "decode_s": 3.99,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  },
+  {
+   "scene": "stump",
+   "spec": "c10_o8_sh3",
+   "layout": "bits",
+   "n": 4961797,
+   "file": 124193739,
+   "bytes_per_prim": 25.029991956543164,
+   "ratio": 9.428688607241304,
+   "encode_s": 41.7,
+   "decode_s": 6.22,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  },
+  {
+   "scene": "stump",
+   "spec": "c10_o8_sh3",
+   "layout": "bytes",
+   "n": 4961797,
+   "file": 118879383,
+   "bytes_per_prim": 23.95893725599818,
+   "ratio": 9.850186486920109,
+   "encode_s": 50.0,
+   "decode_s": 4.42,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  },
+  {
+   "scene": "stump",
+   "spec": "c8_o8_sh3",
+   "layout": "bits",
+   "n": 4961797,
+   "file": 120401874,
+   "bytes_per_prim": 24.26577991804179,
+   "ratio": 9.725630117684048,
+   "encode_s": 40.5,
+   "decode_s": 4.76,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  },
+  {
+   "scene": "stump",
+   "spec": "c8_o8_sh3",
+   "layout": "bytes",
+   "n": 4961797,
+   "file": 115087518,
+   "bytes_per_prim": 23.194725217496806,
+   "ratio": 10.174727132441939,
+   "encode_s": 48.6,
+   "decode_s": 3.12,
+   "codes_identical_to_bits": true,
+   "peak_rss_mb": 20649.0
+  }
+ ]
+}

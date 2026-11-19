@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{The container ladder on \texttt{bicycle} (6{,}131{,}954 primitives, 25 held-out views). Each row changes one thing against the row above it. Ratio is against the fp32 PLY (1447 MB).}
+\label{tab:container}
+\begin{tabular}{lp{4.5cm}rrrrr}
+\toprule
+stage & what it changes & file & B/prim & PSNR & $\Delta$PSNR & ratio \\
+\midrule
+A0 shelf & 45 coefficients, 3 bit each, per primitive & 144.55 MB & 23.57 & 24.33 & +0.00 & 10.01$\times$ \\
+A1 shared rank-16 basis & one rank-16 basis per asset, 48 bit & 98.53 MB & 16.07 & 24.12 & -0.21 & 14.69$\times$ \\
+A2 rank 32 & rank 32 at 64 bit (control that loses) & 108.40 MB & 17.68 & 23.71 & -0.62 & 13.35$\times$ \\
+A3 smallest-three quaternions & 26 bit instead of 32 & 93.57 MB & 15.26 & 24.12 & -0.21 & 15.47$\times$ \\
+A4 container repairs & one scale level, 8-bit quats, bit-identical model & 89.72 MB & 14.64 & 24.12 & -0.21 & 16.13$\times$ \\
+A5 6-bit scales and opacity & first visible step below 8 bits & 85.71 MB & 13.98 & 24.09 & -0.24 & 16.88$\times$ \\
+A6 shipped near-lossless & gp8-6-6\_c9\_sh3, 9-bit positions & 83.41 MB & 13.60 & 24.08 & -0.25 & 17.35$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}

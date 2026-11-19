@@ -1,0 +1,1232 @@
+{
+  "meta": {
+    "source": "experiments\\artifacts\\a4\\m5_rd_v2.json",
+    "rule": "no variant improves coverage (any positive drop => protocol artefact)",
+    "eps": [
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ]
+  },
+  "keep": [
+    "bicycle",
+    "bicycle_i7k",
+    "flowers",
+    "flowers_i7k",
+    "stump",
+    "stump_i7k"
+  ],
+  "excluded": [
+    "treehill",
+    "treehill_i7k"
+  ],
+  "e1": {
+    "0.5": {
+      "bicycle": {
+        "any": {
+          "variant": "m18_o6_sh3",
+          "rate": 9.011817866513905,
+          "drop_pp": -0.4319187741938609,
+          "psnr": 21.980505653016667,
+          "ssim": 0.751233344078064,
+          "lpips": 0.20216434717178344
+        },
+        "qfp": {
+          "variant": "m18_o6_sh3",
+          "rate": 9.011817866513905,
+          "drop_pp": -0.4319187741938609
+        },
+        "prune": null
+      },
+      "bicycle_i7k": {
+        "any": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.928245918627772,
+          "drop_pp": -0.2859489883930036,
+          "psnr": 21.986437890682936,
+          "ssim": 0.6337439012527466,
+          "lpips": 0.3689439034461975
+        },
+        "qfp": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.928245918627772,
+          "drop_pp": -0.2859489883930036
+        },
+        "prune": null
+      },
+      "flowers": {
+        "any": {
+          "variant": "m18_o6_sh3",
+          "rate": 8.724988582257383,
+          "drop_pp": -0.3013929930361495,
+          "psnr": 16.58580341398039,
+          "ssim": 0.6065255471251227,
+          "lpips": 0.34513911130753433
+        },
+        "qfp": {
+          "variant": "m18_o6_sh3",
+          "rate": 8.724988582257383,
+          "drop_pp": -0.3013929930361495
+        },
+        "prune": null
+      },
+      "flowers_i7k": {
+        "any": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 12.966217942121599,
+          "drop_pp": -0.4473599624743699,
+          "psnr": 18.840705882388075,
+          "ssim": 0.5005137784914537,
+          "lpips": 0.48821396312930365
+        },
+        "qfp": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 12.966217942121599,
+          "drop_pp": -0.4473599624743699
+        },
+        "prune": null
+      },
+      "stump": {
+        "any": null,
+        "qfp": null,
+        "prune": null
+      },
+      "stump_i7k": {
+        "any": {
+          "variant": "m18_o6_sh3",
+          "rate": 9.25386002187206,
+          "drop_pp": -0.347350920783397,
+          "psnr": 24.182083709393872,
+          "ssim": 0.7006196230649948,
+          "lpips": 0.2969779372215271
+        },
+        "qfp": {
+          "variant": "m18_o6_sh3",
+          "rate": 9.25386002187206,
+          "drop_pp": -0.347350920783397
+        },
+        "prune": null
+      }
+    },
+    "1.0": {
+      "bicycle": {
+        "any": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.681424470841081,
+          "drop_pp": -0.8299098319671812,
+          "psnr": 21.895548299839728,
+          "ssim": 0.7431038761138916,
+          "lpips": 0.20596237361431122
+        },
+        "qfp": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.681424470841081,
+          "drop_pp": -0.8299098319671812
+        },
+        "prune": null
+      },
+      "bicycle_i7k": {
+        "any": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 13.274759004353864,
+          "drop_pp": -0.9521998810408562,
+          "psnr": 22.07766544289759,
+          "ssim": 0.6265900754928588,
+          "lpips": 0.36743632078170774
+        },
+        "qfp": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 13.274759004353864,
+          "drop_pp": -0.9521998810408562
+        },
+        "prune": null
+      },
+      "flowers": {
+        "any": {
+          "variant": "d2_m16_o8_sh4",
+          "rate": 9.637541385198995,
+          "drop_pp": -0.8919143971912424,
+          "psnr": 17.450551918363708,
+          "ssim": 0.5851343734697863,
+          "lpips": 0.35347970575094223
+        },
+        "qfp": {
+          "variant": "d2_m16_o8_sh4",
+          "rate": 9.637541385198995,
+          "drop_pp": -0.8919143971912424
+        },
+        "prune": null
+      },
+      "flowers_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185,
+          "psnr": 18.921448924582528,
+          "ssim": 0.49079633300954645,
+          "lpips": 0.4928417056798935
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185
+        },
+        "prune": null
+      },
+      "stump": {
+        "any": {
+          "variant": "m18_o6_sh3",
+          "rate": 8.972044268086153,
+          "drop_pp": -0.7194295953912111,
+          "psnr": 23.62405742562693,
+          "ssim": 0.753705121576786,
+          "lpips": 0.18888918915763497
+        },
+        "qfp": {
+          "variant": "m18_o6_sh3",
+          "rate": 8.972044268086153,
+          "drop_pp": -0.7194295953912111
+        },
+        "prune": null
+      },
+      "stump_i7k": {
+        "any": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.903217313920882,
+          "drop_pp": -0.8465657276137583,
+          "psnr": 24.05468142115253,
+          "ssim": 0.6900800094008446,
+          "lpips": 0.30072951037436724
+        },
+        "qfp": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.903217313920882,
+          "drop_pp": -0.8465657276137583
+        },
+        "prune": null
+      }
+    },
+    "2.0": {
+      "bicycle": {
+        "any": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.681424470841081,
+          "drop_pp": -0.8299098319671812,
+          "psnr": 21.895548299839728,
+          "ssim": 0.7431038761138916,
+          "lpips": 0.20596237361431122
+        },
+        "qfp": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.681424470841081,
+          "drop_pp": -0.8299098319671812
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.2707733591198855,
+          "drop_pp": -1.1456055718488392
+        }
+      },
+      "bicycle_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.929244803992388,
+          "drop_pp": -1.3323319437100352,
+          "psnr": 22.014423006235013,
+          "ssim": 0.620230952501297,
+          "lpips": 0.37024874210357667
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.929244803992388,
+          "drop_pp": -1.3323319437100352
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.2874657563765157,
+          "drop_pp": -1.6223716669180317
+        }
+      },
+      "flowers": {
+        "any": {
+          "variant": "d1_m16_o8_sh8",
+          "rate": 9.951412014797524,
+          "drop_pp": -1.991739890073541,
+          "psnr": 17.903433412113927,
+          "ssim": 0.5600861703807657,
+          "lpips": 0.36881279809908435
+        },
+        "qfp": {
+          "variant": "d1_m16_o8_sh8",
+          "rate": 9.951412014797524,
+          "drop_pp": -1.991739890073541
+        },
+        "prune": null
+      },
+      "flowers_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185,
+          "psnr": 18.921448924582528,
+          "ssim": 0.49079633300954645,
+          "lpips": 0.4928417056798935
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.2634494362905773,
+          "drop_pp": -1.2664666561418674
+        }
+      },
+      "stump": {
+        "any": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.596497920617143,
+          "drop_pp": -1.8352317183084867,
+          "psnr": 23.414840670438043,
+          "ssim": 0.7334559895098209,
+          "lpips": 0.19641398638486862
+        },
+        "qfp": {
+          "variant": "m16_o6_sh3",
+          "rate": 9.596497920617143,
+          "drop_pp": -1.8352317183084867
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.22303211248733,
+          "drop_pp": -1.6206760937347755
+        }
+      },
+      "stump_i7k": {
+        "any": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 13.189340620808332,
+          "drop_pp": -1.841443717723863,
+          "psnr": 24.26100551121392,
+          "ssim": 0.6812192760407925,
+          "lpips": 0.2942167464643717
+        },
+        "qfp": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 13.189340620808332,
+          "drop_pp": -1.841443717723863
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.233732875169922,
+          "drop_pp": -1.2964875950014618
+        }
+      }
+    },
+    "5.0": {
+      "bicycle": {
+        "any": {
+          "variant": "m16_o6_sh2",
+          "rate": 14.156887861253953,
+          "drop_pp": -2.638039415967539,
+          "psnr": 21.152854718814368,
+          "ssim": 0.7129728722572327,
+          "lpips": 0.24654928088188172
+        },
+        "qfp": {
+          "variant": "m16_o6_sh2",
+          "rate": 14.156887861253953,
+          "drop_pp": -2.638039415967539
+        },
+        "prune": {
+          "variant": "p70",
+          "rate": 1.6289216944881393,
+          "drop_pp": -3.693495239514302
+        }
+      },
+      "bicycle_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.929244803992388,
+          "drop_pp": -1.3323319437100352,
+          "psnr": 22.014423006235013,
+          "ssim": 0.620230952501297,
+          "lpips": 0.37024874210357667
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.929244803992388,
+          "drop_pp": -1.3323319437100352
+        },
+        "prune": {
+          "variant": "p50",
+          "rate": 2.3231286334580674,
+          "drop_pp": -4.80359587552779
+        }
+      },
+      "flowers": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.64820455134425,
+          "drop_pp": -4.044285650222804,
+          "psnr": 17.982125790402137,
+          "ssim": 0.5278518497943878,
+          "lpips": 0.38916060057553375
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.64820455134425,
+          "drop_pp": -4.044285650222804
+        },
+        "prune": {
+          "variant": "p90",
+          "rate": 1.2492385414867906,
+          "drop_pp": -2.684142663305724
+        }
+      },
+      "flowers_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185,
+          "psnr": 18.921448924582528,
+          "ssim": 0.49079633300954645,
+          "lpips": 0.4928417056798935
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.784018490713995,
+          "drop_pp": -0.7399490132913185
+        },
+        "prune": {
+          "variant": "p70",
+          "rate": 1.6245964783181253,
+          "drop_pp": -3.8325036967920694
+        }
+      },
+      "stump": {
+        "any": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 12.937644201789677,
+          "drop_pp": -4.324366504676995,
+          "psnr": 24.05325274005218,
+          "ssim": 0.716337651014328,
+          "lpips": 0.20322470925748348
+        },
+        "qfp": {
+          "variant": "d1_m16_o8_sh4",
+          "rate": 12.937644201789677,
+          "drop_pp": -4.324366504676995
+        },
+        "prune": {
+          "variant": "p70",
+          "rate": 1.568212485169461,
+          "drop_pp": -4.3460617326805036
+        }
+      },
+      "stump_i7k": {
+        "any": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.72045684992499,
+          "drop_pp": -2.7963102284906944,
+          "psnr": 24.070469603261323,
+          "ssim": 0.6723017655313015,
+          "lpips": 0.2983294716104865
+        },
+        "qfp": {
+          "variant": "d0_m16_o8_sh8",
+          "rate": 15.72045684992499,
+          "drop_pp": -2.7963102284906944
+        },
+        "prune": {
+          "variant": "p50",
+          "rate": 2.2228635378691357,
+          "drop_pp": -4.887709155461366
+        }
+      }
+    }
+  },
+  "e2": [
+    {
+      "scene": "bicycle",
+      "rate": 9.681424470841081,
+      "planner": {
+        "variant": "m16_o6_sh3",
+        "drop_pp": -0.8299098319671812,
+        "psnr": 21.895548299839728,
+        "ssim": 0.7431038761138916,
+        "lpips": 0.20596237361431122
+      },
+      "fidelity_first": {
+        "variant": "d2_m16_o8_sh8",
+        "drop_pp": -2.1233423930654816,
+        "psnr": 22.200724680209184,
+        "ssim": 0.7393405604362487,
+        "lpips": 0.20789928257465362
+      },
+      "prune_first": {
+        "variant": "p20",
+        "drop_pp": -20.425801751467453,
+        "psnr": 16.932993272286684
+      }
+    },
+    {
+      "scene": "bicycle_i7k",
+      "rate": 13.274759004353864,
+      "planner": {
+        "variant": "d1_m16_o8_sh4",
+        "drop_pp": -0.9521998810408562,
+        "psnr": 22.07766544289759,
+        "ssim": 0.6265900754928588,
+        "lpips": 0.36743632078170774
+      },
+      "fidelity_first": {
+        "variant": "d2_m16_o8_sh8",
+        "drop_pp": -0.4915215867841478,
+        "psnr": 22.155277294558505,
+        "ssim": 0.6327796566486359,
+        "lpips": 0.36166595220565795
+      },
+      "prune_first": {
+        "variant": "p10",
+        "drop_pp": -15.086335514755719,
+        "psnr": 17.39468474718719
+      }
+    },
+    {
+      "scene": "flowers",
+      "rate": 9.637541385198995,
+      "planner": {
+        "variant": "d2_m16_o8_sh4",
+        "drop_pp": -0.8919143971912424,
+        "psnr": 17.450551918363708,
+        "ssim": 0.5851343734697863,
+        "lpips": 0.35347970575094223
+      },
+      "fidelity_first": {
+        "variant": "d2_m16_o8_sh8",
+        "drop_pp": -0.8636491262668223,
+        "psnr": 17.468804583352423,
+        "ssim": 0.5862357006831602,
+        "lpips": 0.3515788425098766
+      },
+      "prune_first": {
+        "variant": "p20",
+        "drop_pp": -23.20068351316404,
+        "psnr": 12.101324897160078
+      }
+    },
+    {
+      "scene": "flowers_i7k",
+      "rate": 15.784018490713995,
+      "planner": {
+        "variant": "d0_m16_o8_sh8",
+        "drop_pp": -0.7399490132913185,
+        "psnr": 18.921448924582528,
+        "ssim": 0.49079633300954645,
+        "lpips": 0.4928417056798935
+      },
+      "fidelity_first": {
+        "variant": "d0_m16_o8_sh8",
+        "drop_pp": -0.7399490132913185,
+        "psnr": 18.921448924582528,
+        "ssim": 0.49079633300954645,
+        "lpips": 0.4928417056798935
+      },
+      "prune_first": {
+        "variant": "p10",
+        "drop_pp": -19.351658656804823,
+        "psnr": 13.160342478504605
+      }
+    },
+    {
+      "scene": "stump",
+      "rate": 8.972044268086153,
+      "planner": {
+        "variant": "m18_o6_sh3",
+        "drop_pp": -0.7194295953912111,
+        "psnr": 23.62405742562693,
+        "ssim": 0.753705121576786,
+        "lpips": 0.18888918915763497
+      },
+      "fidelity_first": {
+        "variant": "d2_m16_o8_sh8",
+        "drop_pp": -2.46587334356426,
+        "psnr": 24.05053386682399,
+        "ssim": 0.7358707338571548,
+        "lpips": 0.18335233721882105
+      },
+      "prune_first": {
+        "variant": "p20",
+        "drop_pp": -20.78883495323005,
+        "psnr": 17.98681266907314
+      }
+    },
+    {
+      "scene": "stump_i7k",
+      "rate": 9.903217313920882,
+      "planner": {
+        "variant": "m16_o6_sh3",
+        "drop_pp": -0.8465657276137583,
+        "psnr": 24.05468142115253,
+        "ssim": 0.6900800094008446,
+        "lpips": 0.30072951037436724
+      },
+      "fidelity_first": {
+        "variant": "d2_m16_o8_sh8",
+        "drop_pp": -0.9937701269122095,
+        "psnr": 24.375403953110464,
+        "ssim": 0.6910184323787689,
+        "lpips": 0.2847352921962738
+      },
+      "prune_first": {
+        "variant": "p20",
+        "drop_pp": -12.736191324417812,
+        "psnr": 19.873457204245824
+      }
+    }
+  ],
+  "e2b": {
+    "1.0": {
+      "per_asset": [
+        {
+          "scene": "bicycle",
+          "oracle": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.681424470841081,
+            "drop": -0.8299098319671812
+          },
+          "carp": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 9.927822487974058,
+            "drop": -2.1381075191688366
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.99795839606353,
+            "drop": -48.987897939989836
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.1827917668631365,
+            "drop": -0.42788346077225314
+          },
+          "prune_safe": null
+        },
+        {
+          "scene": "bicycle_i7k",
+          "oracle": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 13.274759004353864,
+            "drop": -0.9521998810408562
+          },
+          "carp": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.928245918627772,
+            "drop": -0.2859489883930036
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 23.446017453316443,
+            "drop": -23.750972107896672
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.183757768233639,
+            "drop": -0.12357038168683314
+          },
+          "prune_safe": null
+        },
+        {
+          "scene": "flowers",
+          "oracle": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 9.637541385198995,
+            "drop": -0.8919143971912424
+          },
+          "carp": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.359180992869858,
+            "drop": -0.8335837781022635
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.18229806677739,
+            "drop": -41.205664435653965
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.121474075459303,
+            "drop": -0.5794781447820773
+          },
+          "prune_safe": null
+        },
+        {
+          "scene": "flowers_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.784018490713995,
+            "drop": -0.7399490132913185
+          },
+          "carp": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.405916942961158,
+            "drop": -0.29010890457468613
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.38554052893867,
+            "drop": -25.46596698167636
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.0969145812421734,
+            "drop": -0.13980458577047117
+          },
+          "prune_safe": null
+        },
+        {
+          "scene": "stump",
+          "oracle": {
+            "variant": "m18_o6_sh3",
+            "rate": 8.972044268086153,
+            "drop": -0.7194295953912111
+          },
+          "carp": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 9.821442556125437,
+            "drop": -2.506369847997661
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.09857327607348,
+            "drop": -49.95098372186495
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.091961673393643,
+            "drop": -1.1799580714703302
+          },
+          "prune_safe": null
+        },
+        {
+          "scene": "stump_i7k",
+          "oracle": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.903217313920882,
+            "drop": -0.8465657276137583
+          },
+          "carp": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 10.192126959616834,
+            "drop": -1.0240310764396379
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.53632588007675,
+            "drop": -31.57587858082432
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.083952367860674,
+            "drop": -0.5349803298255874
+          },
+          "prune_safe": null
+        }
+      ],
+      "aggregate": {
+        "oracle": {
+          "mean_rate_vs_oracle": 1.0,
+          "violations": 0,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.0
+        },
+        "carp": {
+          "mean_rate_vs_oracle": 0.911,
+          "violations": 3,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.89
+        },
+        "maxrate": {
+          "mean_rate_vs_oracle": 2.1,
+          "violations": 6,
+          "n": 6,
+          "mean_excess_pp_when_violating": 35.82
+        },
+        "safe8": {
+          "mean_rate_vs_oracle": 0.384,
+          "violations": 1,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.18
+        },
+        "prune_safe": {
+          "mean_rate_vs_oracle": null,
+          "violations": 0,
+          "n": 0,
+          "mean_excess_pp_when_violating": 0.0
+        }
+      }
+    },
+    "2.0": {
+      "per_asset": [
+        {
+          "scene": "bicycle",
+          "oracle": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.681424470841081,
+            "drop": -0.8299098319671812
+          },
+          "carp": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 13.089403662386198,
+            "drop": -3.960394146047183
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.99795839606353,
+            "drop": -48.987897939989836
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.1827917668631365,
+            "drop": -0.42788346077225314
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.2707733591198855,
+            "drop": -1.1456055718488392
+          }
+        },
+        {
+          "scene": "bicycle_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.929244803992388,
+            "drop": -1.3323319437100352
+          },
+          "carp": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 10.237342878024963,
+            "drop": -0.5042218306382786
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 23.446017453316443,
+            "drop": -23.750972107896672
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.183757768233639,
+            "drop": -0.12357038168683314
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.2874657563765157,
+            "drop": -1.6223716669180317
+          }
+        },
+        {
+          "scene": "flowers",
+          "oracle": {
+            "variant": "d1_m16_o8_sh8",
+            "rate": 9.951412014797524,
+            "drop": -1.991739890073541
+          },
+          "carp": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 12.766356748778165,
+            "drop": -2.0115801858588656
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.18229806677739,
+            "drop": -41.205664435653965
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.121474075459303,
+            "drop": -0.5794781447820773
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.2492385414867906,
+            "drop": -2.684142663305724
+          }
+        },
+        {
+          "scene": "flowers_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.784018490713995,
+            "drop": -0.7399490132913185
+          },
+          "carp": {
+            "variant": "d1_m16_o8_sh8",
+            "rate": 10.044297004654256,
+            "drop": -0.4297192317455922
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.38554052893867,
+            "drop": -25.46596698167636
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.0969145812421734,
+            "drop": -0.13980458577047117
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.2634494362905773,
+            "drop": -1.2664666561418674
+          }
+        },
+        {
+          "scene": "stump",
+          "oracle": {
+            "variant": "m16_o6_sh3",
+            "rate": 9.596497920617143,
+            "drop": -1.8352317183084867
+          },
+          "carp": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 12.937644201789677,
+            "drop": -4.324366504676995
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.09857327607348,
+            "drop": -49.95098372186495
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.091961673393643,
+            "drop": -1.1799580714703302
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.22303211248733,
+            "drop": -1.6206760937347755
+          }
+        },
+        {
+          "scene": "stump_i7k",
+          "oracle": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 13.189340620808332,
+            "drop": -1.841443717723863
+          },
+          "carp": {
+            "variant": "d2_m16_o8_sh4",
+            "rate": 10.192126959616834,
+            "drop": -1.0240310764396379
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.53632588007675,
+            "drop": -31.57587858082432
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.083952367860674,
+            "drop": -0.5349803298255874
+          },
+          "prune_safe": {
+            "variant": "p90",
+            "rate": 1.233732875169922,
+            "drop": -1.2964875950014618
+          }
+        }
+      ],
+      "aggregate": {
+        "oracle": {
+          "mean_rate_vs_oracle": 1.0,
+          "violations": 0,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.0
+        },
+        "carp": {
+          "mean_rate_vs_oracle": 1.006,
+          "violations": 3,
+          "n": 6,
+          "mean_excess_pp_when_violating": 1.43
+        },
+        "maxrate": {
+          "mean_rate_vs_oracle": 1.918,
+          "violations": 6,
+          "n": 6,
+          "mean_excess_pp_when_violating": 34.82
+        },
+        "safe8": {
+          "mean_rate_vs_oracle": 0.351,
+          "violations": 0,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.0
+        },
+        "prune_safe": {
+          "mean_rate_vs_oracle": 0.106,
+          "violations": 1,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.68
+        }
+      }
+    },
+    "5.0": {
+      "per_asset": [
+        {
+          "scene": "bicycle",
+          "oracle": {
+            "variant": "m16_o6_sh2",
+            "rate": 14.156887861253953,
+            "drop": -2.638039415967539
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.907029133392008,
+            "drop": -5.565017111733768
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.99795839606353,
+            "drop": -48.987897939989836
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.1827917668631365,
+            "drop": -0.42788346077225314
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.6289216944881393,
+            "drop": -3.693495239514302
+          }
+        },
+        {
+          "scene": "bicycle_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.929244803992388,
+            "drop": -1.3323319437100352
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.929244803992388,
+            "drop": -1.3323319437100352
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 23.446017453316443,
+            "drop": -23.750972107896672
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.183757768233639,
+            "drop": -0.12357038168683314
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.6575481430003978,
+            "drop": -2.7016175021366005
+          }
+        },
+        {
+          "scene": "flowers",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.64820455134425,
+            "drop": -4.044285650222804
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.64820455134425,
+            "drop": -4.044285650222804
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.18229806677739,
+            "drop": -41.205664435653965
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.121474075459303,
+            "drop": -0.5794781447820773
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.599215982657282,
+            "drop": -7.813599421940257
+          }
+        },
+        {
+          "scene": "flowers_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.784018490713995,
+            "drop": -0.7399490132913185
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.784018490713995,
+            "drop": -0.7399490132913185
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.38554052893867,
+            "drop": -25.46596698167636
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.0969145812421734,
+            "drop": -0.13980458577047117
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.6245964783181253,
+            "drop": -3.8325036967920694
+          }
+        },
+        {
+          "scene": "stump",
+          "oracle": {
+            "variant": "d1_m16_o8_sh4",
+            "rate": 12.937644201789677,
+            "drop": -4.324366504676995
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.72510870342695,
+            "drop": -6.903322737016467
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.09857327607348,
+            "drop": -49.95098372186495
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.091961673393643,
+            "drop": -1.1799580714703302
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.568212485169461,
+            "drop": -4.3460617326805036
+          }
+        },
+        {
+          "scene": "stump_i7k",
+          "oracle": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.72045684992499,
+            "drop": -2.7963102284906944
+          },
+          "carp": {
+            "variant": "d0_m16_o8_sh8",
+            "rate": 15.72045684992499,
+            "drop": -2.7963102284906944
+          },
+          "maxrate": {
+            "variant": "p05",
+            "rate": 22.53632588007675,
+            "drop": -31.57587858082432
+          },
+          "safe8": {
+            "variant": "m16_o8_sh8",
+            "rate": 4.083952367860674,
+            "drop": -0.5349803298255874
+          },
+          "prune_safe": {
+            "variant": "p70",
+            "rate": 1.586805861482469,
+            "drop": -2.921320276722206
+          }
+        }
+      ],
+      "aggregate": {
+        "oracle": {
+          "mean_rate_vs_oracle": 1.0,
+          "violations": 0,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.0
+        },
+        "carp": {
+          "mean_rate_vs_oracle": 1.057,
+          "violations": 2,
+          "n": 6,
+          "mean_excess_pp_when_violating": 1.23
+        },
+        "maxrate": {
+          "mean_rate_vs_oracle": 1.512,
+          "violations": 6,
+          "n": 6,
+          "mean_excess_pp_when_violating": 31.82
+        },
+        "safe8": {
+          "mean_rate_vs_oracle": 0.276,
+          "violations": 0,
+          "n": 6,
+          "mean_excess_pp_when_violating": 0.0
+        },
+        "prune_safe": {
+          "mean_rate_vs_oracle": 0.108,
+          "violations": 1,
+          "n": 6,
+          "mean_excess_pp_when_violating": 2.81
+        }
+      }
+    }
+  },
+  "e3": {
+    "per_asset": [
+      {
+        "scene": "bicycle",
+        "n_pairs": 12,
+        "pp_per_dB_median": 3.86,
+        "pp_per_dB_min": 1.68,
+        "pp_per_dB_max": 35.27
+      },
+      {
+        "scene": "bicycle_i7k",
+        "n_pairs": 9,
+        "pp_per_dB_median": 2.01,
+        "pp_per_dB_min": 1.13,
+        "pp_per_dB_max": 11.26
+      },
+      {
+        "scene": "flowers",
+        "n_pairs": 8,
+        "pp_per_dB_median": 3.02,
+        "pp_per_dB_min": 1.61,
+        "pp_per_dB_max": 9.9
+      },
+      {
+        "scene": "flowers_i7k",
+        "n_pairs": 5,
+        "pp_per_dB_median": 0.91,
+        "pp_per_dB_min": 0.81,
+        "pp_per_dB_max": 1.27
+      },
+      {
+        "scene": "stump",
+        "n_pairs": 9,
+        "pp_per_dB_median": 3.77,
+        "pp_per_dB_min": 2.59,
+        "pp_per_dB_max": 37.9
+      },
+      {
+        "scene": "stump_i7k",
+        "n_pairs": 12,
+        "pp_per_dB_median": 3.5,
+        "pp_per_dB_min": 1.46,
+        "pp_per_dB_max": 16.16
+      }
+    ],
+    "median_range": [
+      0.91,
+      3.86
+    ],
+    "spread_x": 4.2
+  }
+}

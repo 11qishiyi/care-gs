@@ -1,0 +1,20 @@
+{
+ "source": "experiments/artifacts/a4/m5_rd_v2.json + j1_reliability.json",
+ "tol_db": 0.1,
+ "widest_matched_db_pair": {
+  "scene": "stump",
+  "a": "m18_o6_sh3",
+  "b": "d0_m16_o8_sh8",
+  "d_db": 0.096,
+  "d_pp": 6.184,
+  "xa": -0.278,
+  "ya": 0.719,
+  "xb": -0.182,
+  "yb": 6.903
+ },
+ "pp_per_db_median_range": [
+  0.91,
+  3.86
+ ],
+ "pp_per_db_spread_x": 4.2
+}

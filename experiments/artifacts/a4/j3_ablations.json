@@ -1,0 +1,461 @@
+{
+  "ladder": [
+    {
+      "group": "colour",
+      "label": "A0 shelf",
+      "detail": "45 coefficients, 3 bit each, per primitive",
+      "mb": 144.55,
+      "bpp": 23.57,
+      "psnr": 24.33,
+      "ratio": 10.01,
+      "src": "experiments/artifacts/a4/m22_table.md"
+    },
+    {
+      "group": "colour",
+      "label": "A1 shared rank-16 basis",
+      "detail": "one rank-16 basis per asset, 48 bit",
+      "mb": 98.53,
+      "bpp": 16.07,
+      "psnr": 24.12,
+      "ratio": 14.69,
+      "src": "experiments/artifacts/a4/m22_table.md"
+    },
+    {
+      "group": "colour",
+      "label": "A2 rank 32",
+      "detail": "rank 32 at 64 bit (control that loses)",
+      "mb": 108.4,
+      "bpp": 17.68,
+      "psnr": 23.71,
+      "ratio": 13.35,
+      "src": "experiments/artifacts/a4/m22_table.md"
+    },
+    {
+      "group": "geometry",
+      "label": "A3 smallest-three quaternions",
+      "detail": "26 bit instead of 32",
+      "mb": 93.57,
+      "bpp": 15.26,
+      "psnr": 24.12,
+      "ratio": 15.47,
+      "src": [
+        "experiments/artifacts/a4/m23_encode.json",
+        "experiments/artifacts/a4/m23_render.log"
+      ]
+    },
+    {
+      "group": "security",
+      "label": "A4 container repairs",
+      "detail": "one scale level, 8-bit quats, bit-identical model",
+      "mb": 89.72,
+      "bpp": 14.64,
+      "psnr": 24.12,
+      "ratio": 16.13,
+      "src": "experiments/FRONTIER_BOUND.md"
+    },
+    {
+      "group": "security",
+      "label": "A5 6-bit scales and opacity",
+      "detail": "first visible step below 8 bits",
+      "mb": 85.71,
+      "bpp": 13.98,
+      "psnr": 24.09,
+      "ratio": 16.88,
+      "src": "experiments/FRONTIER_BOUND.md"
+    },
+    {
+      "group": "security",
+      "label": "A6 shipped near-lossless",
+      "detail": "gp8-6-6_c9_sh3, 9-bit positions",
+      "mb": 83.41,
+      "bpp": 13.6,
+      "psnr": 24.08,
+      "ratio": 17.35,
+      "src": "experiments/artifacts/a4/m24_render.log"
+    }
+  ],
+  "midrate": [
+    {
+      "spec": "gp6-6-6_c8",
+      "what": "control",
+      "bytes": 20561912,
+      "psnr": 22.87,
+      "ssim": 0.6998871529102325
+    },
+    {
+      "spec": "gp4-6-6_c8",
+      "what": "quaternions 6 -> 4",
+      "bytes": 19228871,
+      "psnr": 22.58,
+      "ssim": 0.6838962328433991
+    },
+    {
+      "spec": "gp6-4-6_c8",
+      "what": "scales 6 -> 4",
+      "bytes": 19011806,
+      "psnr": 21.96,
+      "ssim": 0.6675130641460418
+    },
+    {
+      "spec": "gp6-6-4_c8",
+      "what": "opacity 6 -> 4",
+      "bytes": 20073993,
+      "psnr": 22.88,
+      "ssim": 0.6954720389842987
+    },
+    {
+      "spec": "gp6-6-6_c7",
+      "what": "positions 8 -> 7",
+      "bytes": 19990939,
+      "psnr": 22.76,
+      "ssim": 0.6884395098686218
+    },
+    {
+      "spec": "gp6-6-6_c6",
+      "what": "positions 8 -> 6",
+      "bytes": 19410087,
+      "psnr": 22.43,
+      "ssim": 0.656295462846756
+    },
+    {
+      "spec": "gp4-4-4_c8",
+      "what": "three fields coarsened",
+      "bytes": 17190847,
+      "psnr": 21.65,
+      "ssim": 0.6439706718921662
+    },
+    {
+      "spec": "gp4-4-4_c6",
+      "what": "three fields + 6-bit opacity",
+      "bytes": 16039022,
+      "psnr": 21.36,
+      "ssim": 0.607925466299057
+    }
+  ],
+  "colour_budget": [
+    {
+      "bits": 96,
+      "mb": 30.78,
+      "psnr": 23.04
+    },
+    {
+      "bits": 64,
+      "mb": 22.91,
+      "psnr": 23.01
+    },
+    {
+      "bits": 48,
+      "mb": 20.56,
+      "psnr": 22.87
+    },
+    {
+      "bits": 40,
+      "mb": 19.47,
+      "psnr": 22.63
+    },
+    {
+      "bits": 32,
+      "mb": 18.35,
+      "psnr": 21.94
+    }
+  ],
+  "cost": [
+    {
+      "scene": "bicycle",
+      "spec": "gp6-6-6_c8",
+      "bytes": 76598203,
+      "psnr": 24.06,
+      "ssim": 0.7393153786659241,
+      "decode_s": 15.95,
+      "decode_kb": 4269596
+    },
+    {
+      "scene": "bicycle",
+      "spec": "gp6-6-4_c8",
+      "bytes": 74802867,
+      "psnr": 23.95,
+      "ssim": 0.7330274724960327,
+      "decode_s": 15.76,
+      "decode_kb": 4269192
+    },
+    {
+      "scene": "stump",
+      "spec": "gp6-6-6_c8",
+      "bytes": 62649653,
+      "psnr": 25.52,
+      "ssim": 0.7432447224855423,
+      "decode_s": 12.85,
+      "decode_kb": 3491492
+    },
+    {
+      "scene": "stump",
+      "spec": "gp6-6-4_c8",
+      "bytes": 61191922,
+      "psnr": 25.41,
+      "ssim": 0.7368498928844929,
+      "decode_s": 12.72,
+      "decode_kb": 3490320
+    },
+    {
+      "scene": "bonsai",
+      "spec": "gp6-6-6_c8",
+      "bytes": 15297685,
+      "psnr": 27.08,
+      "ssim": 0.8867974136326764,
+      "decode_s": 3.25,
+      "decode_kb": 952800
+    },
+    {
+      "scene": "bonsai",
+      "spec": "gp6-6-4_c8",
+      "bytes": 14927795,
+      "psnr": 26.97,
+      "ssim": 0.8823685291651133,
+      "decode_s": 3.22,
+      "decode_kb": 952272
+    }
+  ],
+  "encode_cost": [
+    {
+      "stage": "encode r=16 / 48 bit (one SVD + allocation + container)",
+      "seconds": 51.5,
+      "src": "experiments/M22_RESULTS.md"
+    },
+    {
+      "stage": "decode r=16 / 48 bit",
+      "seconds": 9.16,
+      "src": "experiments/M22_RESULTS.md"
+    },
+    {
+      "stage": "decode + PLY write",
+      "seconds": 15.9,
+      "src": "experiments/M22_RESULTS.md"
+    },
+    {
+      "stage": "render, 25 held-out views",
+      "seconds": 10.6,
+      "src": "experiments/M22_RESULTS.md"
+    }
+  ],
+  "prune_score": [
+    {
+      "arm": "control (no prune)",
+      "prims": 1244819,
+      "mb": 15.3,
+      "psnr": 27.08,
+      "d_psnr": null,
+      "src": "experiments/artifacts/a4/smb_bonsai/rows.txt"
+    },
+    {
+      "arm": "fisher",
+      "prims": 622410,
+      "mb": 8.07,
+      "psnr": 26.58,
+      "d_psnr": -0.5,
+      "src": "experiments/artifacts/a4/smb_bonsai/rows.txt"
+    },
+    {
+      "arm": "opacity",
+      "prims": 622410,
+      "mb": 7.95,
+      "psnr": 26.15,
+      "d_psnr": -0.93,
+      "src": "experiments/artifacts/a4/smb_bonsai/rows.txt"
+    },
+    {
+      "arm": "area",
+      "prims": 622410,
+      "mb": 7.84,
+      "psnr": 24.92,
+      "d_psnr": -2.16,
+      "src": "experiments/artifacts/a4/smb_bonsai/rows.txt"
+    },
+    {
+      "arm": "volume",
+      "prims": 622410,
+      "mb": 7.84,
+      "psnr": 24.55,
+      "d_psnr": -2.53,
+      "src": "experiments/artifacts/a4/smb_bonsai/rows.txt"
+    }
+  ],
+  "perceptual": [
+    {
+      "arm": "control (no prune)",
+      "mb": 76.6,
+      "psnr": 24.06,
+      "ssim": 0.7393,
+      "lpips": 0.2813
+    },
+    {
+      "arm": "fisher",
+      "mb": 40.17,
+      "psnr": 23.52,
+      "ssim": 0.7269,
+      "lpips": 0.2916
+    },
+    {
+      "arm": "opacity",
+      "mb": 39.5,
+      "psnr": 22.78,
+      "ssim": 0.7049,
+      "lpips": 0.3034
+    },
+    {
+      "arm": "area",
+      "mb": 39.0,
+      "psnr": 22.14,
+      "ssim": 0.6662,
+      "lpips": 0.3264
+    },
+    {
+      "arm": "volume",
+      "mb": 38.76,
+      "psnr": 19.67,
+      "ssim": 0.5782,
+      "lpips": 0.3777
+    }
+  ],
+  "streams": [
+    {
+      "name": "cluster\\_off",
+      "what": "positions, cluster offsets",
+      "raw": 20.7,
+      "coded": 20.7
+    },
+    {
+      "name": "sh\\_coef",
+      "what": "rank-16 colour projections",
+      "raw": 36.79,
+      "coded": 18.58
+    },
+    {
+      "name": "geo\\_quat\\_abc",
+      "what": "smallest-three quaternion components",
+      "raw": 18.4,
+      "coded": 18.11
+    },
+    {
+      "name": "geo\\_scales",
+      "what": "log-scale triple",
+      "raw": 13.8,
+      "coded": 12.5
+    },
+    {
+      "name": "sh\\_scale",
+      "what": "per-block colour scale",
+      "raw": 6.13,
+      "coded": 4.36
+    },
+    {
+      "name": "geo\\_opacities",
+      "what": "opacity",
+      "raw": 4.6,
+      "coded": 4.31
+    },
+    {
+      "name": "sh\\_dc",
+      "what": "DC term",
+      "raw": 18.4,
+      "coded": 3.69
+    },
+    {
+      "name": "geo\\_quat\\_which",
+      "what": "2-bit largest-component selector",
+      "raw": 1.53,
+      "coded": 0.63
+    },
+    {
+      "name": "cluster\\_hdr",
+      "what": "cluster header",
+      "raw": 0.57,
+      "coded": 0.53
+    }
+  ],
+  "bd_rate": [
+    {
+      "arm": "fisher",
+      "bd_rate_pct": -45.06,
+      "points": 4,
+      "src": "experiments/artifacts/a4/smb_rates/rows_u.txt"
+    },
+    {
+      "arm": "opacity",
+      "bd_rate_pct": -44.96,
+      "points": 4,
+      "src": "experiments/artifacts/a4/smb_rates/rows_u.txt"
+    }
+  ],
+  "gap": [
+    {
+      "scene": "bicycle",
+      "method": "3DGS",
+      "their_mb": 1336.45,
+      "their_psnr": 25.11,
+      "ours_mb": 278.5,
+      "ours_psnr": 24.49,
+      "gap_db": 0.62,
+      "src": "experiments/artifacts/a4/sota_table.md"
+    },
+    {
+      "scene": "bicycle",
+      "method": "HAC",
+      "their_mb": 27.54,
+      "their_psnr": 25.05,
+      "ours_mb": 25.67,
+      "ours_psnr": 22.08,
+      "gap_db": 2.97,
+      "src": "experiments/artifacts/a4/sota_table.md"
+    },
+    {
+      "scene": "bicycle",
+      "method": "PCGS",
+      "their_mb": 19.09,
+      "their_psnr": 25.12,
+      "ours_mb": 18.4,
+      "ours_psnr": 21.5,
+      "gap_db": 3.62,
+      "src": "experiments/artifacts/a4/sota_table.md"
+    },
+    {
+      "scene": "stump",
+      "method": "HAC",
+      "their_mb": 18.11,
+      "their_psnr": 26.58,
+      "ours_mb": 17.61,
+      "ours_psnr": 20.33,
+      "gap_db": 6.25,
+      "src": "experiments/artifacts/a4/sota_table.md"
+    },
+    {
+      "scene": "bicycle",
+      "method": "CompGS",
+      "their_mb": 47.15,
+      "their_psnr": 24.97,
+      "ours_mb": 25.67,
+      "ours_psnr": 22.08,
+      "gap_db": 2.89,
+      "src": [
+        "experiments/published_3dgs.json",
+        "experiments/artifacts/a4/sota_table.md"
+      ]
+    },
+    {
+      "scene": "bicycle",
+      "method": "EAGLES",
+      "their_mb": 104.0,
+      "their_psnr": 25.04,
+      "ours_mb": 83.41,
+      "ours_psnr": 24.08,
+      "gap_db": 0.96,
+      "src": [
+        "experiments/published_3dgs.json",
+        "experiments/artifacts/a4/m24_encode_streams.txt",
+        "experiments/artifacts/a4/m24_render.log"
+      ]
+    }
+  ],
+  "meta": {
+    "note": "every row carries the artifact it was read from; experiments/j3_ablations.py --check re-verifies"
+  }
+}

@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Bitstream composition of the shipped near-lossless point (\texttt{gp8-6-6\_c9\_sh3}, 83.41 MB, 6{,}131{,}954 primitives). ``raw'' is the payload before the \texttt{zstd} frames, ``coded'' after; the last column is bytes per primitive.}
+\label{tab:bitstream}
+\begin{tabular}{llrrrr}
+\toprule
+stream & what it carries & raw (MB) & coded (MB) & share & B/prim \\
+\midrule
+\texttt{cluster\_off} & positions, cluster offsets & 20.70 & 20.70 & 24.8\% & 3.38 \\
+\texttt{sh\_coef} & rank-16 colour projections & 36.79 & 18.58 & 22.3\% & 3.03 \\
+\texttt{geo\_quat\_abc} & smallest-three quaternion components & 18.40 & 18.11 & 21.7\% & 2.95 \\
+\texttt{geo\_scales} & log-scale triple & 13.80 & 12.50 & 15.0\% & 2.04 \\
+\texttt{sh\_scale} & per-block colour scale & 6.13 & 4.36 & 5.2\% & 0.71 \\
+\texttt{geo\_opacities} & opacity & 4.60 & 4.31 & 5.2\% & 0.70 \\
+\texttt{sh\_dc} & DC term & 18.40 & 3.69 & 4.4\% & 0.60 \\
+\texttt{geo\_quat\_which} & 2-bit largest-component selector & 1.53 & 0.63 & 0.8\% & 0.10 \\
+\texttt{cluster\_hdr} & cluster header & 0.57 & 0.53 & 0.6\% & 0.09 \\
+\midrule
+\multicolumn{2}{l}{total} & 120.92 & 83.41 & 100.0\% & 13.60 \\
+\bottomrule
+\end{tabular}
+\end{table}

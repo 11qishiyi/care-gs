@@ -1,0 +1,9 @@
+{
+ "_note": "Rows measured in the first encode batch of round 18.  The node's m22_encode.json was overwritten by the second batch before it was fetched, so these three rows are transcribed from the encode log lines in the session record (`r=16 B= 48 bits 98.53 MB 16.07 B/prim enc 51.5 s dec 9.16 s`, likewise for 64 bits and for r=32/64 bits).  Their PSNRs come from m22_render.log, which was fetched and is authoritative.",
+ "scene": "bicycle",
+ "rows": [
+  {"rank": 16, "bits": 48, "bytes": 98528166, "n": 6131954, "encode_s": 51.5, "decode_s": 9.16},
+  {"rank": 16, "bits": 64, "bytes": 106184808, "n": 6131954, "encode_s": 52.6, "decode_s": 9.87},
+  {"rank": 32, "bits": 64, "bytes": 108400911, "n": 6131954, "encode_s": 63.9, "decode_s": 12.98}
+ ]
+}

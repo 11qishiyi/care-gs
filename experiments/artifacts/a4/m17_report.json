@@ -1,0 +1,119 @@
+{
+ "per_config": {
+  "base": {
+   "n": 6131954,
+   "clean_psnr": 24.523004933746407,
+   "clean_mb": 1447.141144,
+   "best_hac": null,
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "k50_pre": {
+   "n": 3065977,
+   "clean_psnr": 19.777417003703498,
+   "clean_mb": 723.570572,
+   "best_hac": null,
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "k35_pre": {
+   "n": 2146184,
+   "clean_psnr": 16.877606017706633,
+   "clean_mb": 506.499424,
+   "best_hac": {
+    "scene": "bicycle_k35_pre",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 2146184,
+    "mb": 25.642168,
+    "bytes_per_prim": 11.947795715558405,
+    "rate": 19.752597518275365,
+    "psnr": 16.934604593715726,
+    "ssim": 0.4521882736682892,
+    "lpips": null,
+    "drop_pp": 0.42990980546788077,
+    "config": "k35_pre"
+   },
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "k50l3_pre": {
+   "n": 3065977,
+   "clean_psnr": 19.777417003703498,
+   "clean_mb": 723.570572,
+   "best_hac": null,
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "k50l3_ft": {
+   "n": 3065977,
+   "clean_psnr": 22.671651650245526,
+   "clean_mb": 723.570572,
+   "best_hac": null,
+   "best_pcgs": null,
+   "variants": 5,
+   "ft_gain_db": 2.894234646542028
+  },
+  "k35l3_pre": {
+   "n": 2146184,
+   "clean_psnr": 16.877606017706633,
+   "clean_mb": 506.499424,
+   "best_hac": {
+    "scene": "bicycle_k35l3_pre",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 2146184,
+    "mb": 25.642178999999995,
+    "bytes_per_prim": 11.947800840934422,
+    "rate": 19.752589044792177,
+    "psnr": 16.932370218621053,
+    "ssim": 0.45222084045410155,
+    "lpips": null,
+    "drop_pp": 0.42452018852964957,
+    "config": "k35l3_pre"
+   },
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "k35l3_ft": {
+   "n": 2146184,
+   "clean_psnr": 21.80832100725224,
+   "clean_mb": 506.499424,
+   "best_hac": {
+    "scene": "bicycle_k35l3_ft",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 2146184,
+    "mb": 25.670783999999998,
+    "bytes_per_prim": 11.96112914829297,
+    "rate": 19.730578699894792,
+    "psnr": 21.513497964023216,
+    "ssim": 0.5704280662536622,
+    "lpips": null,
+    "drop_pp": -0.4959520236985514,
+    "config": "k35l3_ft"
+   },
+   "best_pcgs": null,
+   "variants": 5,
+   "ft_gain_db": 4.930714989545606
+  }
+ },
+ "base_psnr": 24.523004933746407,
+ "threshold_db": 24.5,
+ "budget_mb": 27.54,
+ "best_under_budget": {
+  "scene": "bicycle_k35l3_ft",
+  "variant": "vq12_c8_o8",
+  "family": "qfp",
+  "n": 2146184,
+  "mb": 25.670783999999998,
+  "bytes_per_prim": 11.96112914829297,
+  "rate": 19.730578699894792,
+  "psnr": 21.513497964023216,
+  "ssim": 0.5704280662536622,
+  "lpips": null,
+  "drop_pp": -0.4959520236985514,
+  "config": "k35l3_ft"
+ },
+ "verdict": "representation_bound_confirmed"
+}

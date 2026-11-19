@@ -1,0 +1,11 @@
+{
+ "source": "experiments/artifacts/a4/j2_audit_decision.json + results_v120/audit_bound_nobonsai.json",
+ "n_cells": 56,
+ "eps": 1.0,
+ "audit_mae_pp_mean": 2.04,
+ "audit_mae_pp_max": 3.42,
+ "false_accept_audit": 0,
+ "false_accept_prior": 4,
+ "false_reject_audit": 0,
+ "false_reject_prior": 4
+}

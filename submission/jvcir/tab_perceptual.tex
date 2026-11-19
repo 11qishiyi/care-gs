@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Perceptual metrics at half the bytes on one model (\texttt{bicycle}, 48-bit colour, LPIPS with a VGG backbone). Every arm keeps the same container; only the pruning score changes.}
+\label{tab:perceptual}
+\begin{tabular}{lrrrrr}
+\toprule
+arm & file & PSNR & SSIM & LPIPS & $\Delta$LPIPS \\
+\midrule
+control (no prune) & 76.60 MB & 24.06 & 0.7393 & 0.2813 & +0.0000 \\
+fisher & 40.17 MB & 23.52 & 0.7269 & 0.2916 & +0.0103 \\
+opacity & 39.50 MB & 22.78 & 0.7049 & 0.3034 & +0.0221 \\
+area & 39.00 MB & 22.14 & 0.6662 & 0.3264 & +0.0451 \\
+volume & 38.76 MB & 19.67 & 0.5782 & 0.3777 & +0.0964 \\
+\bottomrule
+\end{tabular}
+\end{table}

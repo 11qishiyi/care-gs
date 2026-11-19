@@ -1,0 +1,5 @@
+Quantising a shipped 3DGS asset keeps a coverage guarantee; pruning does not.
+Within 1 pp coverage loss, quantisation reaches 9-16x; pruning never reaches 1.3x.
+At matched rate pruning costs 12.7-23.2 coverage points, quantisation 0.7-0.95.
+One rank-16 colour basis per asset codes 6M Gaussians at 17.35x for -0.04 dB.
+A 2-view audit on shipped views decides the tolerance with no false acceptance.

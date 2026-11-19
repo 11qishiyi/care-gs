@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Bit width, one field at a time. Panel A holds the colour block fixed (48 bit) and moves one geometry field on a finetuned \texttt{bicycle} model. Panel B holds geometry fixed (\texttt{gp6-6-6\_c8}) and moves the colour budget.}
+\label{tab:bits}
+\begin{tabular}{llrrr}
+\toprule
+\multicolumn{5}{l}{\emph{Panel A: geometry, one field at a time}} \\
+spec & what it turns & bytes & PSNR & SSIM \\
+\midrule
+\texttt{gp6-6-6\_c8} & reference point & 20,561,912 & 22.87 & 0.6999 \\
+\texttt{gp4-6-6\_c8} & quaternions 6 $\rightarrow$ 4 & 19,228,871 & 22.58 & 0.6839 \\
+\texttt{gp6-4-6\_c8} & scales 6 $\rightarrow$ 4 & 19,011,806 & 21.96 & 0.6675 \\
+\texttt{gp6-6-4\_c8} & opacity 6 $\rightarrow$ 4 & 20,073,993 & 22.88 & 0.6955 \\
+\texttt{gp6-6-6\_c7} & positions 8 $\rightarrow$ 7 & 19,990,939 & 22.76 & 0.6884 \\
+\texttt{gp6-6-6\_c6} & positions 8 $\rightarrow$ 6 & 19,410,087 & 22.43 & 0.6563 \\
+\texttt{gp4-4-4\_c8} & three fields coarsened & 17,190,847 & 21.65 & 0.6440 \\
+\texttt{gp4-4-4\_c6} & three fields + 6-bit opacity & 16,039,022 & 21.36 & 0.6079 \\
+\midrule
+\multicolumn{5}{l}{\emph{Panel B: colour budget}} \\
+colour bits & what it turns & file & PSNR & -- \\
+\midrule
+96 & colour block only & 30.78 MB & 23.04 & -- \\
+64 & colour block only & 22.91 MB & 23.01 & -- \\
+48 & colour block only & 20.56 MB & 22.87 & -- \\
+40 & colour block only & 19.47 MB & 22.63 & -- \\
+32 & colour block only & 18.35 MB & 21.94 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

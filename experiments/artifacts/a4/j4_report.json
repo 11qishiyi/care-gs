@@ -1,0 +1,402 @@
+{
+  "criteria": {
+    "C1": "coverage falls monotonically along the colour ladder (96 -> 32 bit) on both scenes",
+    "C2": "at a matched rate, a geometry-coarsened row loses at least 2x the coverage of a colour row, on at least 3 of the 4 geometry fields",
+    "C3": "view-level coverage is below pixel-level on every non-clean row, and the gap grows as rate falls",
+    "C4": "the k = 2 view audit stays within 3.0 pp of the true coverage on every row"
+  },
+  "scenes": [
+    {
+      "scene": "bicycle",
+      "q": 0.08911,
+      "n_views": 25,
+      "rows": [
+        {
+          "variant": "clean",
+          "mb": 1447.14,
+          "rate": 1.0,
+          "psnr": 24.65,
+          "cov_pixel": 0.91,
+          "cov_view": 0.7223,
+          "gap_pp": 18.77,
+          "audit_pp": 3.86,
+          "family": "clean"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh6",
+          "mb": 285.71,
+          "rate": 5.07,
+          "psnr": 24.58,
+          "cov_pixel": 0.908,
+          "cov_view": 0.7223,
+          "gap_pp": 18.56,
+          "audit_pp": 3.9,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh4",
+          "mb": 212.13,
+          "rate": 6.82,
+          "psnr": 24.56,
+          "cov_pixel": 0.9076,
+          "cov_view": 0.7223,
+          "gap_pp": 18.53,
+          "audit_pp": 3.89,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh3",
+          "mb": 175.34,
+          "rate": 8.25,
+          "psnr": 24.47,
+          "cov_pixel": 0.9057,
+          "cov_view": 0.6823,
+          "gap_pp": 22.34,
+          "audit_pp": 3.94,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh2",
+          "mb": 138.54,
+          "rate": 10.45,
+          "psnr": 23.54,
+          "cov_pixel": 0.8742,
+          "cov_view": 0.5208,
+          "gap_pp": 35.34,
+          "audit_pp": 4.55,
+          "family": "colour"
+        },
+        {
+          "variant": "gp4-6-6_c8_sh3",
+          "mb": 170.74,
+          "rate": 8.48,
+          "psnr": 24.12,
+          "cov_pixel": 0.8983,
+          "cov_view": 0.6823,
+          "gap_pp": 21.6,
+          "audit_pp": 3.91,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-4-6_c8_sh3",
+          "mb": 170.74,
+          "rate": 8.48,
+          "psnr": 23.54,
+          "cov_pixel": 0.8803,
+          "cov_view": 0.4777,
+          "gap_pp": 40.27,
+          "audit_pp": 4.28,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-6-4_c8_sh3",
+          "mb": 173.8,
+          "rate": 8.33,
+          "psnr": 24.36,
+          "cov_pixel": 0.9025,
+          "cov_view": 0.6823,
+          "gap_pp": 22.02,
+          "audit_pp": 3.89,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-6-6_c7_sh3",
+          "mb": 173.04,
+          "rate": 8.36,
+          "psnr": 24.4,
+          "cov_pixel": 0.9039,
+          "cov_view": 0.6823,
+          "gap_pp": 22.16,
+          "audit_pp": 3.94,
+          "family": "geometry"
+        }
+      ],
+      "criteria": {
+        "scene": "bicycle",
+        "C1": {
+          "pass": true,
+          "coverage": [
+            0.91,
+            0.9076,
+            0.9057,
+            0.8742
+          ],
+          "rates": [
+            1.0,
+            6.82,
+            8.25,
+            10.45
+          ],
+          "read": "ascending rate: coverage must never increase"
+        },
+        "C2": {
+          "pass": false,
+          "fields_worse": 2,
+          "detail": [
+            {
+              "geometry": "gp4-6-6_c8_sh3",
+              "rate": 8.48,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 1.17,
+              "ref_loss_pp": 0.43,
+              "ratio": 2.72
+            },
+            {
+              "geometry": "gp6-4-6_c8_sh3",
+              "rate": 8.48,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 2.97,
+              "ref_loss_pp": 0.43,
+              "ratio": 6.91
+            },
+            {
+              "geometry": "gp6-6-4_c8_sh3",
+              "rate": 8.33,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 0.75,
+              "ref_loss_pp": 0.43,
+              "ratio": 1.74
+            },
+            {
+              "geometry": "gp6-6-6_c7_sh3",
+              "rate": 8.36,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 0.61,
+              "ref_loss_pp": 0.43,
+              "ratio": 1.42
+            }
+          ]
+        },
+        "C3": {
+          "pass": true,
+          "gaps_desc_rate": [
+            35.34,
+            21.6,
+            40.27,
+            22.16,
+            22.02,
+            22.34,
+            18.53,
+            18.56
+          ]
+        },
+        "C4": {
+          "pass": false,
+          "worst_pp": 4.55,
+          "per_row": {
+            "clean": 3.86,
+            "gp6-6-6_c8_sh6": 3.9,
+            "gp6-6-6_c8_sh4": 3.89,
+            "gp6-6-6_c8_sh3": 3.94,
+            "gp6-6-6_c8_sh2": 4.55,
+            "gp4-6-6_c8_sh3": 3.91,
+            "gp6-4-6_c8_sh3": 4.28,
+            "gp6-6-4_c8_sh3": 3.89,
+            "gp6-6-6_c7_sh3": 3.94
+          }
+        },
+        "notes": []
+      }
+    },
+    {
+      "scene": "stump",
+      "q": 0.07385,
+      "n_views": 16,
+      "rows": [
+        {
+          "variant": "clean",
+          "mb": 1170.98,
+          "rate": 1.0,
+          "psnr": 26.38,
+          "cov_pixel": 0.9113,
+          "cov_view": 0.7412,
+          "gap_pp": 17.0,
+          "audit_pp": 3.0,
+          "family": "clean"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh6",
+          "mb": 231.19,
+          "rate": 5.07,
+          "psnr": 26.31,
+          "cov_pixel": 0.9095,
+          "cov_view": 0.7412,
+          "gap_pp": 16.83,
+          "audit_pp": 2.98,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh4",
+          "mb": 171.65,
+          "rate": 6.82,
+          "psnr": 26.29,
+          "cov_pixel": 0.9091,
+          "cov_view": 0.7412,
+          "gap_pp": 16.78,
+          "audit_pp": 2.97,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh3",
+          "mb": 141.88,
+          "rate": 8.25,
+          "psnr": 26.18,
+          "cov_pixel": 0.9061,
+          "cov_view": 0.7412,
+          "gap_pp": 16.48,
+          "audit_pp": 2.95,
+          "family": "colour"
+        },
+        {
+          "variant": "gp6-6-6_c8_sh2",
+          "mb": 112.11,
+          "rate": 10.45,
+          "psnr": 23.88,
+          "cov_pixel": 0.7877,
+          "cov_view": 0.0,
+          "gap_pp": 78.77,
+          "audit_pp": 2.86,
+          "family": "colour"
+        },
+        {
+          "variant": "gp4-6-6_c8_sh3",
+          "mb": 138.16,
+          "rate": 8.48,
+          "psnr": 26.11,
+          "cov_pixel": 0.904,
+          "cov_view": 0.7412,
+          "gap_pp": 16.28,
+          "audit_pp": 2.96,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-4-6_c8_sh3",
+          "mb": 138.16,
+          "rate": 8.48,
+          "psnr": 25.43,
+          "cov_pixel": 0.8807,
+          "cov_view": 0.4313,
+          "gap_pp": 44.95,
+          "audit_pp": 3.22,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-6-4_c8_sh3",
+          "mb": 140.64,
+          "rate": 8.33,
+          "psnr": 26.06,
+          "cov_pixel": 0.9026,
+          "cov_view": 0.7412,
+          "gap_pp": 16.13,
+          "audit_pp": 2.96,
+          "family": "geometry"
+        },
+        {
+          "variant": "gp6-6-6_c7_sh3",
+          "mb": 140.02,
+          "rate": 8.36,
+          "psnr": 26.08,
+          "cov_pixel": 0.9034,
+          "cov_view": 0.7412,
+          "gap_pp": 16.21,
+          "audit_pp": 2.96,
+          "family": "geometry"
+        }
+      ],
+      "criteria": {
+        "scene": "stump",
+        "C1": {
+          "pass": true,
+          "coverage": [
+            0.9113,
+            0.9091,
+            0.9061,
+            0.7877
+          ],
+          "rates": [
+            1.0,
+            6.82,
+            8.25,
+            10.45
+          ],
+          "read": "ascending rate: coverage must never increase"
+        },
+        "C2": {
+          "pass": false,
+          "fields_worse": 1,
+          "detail": [
+            {
+              "geometry": "gp4-6-6_c8_sh3",
+              "rate": 8.48,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 0.73,
+              "ref_loss_pp": 0.52,
+              "ratio": 1.4
+            },
+            {
+              "geometry": "gp6-4-6_c8_sh3",
+              "rate": 8.48,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 3.06,
+              "ref_loss_pp": 0.52,
+              "ratio": 5.88
+            },
+            {
+              "geometry": "gp6-6-4_c8_sh3",
+              "rate": 8.33,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 0.87,
+              "ref_loss_pp": 0.52,
+              "ratio": 1.67
+            },
+            {
+              "geometry": "gp6-6-6_c7_sh3",
+              "rate": 8.36,
+              "ref": "gp6-6-6_c8_sh3",
+              "ref_rate": 8.25,
+              "geo_loss_pp": 0.79,
+              "ref_loss_pp": 0.52,
+              "ratio": 1.52
+            }
+          ]
+        },
+        "C3": {
+          "pass": true,
+          "gaps_desc_rate": [
+            78.77,
+            16.28,
+            44.95,
+            16.21,
+            16.13,
+            16.48,
+            16.78,
+            16.83
+          ]
+        },
+        "C4": {
+          "pass": false,
+          "worst_pp": 3.22,
+          "per_row": {
+            "clean": 3.0,
+            "gp6-6-6_c8_sh6": 2.98,
+            "gp6-6-6_c8_sh4": 2.97,
+            "gp6-6-6_c8_sh3": 2.95,
+            "gp6-6-6_c8_sh2": 2.86,
+            "gp4-6-6_c8_sh3": 2.96,
+            "gp6-4-6_c8_sh3": 3.22,
+            "gp6-6-4_c8_sh3": 2.96,
+            "gp6-6-6_c7_sh3": 2.96
+          }
+        },
+        "notes": []
+      }
+    }
+  ]
+}

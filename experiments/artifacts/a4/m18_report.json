@@ -1,0 +1,85 @@
+{
+ "per_config": {
+  "k25s30_ft": {
+   "n": 1532988,
+   "clean_psnr": 21.974740169981644,
+   "clean_mb": 361.785168,
+   "best_hac": {
+    "scene": "bicycle_k25s30_ft",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 1532988,
+    "mb": 18.39649,
+    "bytes_per_prim": 12.000413571404343,
+    "rate": 19.665988892446332,
+    "psnr": 21.495298075539274,
+    "ssim": 0.541280403137207,
+    "lpips": null,
+    "drop_pp": -1.0725079717465968,
+    "config": "k25s30_ft"
+   },
+   "best_pcgs": {
+    "scene": "bicycle_k25s30_ft",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 1532988,
+    "mb": 18.39649,
+    "bytes_per_prim": 12.000413571404343,
+    "rate": 19.665988892446332,
+    "psnr": 21.495298075539274,
+    "ssim": 0.541280403137207,
+    "lpips": null,
+    "drop_pp": -1.0725079717465968,
+    "config": "k25s30_ft"
+   },
+   "variants": 5
+  },
+  "k35s30_ft": {
+   "n": 2146184,
+   "clean_psnr": 22.544416746661923,
+   "clean_mb": 506.499424,
+   "best_hac": {
+    "scene": "bicycle_k35s30_ft",
+    "variant": "vq12_c8_o8",
+    "family": "qfp",
+    "n": 2146184,
+    "mb": 25.671023,
+    "bytes_per_prim": 11.961240508735505,
+    "rate": 19.73039500607358,
+    "psnr": 22.07653525949958,
+    "ssim": 0.6100200963020325,
+    "lpips": null,
+    "drop_pp": -1.057065126042785,
+    "config": "k35s30_ft"
+   },
+   "best_pcgs": null,
+   "variants": 5
+  },
+  "base": {
+   "n": 0,
+   "clean_psnr": 24.52,
+   "clean_mb": null,
+   "best_hac": null,
+   "best_pcgs": null,
+   "variants": 0
+  }
+ },
+ "base_psnr": 24.52,
+ "threshold_db": 24.5,
+ "budget_mb": 27.54,
+ "best_under_budget": {
+  "scene": "bicycle_k35s30_ft",
+  "variant": "vq12_c8_o8",
+  "family": "qfp",
+  "n": 2146184,
+  "mb": 25.671023,
+  "bytes_per_prim": 11.961240508735505,
+  "rate": 19.73039500607358,
+  "psnr": 22.07653525949958,
+  "ssim": 0.6100200963020325,
+  "lpips": null,
+  "drop_pp": -1.057065126042785,
+  "config": "k35s30_ft"
+ },
+ "verdict": "representation_bound_confirmed"
+}

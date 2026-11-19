@@ -1,0 +1,54 @@
+{
+ "_note": "Published per-scene numbers used as external reference points.  Every row is a quote from the paper's own table; MB means the paper's 'Size (MB)' column (10^6 bytes as printed, not MiB).  MipNeRF360 is evaluated at images_4 (1/4 linear resolution) by the 3DGS/Scaffold-GS lineage, which is the same protocol as experiments/*.py --factor 4 on full-resolution ground truth.",
+ "_sources": {
+  "3dgs": "Kerbl et al. 2308.04079, per-scene table as reproduced in HAC (2403.14530) supp. Table G",
+  "hac": "HAC 2403.14530 supp. Table C, lambda_e = 0.004 (15.26 MB avg)",
+  "pcgs": "PCGS 2503.08511 supp. Table IV, lambda_s = 4e-4, 40k iters (12.19 MB avg)",
+  "contextgs": "ContextGS 2405.20721 Table 1 low-rate row (12.68 MB avg)",
+  "compgs": "CompGS (Niedermayr et al., CVPR 2024, 2401.02436) per-scene table, bicycle row; SSIM/LPIPS not transcribed",
+  "eagles": "EAGLES (ECCV 2024, 2312.04564) per-scene table, bicycle row; SSIM/LPIPS not transcribed",
+  "lightgaussian_excluded": "LightGaussian (NeurIPS 2024, 2311.17245) reports bicycle PSNR 25.196 but no per-scene file size, so it cannot enter an equal-size comparison"
+ },
+ "protocol": {"dataset": "MipNeRF360", "images": "images_4", "iterations": 30000, "lpips": "vgg"},
+ "methods": {
+  "3dgs": {
+   "bicycle": {"mb": 1336.45, "psnr": 25.11, "ssim": 0.746, "lpips": 0.245},
+   "flowers": {"mb": 814.24, "psnr": 21.36, "ssim": 0.588, "lpips": 0.360},
+   "garden": {"mb": 1327.99, "psnr": 27.30, "ssim": 0.856, "lpips": 0.122},
+   "stump": {"mb": 1070.92, "psnr": 26.66, "ssim": 0.770, "lpips": 0.242},
+   "treehill": {"mb": 812.63, "psnr": 22.62, "ssim": 0.636, "lpips": 0.347},
+   "room": {"mb": 353.10, "psnr": 31.74, "ssim": 0.926, "lpips": 0.197},
+   "counter": {"mb": 277.39, "psnr": 29.07, "ssim": 0.914, "lpips": 0.184},
+   "kitchen": {"mb": 414.33, "psnr": 31.47, "ssim": 0.931, "lpips": 0.117},
+   "bonsai": {"mb": 295.33, "psnr": 32.12, "ssim": 0.946, "lpips": 0.181}
+  },
+  "hac": {
+   "bicycle": {"mb": 27.54, "psnr": 25.05, "ssim": 0.742, "lpips": 0.264},
+   "flowers": {"mb": 19.59, "psnr": 21.26, "ssim": 0.572, "lpips": 0.381},
+   "garden": {"mb": 22.69, "psnr": 27.28, "ssim": 0.842, "lpips": 0.151},
+   "stump": {"mb": 18.11, "psnr": 26.58, "ssim": 0.762, "lpips": 0.269},
+   "treehill": {"mb": 20.04, "psnr": 23.30, "ssim": 0.645, "lpips": 0.356},
+   "room": {"mb": 5.53, "psnr": 31.55, "ssim": 0.921, "lpips": 0.208},
+   "counter": {"mb": 7.26, "psnr": 29.35, "ssim": 0.911, "lpips": 0.195},
+   "kitchen": {"mb": 8.05, "psnr": 31.16, "ssim": 0.923, "lpips": 0.131},
+   "bonsai": {"mb": 8.56, "psnr": 32.28, "ssim": 0.942, "lpips": 0.189}
+  },
+  "pcgs": {
+   "bicycle": {"mb": 19.09, "psnr": 25.12, "ssim": 0.7387, "lpips": 0.2724},
+   "flowers": {"mb": 15.73, "psnr": 21.33, "ssim": 0.5744, "lpips": 0.3806},
+   "garden": {"mb": 18.27, "psnr": 27.37, "ssim": 0.8416, "lpips": 0.1583},
+   "stump": {"mb": 13.49, "psnr": 26.61, "ssim": 0.7605, "lpips": 0.2734},
+   "treehill": {"mb": 16.24, "psnr": 23.32, "ssim": 0.6416, "lpips": 0.3682},
+   "room": {"mb": 5.00, "psnr": 32.07, "ssim": 0.9232, "lpips": 0.2094},
+   "counter": {"mb": 6.80, "psnr": 29.75, "ssim": 0.9148, "lpips": 0.1913},
+   "kitchen": {"mb": 7.67, "psnr": 31.55, "ssim": 0.9276, "lpips": 0.1279},
+   "bonsai": {"mb": 7.44, "psnr": 33.20, "ssim": 0.9484, "lpips": 0.1824}
+  },
+  "compgs": {
+   "bicycle": {"mb": 47.147, "psnr": 24.970}
+  },
+  "eagles": {
+   "bicycle": {"mb": 104.0, "psnr": 25.04}
+  }
+ }
+}
