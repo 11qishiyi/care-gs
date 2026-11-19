@@ -1,0 +1,14 @@
+{
+ "scene": "stump",
+ "variant": "legacy",
+ "n": 4961797,
+ "spec": "gp6-6-6_c8_sh3",
+ "jobs": 4,
+ "load_s": 10.6,
+ "build_s": 127.2,
+ "write_s": 2.2,
+ "total_s": 140.0,
+ "bytes": 62649653,
+ "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+ "peak_rss_gb": 14.94
+}

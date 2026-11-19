@@ -1,0 +1,41 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Largest measured rate whose coverage loss stays within a tolerance $\varepsilon$, with the configuration that achieves it. ``none'' in the last column means no pruning configuration on that asset is admissible at that tolerance, so the empty column at $\varepsilon \le 1$ pp is a statement about admissibility, not about tuning.}
+\label{tab:frontier}
+\begin{tabular}{rlrrrr}
+\toprule
+$\varepsilon$ (pp) & asset & configuration & rate & drop (pp) & best pruning rate \\
+\midrule
+$0.5$ & bicycle & \texttt{m18\_o6\_sh3} & 9.01$\times$ & -0.43 & none \\
+ & bicycle\_i7k & \texttt{m16\_o6\_sh3} & 9.93$\times$ & -0.29 & none \\
+ & flowers & \texttt{m18\_o6\_sh3} & 8.72$\times$ & -0.30 & none \\
+ & flowers\_i7k & \texttt{d1\_m16\_o8\_sh4} & 12.97$\times$ & -0.45 & none \\
+ & stump & -- & -- & -- & none \\
+ & stump\_i7k & \texttt{m18\_o6\_sh3} & 9.25$\times$ & -0.35 & none \\
+\midrule
+$1.0$ & bicycle & \texttt{m16\_o6\_sh3} & 9.68$\times$ & -0.83 & none \\
+ & bicycle\_i7k & \texttt{d1\_m16\_o8\_sh4} & 13.27$\times$ & -0.95 & none \\
+ & flowers & \texttt{d2\_m16\_o8\_sh4} & 9.64$\times$ & -0.89 & none \\
+ & flowers\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.78$\times$ & -0.74 & none \\
+ & stump & \texttt{m18\_o6\_sh3} & 8.97$\times$ & -0.72 & none \\
+ & stump\_i7k & \texttt{m16\_o6\_sh3} & 9.90$\times$ & -0.85 & none \\
+\midrule
+$2.0$ & bicycle & \texttt{m16\_o6\_sh3} & 9.68$\times$ & -0.83 & 1.27$\times$ \\
+ & bicycle\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.93$\times$ & -1.33 & 1.29$\times$ \\
+ & flowers & \texttt{d1\_m16\_o8\_sh8} & 9.95$\times$ & -1.99 & none \\
+ & flowers\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.78$\times$ & -0.74 & 1.26$\times$ \\
+ & stump & \texttt{m16\_o6\_sh3} & 9.60$\times$ & -1.84 & 1.22$\times$ \\
+ & stump\_i7k & \texttt{d1\_m16\_o8\_sh4} & 13.19$\times$ & -1.84 & 1.23$\times$ \\
+\midrule
+$5.0$ & bicycle & \texttt{m16\_o6\_sh2} & 14.16$\times$ & -2.64 & 1.63$\times$ \\
+ & bicycle\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.93$\times$ & -1.33 & 2.32$\times$ \\
+ & flowers & \texttt{d0\_m16\_o8\_sh8} & 15.65$\times$ & -4.04 & 1.25$\times$ \\
+ & flowers\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.78$\times$ & -0.74 & 1.62$\times$ \\
+ & stump & \texttt{d1\_m16\_o8\_sh4} & 12.94$\times$ & -4.32 & 1.57$\times$ \\
+ & stump\_i7k & \texttt{d0\_m16\_o8\_sh8} & 15.72$\times$ & -2.80 & 2.22$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}

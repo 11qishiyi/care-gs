@@ -1,0 +1,14 @@
+{
+ "scene": "stump",
+ "variant": "sliced",
+ "n": 4961797,
+ "spec": "gp6-6-6_c8_sh3",
+ "jobs": 4,
+ "load_s": 10.8,
+ "build_s": 103.9,
+ "write_s": 2.5,
+ "total_s": 117.3,
+ "bytes": 62649653,
+ "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+ "peak_rss_gb": 9.51
+}

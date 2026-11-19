@@ -1,0 +1,82 @@
+{
+ "rows": [
+  {
+   "tag": "p15",
+   "arm": "a",
+   "bytes": 11499080,
+   "psnr": 20.02,
+   "ssim": 0.43558544039726255,
+   "frontier_ref": null,
+   "vs_frontier": null,
+   "dominated_by": {
+    "bytes": 10822808,
+    "psnr": 20.12
+   }
+  },
+  {
+   "tag": "p15",
+   "arm": "b",
+   "bytes": 10822808,
+   "psnr": 20.12,
+   "ssim": 0.443925267457962,
+   "frontier_ref": null,
+   "vs_frontier": null,
+   "dominated_by": null
+  },
+  {
+   "tag": "p10",
+   "arm": "a",
+   "bytes": 7660004,
+   "psnr": 19.0,
+   "ssim": 0.38574623703956606,
+   "frontier_ref": null,
+   "vs_frontier": null,
+   "dominated_by": {
+    "bytes": 7242797,
+    "psnr": 19.02
+   }
+  },
+  {
+   "tag": "p10",
+   "arm": "b",
+   "bytes": 7242797,
+   "psnr": 19.02,
+   "ssim": 0.3908319127559662,
+   "frontier_ref": null,
+   "vs_frontier": null,
+   "dominated_by": null
+  }
+ ],
+ "judgement": {
+  "per_prefix": [
+   {
+    "tag": "p10",
+    "byte_ratio": 0.9455,
+    "d_psnr": 0.02,
+    "N1": true
+   },
+   {
+    "tag": "p15",
+    "byte_ratio": 0.9412,
+    "d_psnr": 0.1,
+    "N1": true
+   }
+  ],
+  "on_frontier": [
+   "p15-b",
+   "p10-b"
+  ],
+  "budget": [
+   {
+    "tag": "p10",
+    "wall_ratio": 1.049,
+    "N3": true
+   },
+   {
+    "tag": "p15",
+    "wall_ratio": 0.923,
+    "N3": true
+   }
+  ]
+ }
+}

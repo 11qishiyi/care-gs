@@ -1,0 +1,43 @@
+[
+ {
+  "case": "M47",
+  "artifact_rows": 3,
+  "rows_not_in_doc": []
+ },
+ {
+  "case": "M48",
+  "artifact_rows": 10,
+  "rows_not_in_doc": []
+ },
+ {
+  "case": "M49",
+  "artifact_rows": 5,
+  "doc_bytes": 0,
+  "rows_not_in_doc": [],
+  "rows_without_mb": [],
+  "doc_bytes_without_artifact": []
+ },
+ {
+  "case": "M50",
+  "artifact_rows": 8,
+  "doc_bytes": 0,
+  "rows_not_in_doc": [],
+  "rows_without_mb": [],
+  "doc_bytes_without_artifact": []
+ },
+ {
+  "case": "M51",
+  "artifact_rows": 6,
+  "doc_bytes": 6,
+  "rows_not_in_doc": [],
+  "rows_without_mb": [
+   "bicycle gp6-6-6_c8 76598203 24.06 0.7393153786659241 15.95 4269596",
+   "bicycle gp6-6-4_c8 74802867 23.95 0.7330274724960327 15.76 4269192",
+   "stump gp6-6-6_c8 62649653 25.52 0.7432447224855423 12.85 3491492",
+   "stump gp6-6-4_c8 61191922 25.41 0.7368498928844929 12.72 3490320",
+   "bonsai gp6-6-6_c8 15297685 27.08 0.8867974136326764 3.25 952800",
+   "bonsai gp6-6-4_c8 14927795 26.97 0.8823685291651133 3.22 952272"
+  ],
+  "doc_bytes_without_artifact": []
+ }
+]

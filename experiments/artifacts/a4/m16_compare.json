@@ -1,0 +1,330 @@
+{
+ "c1": {
+  "rows": [
+   {
+    "scene": "bicycle",
+    "ours": 24.523004933746407,
+    "ref": 25.11,
+    "delta": -0.5869950662535928,
+    "ssim_delta": 0.02450294160842892,
+    "lpips_delta": null
+   },
+   {
+    "scene": "bonsai",
+    "ours": null,
+    "ref": 32.12,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "counter",
+    "ours": null,
+    "ref": 29.07,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "flowers",
+    "ours": null,
+    "ref": 21.36,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "garden",
+    "ours": null,
+    "ref": 27.3,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "kitchen",
+    "ours": null,
+    "ref": 31.47,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "room",
+    "ours": null,
+    "ref": 31.74,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   },
+   {
+    "scene": "stump",
+    "ours": 26.15132063129478,
+    "ref": 26.66,
+    "delta": -0.50867936870522,
+    "ssim_delta": 0.008721727430820447,
+    "lpips_delta": null
+   },
+   {
+    "scene": "treehill",
+    "ours": null,
+    "ref": 22.62,
+    "delta": null,
+    "ssim_delta": null,
+    "lpips_delta": null
+   }
+  ],
+  "n_ok": 0,
+  "n": 2,
+  "mean_abs": 0.5478372174794064,
+  "verdict": null
+ },
+ "c2": {
+  "hac": {
+   "rows": [
+    {
+     "scene": "bicycle",
+     "ref_mb": 27.54,
+     "ref_psnr": 25.05,
+     "variant": "vq12_c8_o8",
+     "mb": 14.6913,
+     "psnr": 20.07787513406185,
+     "d_psnr": -4.972124865938152,
+     "d_ssim": -0.2929110403060913,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "bonsai",
+     "ref_mb": 8.56,
+     "ref_psnr": 32.28,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "counter",
+     "ref_mb": 7.26,
+     "ref_psnr": 29.35,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "flowers",
+     "ref_mb": 19.59,
+     "ref_psnr": 21.26,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "garden",
+     "ref_mb": 22.69,
+     "ref_psnr": 27.28,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "kitchen",
+     "ref_mb": 8.05,
+     "ref_psnr": 31.16,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "room",
+     "ref_mb": 5.53,
+     "ref_psnr": 31.55,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "stump",
+     "ref_mb": 18.11,
+     "ref_psnr": 26.58,
+     "variant": "p30_vq12_c8_o8",
+     "mb": 17.609257,
+     "psnr": 20.332280516401624,
+     "d_psnr": -6.247719483598374,
+     "d_ssim": -0.1336619983315468,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "treehill",
+     "ref_mb": 20.04,
+     "ref_psnr": 23.3,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    }
+   ],
+   "n_ok": 0,
+   "n": 2,
+   "mean": -5.609922174768263,
+   "verdict": null
+  },
+  "pcgs": {
+   "rows": [
+    {
+     "scene": "bicycle",
+     "ref_mb": 19.09,
+     "ref_psnr": 25.12,
+     "variant": "vq12_c8_o8",
+     "mb": 14.6913,
+     "psnr": 20.07787513406185,
+     "d_psnr": -5.042124865938153,
+     "d_ssim": -0.2896110403060913,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "bonsai",
+     "ref_mb": 7.44,
+     "ref_psnr": 33.2,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "counter",
+     "ref_mb": 6.8,
+     "ref_psnr": 29.75,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "flowers",
+     "ref_mb": 15.73,
+     "ref_psnr": 21.33,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "garden",
+     "ref_mb": 18.27,
+     "ref_psnr": 27.37,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "kitchen",
+     "ref_mb": 7.67,
+     "ref_psnr": 31.55,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "room",
+     "ref_mb": 5.0,
+     "ref_psnr": 32.07,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "stump",
+     "ref_mb": 13.49,
+     "ref_psnr": 26.61,
+     "variant": "p10_vq12_c8_o8",
+     "mb": 5.892957,
+     "psnr": 16.62613470464406,
+     "d_psnr": -9.98386529535594,
+     "d_ssim": -0.2635980817973613,
+     "d_lpips": null,
+     "ok": false
+    },
+    {
+     "scene": "treehill",
+     "ref_mb": 16.24,
+     "ref_psnr": 23.32,
+     "variant": null,
+     "mb": null,
+     "psnr": null,
+     "d_psnr": null,
+     "d_ssim": null,
+     "d_lpips": null,
+     "ok": false
+    }
+   ],
+   "n_ok": 0,
+   "n": 2,
+   "mean": -7.5129950806470465,
+   "verdict": null
+  }
+ },
+ "smallest": [
+  {
+   "scene": "bicycle",
+   "variant": "p10_vq12_c8_o8",
+   "mb": 1.537589,
+   "psnr": 16.746272087063556
+  },
+  {
+   "scene": "stump",
+   "variant": "p10_vq12_c8_o8",
+   "mb": 5.892957,
+   "psnr": 16.62613470464406
+  }
+ ]
+}

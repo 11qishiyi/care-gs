@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Two decision rules for ``ship or do not ship'' against a tolerance, on 56 cells. A false accept ships an asset with a guarantee it does not meet. ``prior'' is the leave-one-asset-out median loss; ``audit'' re-renders on the shipped calibration views and counts residuals under the unchanged quantile.}
+\label{tab:decision}
+\begin{tabular}{lrrrr}
+\toprule
+$\varepsilon$ (pp) & prior accuracy & prior false accepts & audit accuracy & audit false accepts \\
+\midrule
+0.5 & 0.946 & 0/56 & 1.000 & 0/56 \\
+1.0 & 0.857 & 4/56 & 1.000 & 0/56 \\
+2.0 & 0.964 & 2/56 & 1.000 & 0/56 \\
+5.0 & 0.929 & 3/56 & 1.000 & 0/56 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Same model, same container, five pruning scores at half the primitives (\texttt{bonsai}, 1{,}244{,}819 primitives). BD-rate is measured on \texttt{bicycle} over four colour budgets without finetuning.}
+\label{tab:prune}
+\begin{tabular}{lrrrr}
+\toprule
+arm & primitives & file & PSNR & $\Delta$PSNR \\
+\midrule
+control (no prune) & 1,244,819 & 15.30 MB & 27.08 & -- \\
+fisher & 622,410 & 8.07 MB & 26.58 & -0.50 \\
+opacity & 622,410 & 7.95 MB & 26.15 & -0.93 \\
+area & 622,410 & 7.84 MB & 24.92 & -2.16 \\
+volume & 622,410 & 7.84 MB & 24.55 & -2.53 \\
+\midrule
+BD-rate, fisher & \multicolumn{3}{r}{-45.06\,\%} (4 points) \\
+BD-rate, opacity & \multicolumn{3}{r}{-44.96\,\%} (4 points) \\
+\bottomrule
+\end{tabular}
+\end{table}

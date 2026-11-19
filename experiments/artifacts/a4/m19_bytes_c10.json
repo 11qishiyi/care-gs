@@ -1,0 +1,48 @@
+{
+ "specs": [
+  "c10_o8_sh3"
+ ],
+ "level": 12,
+ "scenes": [
+  {
+   "n": 6131954,
+   "sh_degree": 3,
+   "rows": [
+    {
+     "spec": "c10_o8_sh3",
+     "keep": 1.0,
+     "stored": 6131954,
+     "n": 6131954,
+     "model_bytes_per_prim": 31.843761741771058,
+     "packed_bytes_per_prim": 31.843770680601974,
+     "zstd_bytes_per_prim": 25.56209342079213,
+     "zstd_morton_bytes_per_prim": 25.0695667319096,
+     "streams": {
+      "cluster_hdr": 574872,
+      "cluster_off": 22994880,
+      "geo_scales": 18395862,
+      "geo_quats": 24527816,
+      "geo_opacities": 6131954,
+      "geo_hdr": 64,
+      "sh_dc": 6898449,
+      "sh_rest": 103476724,
+      "sh_scale": 12263908,
+      "sh_hdr": 8
+     }
+    }
+   ],
+   "scene": "bicycle"
+  }
+ ],
+ "criteria": {
+  "G1_model_is_upper_bound": {
+   "verdict": true,
+   "violations": []
+  },
+  "G2_no_rank_inversion": {
+   "verdict": true,
+   "inversions": []
+  }
+ },
+ "backend": "zstd"
+}

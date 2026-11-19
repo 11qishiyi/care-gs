@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Four planners, one tolerance, leave-one-asset-out. Only the oracle sees the target asset's coverage; every planner sees its measured rates. ``Violations'' counts assets shipped outside the tolerance.}
+\label{tab:planners}
+\begin{tabular}{lrrrrrr}
+\toprule
+planner & \multicolumn{2}{c}{rate / oracle} & \multicolumn{2}{c}{violations} & \multicolumn{2}{c}{mean excess (pp)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & $\varepsilon{=}1$ & $\varepsilon{=}5$ & $\varepsilon{=}1$ & $\varepsilon{=}5$ & $\varepsilon{=}1$ & $\varepsilon{=}5$ \\
+\midrule
+oracle & 1.000 & 1.000 & 0/6 & 0/6 & 0.000 & 0.000 \\
+carp & 0.911 & 1.057 & 3/6 & 2/6 & 0.890 & 1.230 \\
+maxrate & 2.100 & 1.512 & 6/6 & 6/6 & 35.820 & 31.820 \\
+safe8 & 0.384 & 0.276 & 1/6 & 0/6 & 0.180 & 0.000 \\
+prune\_safe & -- & 0.108 & 0/0 & 1/6 & 0.000 & 2.810 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\caption{Decode cost measured end to end (container $\rightarrow$ tensors), Peak is the decoder's peak resident memory. The last four rows are the encoder side on \texttt{bicycle}.}
+\label{tab:cost}
+\begin{tabular}{llrrrr}
+\toprule
+scene & spec & file & decode (s) & peak (GB) & PSNR \\
+\midrule
+bicycle & \texttt{gp6-6-6\_c8} & 76,598,203 B & 15.95 & 4.27 & 24.06 \\
+bicycle & \texttt{gp6-6-4\_c8} & 74,802,867 B & 15.76 & 4.27 & 23.95 \\
+stump & \texttt{gp6-6-6\_c8} & 62,649,653 B & 12.85 & 3.49 & 25.52 \\
+stump & \texttt{gp6-6-4\_c8} & 61,191,922 B & 12.72 & 3.49 & 25.41 \\
+bonsai & \texttt{gp6-6-6\_c8} & 15,297,685 B & 3.25 & 0.95 & 27.08 \\
+bonsai & \texttt{gp6-6-4\_c8} & 14,927,795 B & 3.22 & 0.95 & 26.97 \\
+\midrule
+\multicolumn{2}{l}{encode r=16 / 48 bit (one SVD + allocation + container)} & -- & 51.50 & -- & -- \\
+\multicolumn{2}{l}{decode r=16 / 48 bit} & -- & 9.16 & -- & -- \\
+\multicolumn{2}{l}{decode + PLY write} & -- & 15.90 & -- & -- \\
+\multicolumn{2}{l}{render, 25 held-out views} & -- & 10.60 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

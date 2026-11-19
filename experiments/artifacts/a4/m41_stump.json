@@ -1,0 +1,35 @@
+{
+ "spec": "gp6-6-6_c8_sh3",
+ "n": 4961797,
+ "build_seconds": 137.74,
+ "rows": [
+  {
+   "jobs": 1,
+   "seconds": 8.71,
+   "bytes": 62649653,
+   "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+   "rss_mb": 15299.0
+  },
+  {
+   "jobs": 2,
+   "seconds": 4.85,
+   "bytes": 62649653,
+   "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+   "rss_mb": 15299.0
+  },
+  {
+   "jobs": 4,
+   "seconds": 2.55,
+   "bytes": 62649653,
+   "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+   "rss_mb": 15299.0
+  },
+  {
+   "jobs": 8,
+   "seconds": 1.41,
+   "bytes": 62649653,
+   "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+   "rss_mb": 15299.0
+  }
+ ]
+}

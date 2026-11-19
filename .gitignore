@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.blg
+*.spl
+_gate_tmp/
+_gate_res/
+_gate_j6/
