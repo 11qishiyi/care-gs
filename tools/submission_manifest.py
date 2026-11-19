@@ -23,7 +23,7 @@ SLOTS: list[tuple[str, Path, bool, str]] = [
     ("Manuscript (bibliography)", SUB / "refs.bib", True, ""),
     ("Manuscript (PDF for review)", SUB / "main.pdf", True, "generated, not hand-edited"),
     ("Highlights", SUB / "highlights.txt", True, "5 bullets, all <= 85 characters"),
-    ("Cover letter", SUB / "COVER_LETTER.md", True, "upload as PDF if the system asks for one"),
+    ("Cover letter (PDF)", SUB / "cover_letter.pdf", True, "typeset form of COVER_LETTER.md"),
     ("Declaration of competing interest", SUB / "declaration_of_competing_interest.docx", True, ""),
     ("Graphical abstract", FIG / "graphical_abstract.pdf", False, "optional; Elsevier encourages it"),
 ]
