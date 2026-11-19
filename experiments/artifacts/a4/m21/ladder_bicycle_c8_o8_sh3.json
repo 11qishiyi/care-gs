@@ -1,0 +1,62 @@
+[
+ {
+  "file": "/workspace/res/m21/models/bicycle_c8_o8_sh3_p.gs1",
+  "step": "dc",
+  "planes": 0,
+  "frac": 0.4334674747742821,
+  "bytes": 75163723,
+  "damaged_bytes": 827815050,
+  "n": 6131954,
+  "decode_s": 4.675,
+  "decode_ply_s": 18.5,
+  "bpp": 12.258,
+  "sh_rest_abs_mean": 0.0,
+  "sh_rest_abs_max": 0.0,
+  "ply": "/workspace/res/m21/ply/bicycle_c8_o8_sh3_p_dc.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/bicycle_c8_o8_sh3_p.gs1",
+  "step": "p2",
+  "planes": 1,
+  "frac": 0.5771882086413668,
+  "bytes": 100083192,
+  "damaged_bytes": 551875860,
+  "n": 6131954,
+  "decode_s": 16.996,
+  "decode_ply_s": 20.567,
+  "bpp": 16.322,
+  "sh_rest_abs_mean": 0.06325304734219539,
+  "sh_rest_abs_max": 0.7937445640563965,
+  "ply": "/workspace/res/m21/ply/bicycle_c8_o8_sh3_p_p2.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/bicycle_c8_o8_sh3_p.gs1",
+  "step": "p1",
+  "planes": 2,
+  "frac": 0.7720187162987306,
+  "bytes": 133864489,
+  "damaged_bytes": 275937930,
+  "n": 6131954,
+  "decode_s": 23.501,
+  "decode_ply_s": 24.72,
+  "bpp": 21.831,
+  "sh_rest_abs_mean": 0.054429036886427265,
+  "sh_rest_abs_max": 0.8823529411764706,
+  "ply": "/workspace/res/m21/ply/bicycle_c8_o8_sh3_p_p1.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/bicycle_c8_o8_sh3_p.gs1",
+  "step": "p0",
+  "planes": 3,
+  "frac": 1.0,
+  "bytes": 173393737,
+  "damaged_bytes": 0,
+  "n": 6131954,
+  "decode_s": 27.333,
+  "decode_ply_s": 25.106,
+  "bpp": 28.277,
+  "sh_rest_abs_mean": 0.0468798435369642,
+  "sh_rest_abs_max": 0.8823529411764706,
+  "ply": "/workspace/res/m21/ply/bicycle_c8_o8_sh3_p_p0.ply"
+ }
+]

@@ -1,0 +1,5 @@
+control 1.0 0 76598203 auto   76.60 MB 24.06
+opacity 0.5 0 39501375 auto   39.50 MB 22.78
+volume 0.5 0 38756326 auto   38.76 MB 19.67
+area 0.5 0 38999009 auto   39.00 MB 22.14
+fisher 0.5 0 40166441 auto   40.17 MB 23.53

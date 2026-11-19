@@ -1,0 +1,6 @@
+enc_bicycle_f4m 137 s
+enc_bicycle_f256k 142 s
+enc_stump_f4m 112 s
+enc_stump_f256k 138 s
+enc_bonsai_f4m 27 s
+enc_bonsai_f256k 27 s

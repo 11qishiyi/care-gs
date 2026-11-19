@@ -1,0 +1,125 @@
+{
+ "specs": [
+  "sh16_g16",
+  "sh12_g16",
+  "sh8_g16",
+  "m16_o8_sh8",
+  "m16_o8_sh6"
+ ],
+ "level": 12,
+ "scenes": [
+  {
+   "n": 5258922,
+   "sh_degree": 3,
+   "rows": [
+    {
+     "spec": "sh16_g16",
+     "keep": 1.0,
+     "stored": 5258922,
+     "n": 5258922,
+     "model_bytes_per_prim": 120.0,
+     "packed_bytes_per_prim": 120.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 110.43614698982034,
+     "streams": {
+      "geo_means": 31553532,
+      "geo_scales": 31553532,
+      "geo_quats": 42071376,
+      "geo_opacities": 10517844,
+      "sh_dc": 31553532,
+      "sh_rest": 473302980,
+      "sh_scale": 10517844
+     }
+    },
+    {
+     "spec": "sh12_g16",
+     "keep": 1.0,
+     "stored": 5258922,
+     "n": 5258922,
+     "model_bytes_per_prim": 96.0,
+     "packed_bytes_per_prim": 96.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 88.52366093279193,
+     "streams": {
+      "geo_means": 31553532,
+      "geo_scales": 31553532,
+      "geo_quats": 42071376,
+      "geo_opacities": 10517844,
+      "sh_dc": 23665149,
+      "sh_rest": 354977235,
+      "sh_scale": 10517844
+     }
+    },
+    {
+     "spec": "sh8_g16",
+     "keep": 1.0,
+     "stored": 5258922,
+     "n": 5258922,
+     "model_bytes_per_prim": 72.0,
+     "packed_bytes_per_prim": 72.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 64.84871918617542,
+     "streams": {
+      "geo_means": 31553532,
+      "geo_scales": 31553532,
+      "geo_quats": 42071376,
+      "geo_opacities": 10517844,
+      "sh_dc": 15776766,
+      "sh_rest": 236651490,
+      "sh_scale": 10517844
+     }
+    },
+    {
+     "spec": "m16_o8_sh8",
+     "keep": 1.0,
+     "stored": 5258922,
+     "n": 5258922,
+     "model_bytes_per_prim": 64.0,
+     "packed_bytes_per_prim": 64.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 56.42164686983378,
+     "streams": {
+      "geo_means": 31553532,
+      "geo_scales": 15776766,
+      "geo_quats": 21035688,
+      "geo_opacities": 5258922,
+      "sh_dc": 15776766,
+      "sh_rest": 236651490,
+      "sh_scale": 10517844
+     }
+    },
+    {
+     "spec": "m16_o8_sh6",
+     "keep": 1.0,
+     "stored": 5258922,
+     "n": 5258922,
+     "model_bytes_per_prim": 52.0,
+     "packed_bytes_per_prim": 52.00000019015304,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 45.99903516348027,
+     "streams": {
+      "geo_means": 31553532,
+      "geo_scales": 15776766,
+      "geo_quats": 21035688,
+      "geo_opacities": 5258922,
+      "sh_dc": 11832575,
+      "sh_rest": 177488618,
+      "sh_scale": 10517844
+     }
+    }
+   ],
+   "scene": "bicycle"
+  }
+ ],
+ "criteria": {
+  "G1_model_is_upper_bound": {
+   "verdict": true,
+   "violations": []
+  },
+  "G2_no_rank_inversion": {
+   "verdict": true,
+   "inversions": []
+  }
+ },
+ "backend": "zstd"
+}

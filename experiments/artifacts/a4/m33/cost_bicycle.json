@@ -1,0 +1,79 @@
+[
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_control.gs1",
+  "decode_s": 11.27920937538147,
+  "peak_gb": 2.008576,
+  "lost_mb": 0.0,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0010.gs1",
+  "decode_s": 11.283137559890747,
+  "peak_gb": 2.080408,
+  "lost_mb": 4.194304,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0025.gs1",
+  "decode_s": 11.354018926620483,
+  "peak_gb": 2.08174,
+  "lost_mb": 4.194304,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0050.gs1",
+  "decode_s": 11.256035327911377,
+  "peak_gb": 2.084544,
+  "lost_mb": 4.194304,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0100.gs1",
+  "decode_s": 11.283593893051147,
+  "peak_gb": 2.080588,
+  "lost_mb": 4.194304,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0200.gs1",
+  "decode_s": 11.484625101089478,
+  "peak_gb": 2.080452,
+  "lost_mb": 8.388608,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_damage_0500.gs1",
+  "decode_s": 11.277980327606201,
+  "peak_gb": 2.080416,
+  "lost_mb": 12.582912,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_25.gs1",
+  "decode_s": 7.413941383361816,
+  "peak_gb": 1.999048,
+  "lost_mb": 95.048433,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_50.gs1",
+  "decode_s": 7.378756999969482,
+  "peak_gb": 1.999244,
+  "lost_mb": 75.119582,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_75.gs1",
+  "decode_s": 7.5430052280426025,
+  "peak_gb": 2.001404,
+  "lost_mb": 42.607818,
+  "n": 6131954
+ },
+ {
+  "file": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_90.gs1",
+  "decode_s": 11.197550296783447,
+  "peak_gb": 2.080688,
+  "lost_mb": 15.820208,
+  "n": 6131954
+ }
+]

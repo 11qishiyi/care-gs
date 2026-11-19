@@ -1,0 +1,84 @@
+{
+ "k": 4096,
+ "n": 6131954,
+ "bytes": 54606955,
+ "bytes_per_prim": 8.905310607352893,
+ "bits_index": 12,
+ "codebook_bytes": 65536,
+ "streams": {
+  "geo_hdr": {
+   "raw": 32,
+   "comp": 41
+  },
+  "cluster_hdr": {
+   "raw": 574872,
+   "comp": 533830
+  },
+  "cluster_off": {
+   "raw": 18395904,
+   "comp": 18210183
+  },
+  "sh_hdr": {
+   "raw": 4,
+   "comp": 13
+  },
+  "sh_scale": {
+   "raw": 6131954,
+   "comp": 4356093
+  },
+  "geo_vq_cb": {
+   "raw": 65536,
+   "comp": 60559
+  },
+  "geo_vq_idx": {
+   "raw": 9197931,
+   "comp": 9175001
+  },
+  "sh_dc": {
+   "raw": 18395862,
+   "comp": 3687323
+  },
+  "sh_basis": {
+   "raw": 2880,
+   "comp": 2722
+  },
+  "sh_basis_mean": {
+   "raw": 180,
+   "comp": 189
+  },
+  "sh_basis_comp": {
+   "raw": 64,
+   "comp": 73
+  },
+  "sh_coef_bits": {
+   "raw": 16,
+   "comp": 20
+  },
+  "sh_coef": {
+   "raw": 36791728,
+   "comp": 18578185
+  }
+ },
+ "distortion": {
+  "mse_total": 0.12481388449668884,
+  "rel_rmse": 0.08236046880483627,
+  "per_dim_mse": {
+   "log_sx": 0.16746917366981506,
+   "log_sy": 0.16739188134670258,
+   "log_sz": 0.16684964299201965,
+   "qw": 0.05564980208873749,
+   "qx": 0.09114129096269608,
+   "qy": 0.0998501181602478,
+   "qz": 0.09215759485960007,
+   "logit_a": 0.15800197422504425
+  }
+ },
+ "scalar_reference": {},
+ "spec": "gp6-6-6_c8_sh3",
+ "rank": 16,
+ "bits": 48,
+ "index_stats": {
+  "used": 4096,
+  "max_count": 3725
+ }
+}

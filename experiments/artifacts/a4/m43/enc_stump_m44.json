@@ -1,0 +1,14 @@
+{
+ "scene": "stump",
+ "variant": "m44",
+ "n": 4961797,
+ "spec": "gp6-6-6_c8_sh3",
+ "jobs": 4,
+ "load_s": 10.7,
+ "build_s": 82.6,
+ "write_s": 2.5,
+ "total_s": 95.9,
+ "bytes": 62649653,
+ "md5": "2a9ad2c1ccae0ebbf5afcb34264a77dd",
+ "peak_rss_gb": 7.83
+}

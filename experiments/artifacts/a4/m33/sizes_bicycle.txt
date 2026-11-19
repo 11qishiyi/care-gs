@@ -1,0 +1,2 @@
+-rw-r--r-- 1 root root 76559117 Nov 16 13:50 /workspace/res/m33/bicycle/gp6_6_6_c8_sh3_r16_b048_auto.gs1
+-rw-r--r-- 1 root root 76559118 Nov 16 13:52 /workspace/res/m33/bicycle/gp6_6_6_c8_sh3_r16_b048_legacy.gs1

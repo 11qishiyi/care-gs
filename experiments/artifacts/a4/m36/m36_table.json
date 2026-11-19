@@ -1,0 +1,54 @@
+{
+ "arms": {
+  "a": {
+   "bytes": 19272155,
+   "psnr": 21.07,
+   "seconds": 731,
+   "train_eval_psnr": 21.26
+  },
+  "b": {
+   "bytes": 17959298,
+   "psnr": 21.24,
+   "seconds": 812,
+   "lambda": 0.9319,
+   "grad_render": 0.01355,
+   "grad_rate": 0.0007272,
+   "train_eval_psnr": 21.09
+  },
+  "c": {
+   "bytes": 18381419,
+   "psnr": 21.19,
+   "seconds": 780,
+   "lambda": 0.2959,
+   "grad_render": 0.01355,
+   "grad_rate": 0.002291,
+   "train_eval_psnr": 21.23
+  },
+  "d": {
+   "bytes": 17482803,
+   "psnr": 21.09,
+   "seconds": 823,
+   "lambda": 2.796,
+   "grad_render": 0.01355,
+   "grad_rate": 0.0007272,
+   "train_eval_psnr": 20.47
+  }
+ },
+ "verdict": {
+  "b_vs_a": {
+   "byte_ratio": 0.9318780385483616,
+   "delta_db": 0.16999999999999815,
+   "time_ratio": 1.1108071135430917
+  },
+  "b_dominates_a": true,
+  "R1_bytes": false,
+  "R1_matched_psnr": false,
+  "c_vs_b": {
+   "byte_ratio": 1.0235043151463938,
+   "delta_db": 0.04999999999999716
+  },
+  "R2": false,
+  "R3": true,
+  "branch": "rate_pressure_does_not_pay"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "src": "/workspace/res/m33/stump/gp6_6_6_c8_sh3_r16_b048_auto.gs1",
+ "dst": "/workspace/res/m33/stump/dmg/stump_damage_0010.gs1",
+ "stream": null,
+ "flipped": 62589,
+ "span": 62588517,
+ "frac": 0.001,
+ "condition": "damage_0010",
+ "changed": {
+  "lost_bytes": 4194304,
+  "streams_with_lost_frames": [
+   "sh_coef"
+  ],
+  "means_changed_frac": 0.0,
+  "means_max_abs": 0.0,
+  "sh_dc_changed_frac": 0.0,
+  "sh_dc_max_abs": 0.0,
+  "sh_rest_changed_frac": 0.7927873711883013,
+  "sh_rest_max_abs": 0.4758579730987549,
+  "scales_changed_frac": 0.0,
+  "scales_max_abs": 0.0,
+  "opacities_changed_frac": 0.0,
+  "opacities_max_abs": 0.0,
+  "quats_changed_frac": 0.0,
+  "quats_max_abs": 0.0
+ },
+ "n": 4961797,
+ "bytes": 62591311
+}

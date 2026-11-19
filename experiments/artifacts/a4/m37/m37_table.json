@@ -1,0 +1,29 @@
+{
+ "arms": {
+  "a": {
+   "bytes": 76931227,
+   "psnr": 23.69,
+   "ssim": 0.7243767023086548,
+   "seconds": 1265,
+   "eval_cal": 25.27
+  },
+  "b": {
+   "bytes": 73124530,
+   "psnr": 23.81,
+   "ssim": 0.7330758023262024,
+   "seconds": 1577,
+   "lambda": 0.2358,
+   "eval_cal": 25.26
+  }
+ },
+ "verdict": {
+  "byte_ratio": 0.9505181816481362,
+  "delta_db": 0.11999999999999744,
+  "K1_smaller": false,
+  "K1_better": true,
+  "K2": true,
+  "K3": true,
+  "time_ratio": 1.2466403162055335,
+  "branch": "pressure_helps_near_lossless"
+ }
+}

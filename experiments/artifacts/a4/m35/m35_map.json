@@ -1,0 +1,193 @@
+{
+ "scenes": {
+  "bicycle": {
+   "meta": {
+    "prims": 6131954,
+    "views": 25,
+    "clean": 24.52,
+    "payload": 1447.1
+   },
+   "points": [
+    {
+     "spec": "gp6-6-6_c8_sh3",
+     "bytes": 76557737,
+     "seconds": 75,
+     "psnr": 24.06,
+     "dominated_by": "",
+     "MB": 76.557737,
+     "bytes_per_prim": 12.485047506879535,
+     "ratio": 18.902073868771748,
+     "delta_db": -0.46000000000000085
+    },
+    {
+     "spec": "gp5-5-5_c7_sh3",
+     "bytes": 69340529,
+     "seconds": 71,
+     "psnr": 23.8,
+     "dominated_by": "",
+     "MB": 69.340529,
+     "bytes_per_prim": 11.30806411789782,
+     "ratio": 20.869468705668513,
+     "delta_db": -0.7199999999999989
+    },
+    {
+     "spec": "gp6-6-6_c6_sh2",
+     "bytes": 69296016,
+     "seconds": 61,
+     "psnr": 22.82,
+     "dominated_by": "yes",
+     "MB": 69.296016,
+     "bytes_per_prim": 11.300804931021988,
+     "ratio": 20.882874420947953,
+     "delta_db": -1.6999999999999993
+    },
+    {
+     "spec": "gp5-5-5_c6_sh3",
+     "bytes": 66243751,
+     "seconds": 77,
+     "psnr": 23.6,
+     "dominated_by": "",
+     "MB": 66.243751,
+     "bytes_per_prim": 10.80304108608773,
+     "ratio": 21.845079394734153,
+     "delta_db": -0.9199999999999982
+    },
+    {
+     "spec": "gp4-4-4_c6_sh3",
+     "bytes": 57234231,
+     "seconds": 71,
+     "psnr": 22.53,
+     "dominated_by": "",
+     "MB": 57.234231,
+     "bytes_per_prim": 9.333767180901878,
+     "ratio": 25.283820097102378,
+     "delta_db": -1.9899999999999984
+    },
+    {
+     "spec": "gp4-4-4_c6_sh2",
+     "bytes": 55182999,
+     "seconds": 62,
+     "psnr": 21.82,
+     "dominated_by": "",
+     "MB": 55.182999,
+     "bytes_per_prim": 8.999251951335577,
+     "ratio": 26.22365631124905,
+     "delta_db": -2.6999999999999993
+    }
+   ],
+   "fit": {
+    "slope_db_per_bit": 4.210554936166615,
+    "intercept": -86.19601376924452,
+    "r2": 0.78068311826933,
+    "crossings_MB": {
+     "23.0": 64.1024867374286,
+     "24.0": 75.57340943204598
+    }
+   },
+   "notes": []
+  },
+  "stump": {
+   "meta": {
+    "prims": 4961797,
+    "views": 16,
+    "clean": 26.15,
+    "payload": 1170.98
+   },
+   "points": [
+    {
+     "spec": "gp6-6-6_c8_sh3",
+     "bytes": 62591315,
+     "seconds": 47,
+     "psnr": 25.52,
+     "dominated_by": "",
+     "MB": 62.591315,
+     "bytes_per_prim": 12.614646467801887,
+     "ratio": 18.708346357637637,
+     "delta_db": -0.629999999999999
+    },
+    {
+     "spec": "gp6-6-6_c6_sh2",
+     "bytes": 56772867,
+     "seconds": 46,
+     "psnr": 22.7,
+     "dominated_by": "yes",
+     "MB": 56.772867,
+     "bytes_per_prim": 11.441997123219672,
+     "ratio": 20.625697835552323,
+     "delta_db": -3.4499999999999993
+    },
+    {
+     "spec": "gp5-5-5_c7_sh3",
+     "bytes": 56715739,
+     "seconds": 47,
+     "psnr": 25.3,
+     "dominated_by": "",
+     "MB": 56.715739,
+     "bytes_per_prim": 11.430483552632241,
+     "ratio": 20.646473459510066,
+     "delta_db": -0.8499999999999979
+    },
+    {
+     "spec": "gp5-5-5_c6_sh3",
+     "bytes": 54405989,
+     "seconds": 46,
+     "psnr": 25.04,
+     "dominated_by": "",
+     "MB": 54.405989,
+     "bytes_per_prim": 10.964976801751462,
+     "ratio": 21.522998139046788,
+     "delta_db": -1.1099999999999994
+    },
+    {
+     "spec": "gp4-4-4_c6_sh3",
+     "bytes": 47464139,
+     "seconds": 45,
+     "psnr": 24.42,
+     "dominated_by": "",
+     "MB": 47.464139,
+     "bytes_per_prim": 9.56591714654993,
+     "ratio": 24.670836228589337,
+     "delta_db": -1.7299999999999969
+    },
+    {
+     "spec": "gp4-4-4_c6_sh2",
+     "bytes": 45747200,
+     "seconds": 47,
+     "psnr": 22.32,
+     "dominated_by": "",
+     "MB": 45.7472,
+     "bytes_per_prim": 9.21988545682139,
+     "ratio": 25.596757834359263,
+     "delta_db": -3.8299999999999983
+    }
+   ],
+   "fit": {
+    "slope_db_per_bit": 4.553964513317881,
+    "intercept": -92.71409880921686,
+    "r2": 0.32135718333951346,
+    "crossings_MB": {
+     "23.0": 44.568781885693795,
+     "24.0": 51.89596670259292
+    }
+   },
+   "notes": []
+  }
+ },
+ "sota": [
+  {
+   "name": "HAC",
+   "MB": 27.54,
+   "psnr": 25.05
+  },
+  {
+   "name": "PCGS",
+   "MB": 19.09,
+   "psnr": 25.12
+  },
+  {
+   "name": "3DGS (published model, no compression)",
+   "MB": 1447.1,
+   "psnr": 24.52
+  }
+ ]
+}

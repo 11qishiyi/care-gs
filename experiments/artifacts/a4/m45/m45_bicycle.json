@@ -1,0 +1,18 @@
+{
+ "ply": "bicycle.ply",
+ "n": 6131954,
+ "load_s": 21.1,
+ "old_encodes_s": 35.1,
+ "geo_once_s": 8.9,
+ "sh_three_s": 17.4,
+ "new_phase_s": 26.3,
+ "phase_ratio": 0.75,
+ "geo_streams_identical": true,
+ "sh_streams_identical": true,
+ "layout_chosen": "bytes",
+ "per_prim_old": 58.5938,
+ "per_prim_new": 58.5938,
+ "build_s": 78.3,
+ "write_s": 2.2,
+ "bytes": 76598203
+}

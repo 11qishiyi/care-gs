@@ -1,0 +1,28 @@
+{
+ "src": "/workspace/res/m33/bicycle/gp6_6_6_c8_sh3_r16_b048_auto.gs1",
+ "dst": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_90.gs1",
+ "frac": 0.9,
+ "bytes": 68903504,
+ "payload": 68900520,
+ "payload_total": 76556133,
+ "condition": "trunc_90",
+ "changed": {
+  "lost_bytes": 15820208,
+  "streams_with_lost_frames": [
+   "sh_coef"
+  ],
+  "means_changed_frac": 0.0,
+  "means_max_abs": 0.0,
+  "sh_dc_changed_frac": 0.0,
+  "sh_dc_max_abs": 0.0,
+  "sh_rest_changed_frac": 0.9959918159855733,
+  "sh_rest_max_abs": 0.4841948449611664,
+  "scales_changed_frac": 0.0,
+  "scales_max_abs": 0.0,
+  "opacities_changed_frac": 0.0,
+  "opacities_max_abs": 0.0,
+  "quats_changed_frac": 0.0,
+  "quats_max_abs": 0.0
+ },
+ "n": 6131954
+}

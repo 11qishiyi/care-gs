@@ -1,0 +1,18 @@
+{
+ "ply": "bonsai.ply",
+ "n": 1244819,
+ "load_s": 4.5,
+ "old_encodes_s": 5.9,
+ "geo_once_s": 1.3,
+ "sh_three_s": 3.4,
+ "new_phase_s": 4.6,
+ "phase_ratio": 0.782,
+ "geo_streams_identical": true,
+ "sh_streams_identical": true,
+ "layout_chosen": "bytes",
+ "per_prim_old": 58.5938,
+ "per_prim_new": 58.5938,
+ "build_s": 14.2,
+ "write_s": 0.5,
+ "bytes": 15297685
+}

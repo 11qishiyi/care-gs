@@ -1,0 +1,146 @@
+[
+ {
+  "frac": 0.001,
+  "seed": 0,
+  "lost_bytes": 524288,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.001,
+  "seed": 1,
+  "lost_bytes": 262144,
+  "streams": [
+   "geo_opacities"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.001,
+  "seed": 2,
+  "lost_bytes": 524288,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.01,
+  "seed": 0,
+  "lost_bytes": 1572864,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.01,
+  "seed": 1,
+  "lost_bytes": 1048576,
+  "streams": [
+   "geo_opacities"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.01,
+  "seed": 2,
+  "lost_bytes": 1572864,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f262144_auto.gs1",
+  "file_bytes": 76598203
+ },
+ {
+  "frac": 0.001,
+  "seed": 0,
+  "lost_bytes": 4194304,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ },
+ {
+  "frac": 0.001,
+  "seed": 1,
+  "lost_bytes": 4194304,
+  "streams": [
+   "geo_opacities"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ },
+ {
+  "frac": 0.001,
+  "seed": 2,
+  "lost_bytes": 4194304,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ },
+ {
+  "frac": 0.01,
+  "seed": 0,
+  "lost_bytes": 4194304,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ },
+ {
+  "frac": 0.01,
+  "seed": 1,
+  "lost_bytes": 4194304,
+  "streams": [
+   "geo_opacities"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ },
+ {
+  "frac": 0.01,
+  "seed": 2,
+  "lost_bytes": 8388608,
+  "streams": [
+   "sh_coef"
+  ],
+  "decoded": true,
+  "note": "",
+  "path": "gp6_6_6_c8_sh3_r16_b048_f4194304_auto.gs1",
+  "file_bytes": 76557737
+ }
+]

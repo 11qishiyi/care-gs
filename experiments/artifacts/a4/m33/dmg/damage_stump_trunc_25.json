@@ -1,0 +1,38 @@
+{
+ "src": "/workspace/res/m33/stump/gp6_6_6_c8_sh3_r16_b048_auto.gs1",
+ "dst": "/workspace/res/m33/stump/dmg/stump_trunc_25.gs1",
+ "frac": 0.25,
+ "bytes": 15649923,
+ "payload": 15647129,
+ "payload_total": 62588517,
+ "condition": "trunc_25",
+ "changed": {
+  "lost_bytes": 76911000,
+  "streams_with_lost_frames": [
+   "sh_scale",
+   "geo_scales",
+   "geo_opacities",
+   "geo_quat_which",
+   "geo_quat_abc",
+   "sh_dc",
+   "sh_basis",
+   "sh_basis_mean",
+   "sh_basis_comp",
+   "sh_coef_bits",
+   "sh_coef"
+  ],
+  "means_changed_frac": 0.0,
+  "means_max_abs": 0.0,
+  "sh_dc_changed_frac": 0.9999941553433161,
+  "sh_dc_max_abs": 9.44322395324707,
+  "sh_rest_changed_frac": 1.0,
+  "sh_rest_max_abs": 0.8988263010978699,
+  "scales_changed_frac": 1.0,
+  "scales_max_abs": 9.822835922241211,
+  "opacities_changed_frac": 0.9999987907606861,
+  "opacities_max_abs": 0.9992682933807373,
+  "quats_changed_frac": 1.0,
+  "quats_max_abs": 1.5771613121032715
+ },
+ "n": 4961797
+}

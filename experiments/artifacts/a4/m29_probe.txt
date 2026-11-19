@@ -1,0 +1,10 @@
+
+          stream dims bits  zstd MB  B/prim  b/code     H0     H1  H(pos)  pos MB  H(scl)  scl MB
+     cluster_off    3   10   22.995   3.750   10.00   9.99   9.90    9.99  22.995     nan   0.000
+      geo_scales    3    8   15.337   2.501    6.67   6.82   6.78    6.82  15.534     nan   0.000
+  geo_quat_which    1    2    0.631   0.103    0.82   0.95   0.77    0.95   0.636    0.95   0.647
+    geo_quat_abc    3    8   18.109   2.953    7.88   7.76   7.75    7.76  18.189    7.76  18.067
+   geo_opacities    1    8    5.492   0.896    7.17   7.18   6.96    7.18   5.530    7.14   5.489
+
+attribute streams now 62.56 MB, best practical 62.52 MB (0.1 % saved)
+whole file 89.72 MB -> projected 89.68 MB (6131.95 B/prim now)

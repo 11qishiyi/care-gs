@@ -1,0 +1,125 @@
+{
+ "specs": [
+  "sh16_g16",
+  "sh12_g16",
+  "sh8_g16",
+  "m16_o8_sh8",
+  "m16_o8_sh6"
+ ],
+ "level": 12,
+ "scenes": [
+  {
+   "n": 3127149,
+   "sh_degree": 3,
+   "rows": [
+    {
+     "spec": "sh16_g16",
+     "keep": 1.0,
+     "stored": 3127149,
+     "n": 3127149,
+     "model_bytes_per_prim": 120.0,
+     "packed_bytes_per_prim": 120.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 112.89593972017323,
+     "streams": {
+      "geo_means": 18762894,
+      "geo_scales": 18762894,
+      "geo_quats": 25017192,
+      "geo_opacities": 6254298,
+      "sh_dc": 18762894,
+      "sh_rest": 281443410,
+      "sh_scale": 6254298
+     }
+    },
+    {
+     "spec": "sh12_g16",
+     "keep": 1.0,
+     "stored": 3127149,
+     "n": 3127149,
+     "model_bytes_per_prim": 96.0,
+     "packed_bytes_per_prim": 96.0000003197801,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 90.486573553099,
+     "streams": {
+      "geo_means": 18762894,
+      "geo_scales": 18762894,
+      "geo_quats": 25017192,
+      "geo_opacities": 6254298,
+      "sh_dc": 14072171,
+      "sh_rest": 211082558,
+      "sh_scale": 6254298
+     }
+    },
+    {
+     "spec": "sh8_g16",
+     "keep": 1.0,
+     "stored": 3127149,
+     "n": 3127149,
+     "model_bytes_per_prim": 72.0,
+     "packed_bytes_per_prim": 72.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 65.61713528840487,
+     "streams": {
+      "geo_means": 18762894,
+      "geo_scales": 18762894,
+      "geo_quats": 25017192,
+      "geo_opacities": 6254298,
+      "sh_dc": 9381447,
+      "sh_rest": 140721705,
+      "sh_scale": 6254298
+     }
+    },
+    {
+     "spec": "m16_o8_sh8",
+     "keep": 1.0,
+     "stored": 3127149,
+     "n": 3127149,
+     "model_bytes_per_prim": 64.0,
+     "packed_bytes_per_prim": 64.0,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 57.26106622997497,
+     "streams": {
+      "geo_means": 18762894,
+      "geo_scales": 9381447,
+      "geo_quats": 12508596,
+      "geo_opacities": 3127149,
+      "sh_dc": 9381447,
+      "sh_rest": 140721705,
+      "sh_scale": 6254298
+     }
+    },
+    {
+     "spec": "m16_o8_sh6",
+     "keep": 1.0,
+     "stored": 3127149,
+     "n": 3127149,
+     "model_bytes_per_prim": 52.0,
+     "packed_bytes_per_prim": 52.00000031978009,
+     "zstd_bytes_per_prim": null,
+     "zstd_morton_bytes_per_prim": 47.103570696503425,
+     "streams": {
+      "geo_means": 18762894,
+      "geo_scales": 9381447,
+      "geo_quats": 12508596,
+      "geo_opacities": 3127149,
+      "sh_dc": 7036086,
+      "sh_rest": 105541279,
+      "sh_scale": 6254298
+     }
+    }
+   ],
+   "scene": "flowers"
+  }
+ ],
+ "criteria": {
+  "G1_model_is_upper_bound": {
+   "verdict": true,
+   "violations": []
+  },
+  "G2_no_rank_inversion": {
+   "verdict": true,
+   "inversions": []
+  }
+ },
+ "backend": "zstd"
+}

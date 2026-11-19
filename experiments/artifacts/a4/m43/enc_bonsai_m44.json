@@ -1,0 +1,14 @@
+{
+ "scene": "bonsai",
+ "variant": "m44",
+ "n": 1244819,
+ "spec": "gp6-6-6_c8_sh3",
+ "jobs": 4,
+ "load_s": 2.7,
+ "build_s": 19.0,
+ "write_s": 0.7,
+ "total_s": 22.4,
+ "bytes": 15297685,
+ "md5": "cae84e9421e4b7e95ae8b125c55f89c0",
+ "peak_rss_gb": 2.27
+}

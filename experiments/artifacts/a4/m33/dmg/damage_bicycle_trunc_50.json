@@ -1,0 +1,36 @@
+{
+ "src": "/workspace/res/m33/bicycle/gp6_6_6_c8_sh3_r16_b048_auto.gs1",
+ "dst": "/workspace/res/m33/bicycle/dmg/bicycle_trunc_50.gs1",
+ "frac": 0.5,
+ "bytes": 38281050,
+ "payload": 38278066,
+ "payload_total": 76556133,
+ "condition": "trunc_50",
+ "changed": {
+  "lost_bytes": 75119582,
+  "streams_with_lost_frames": [
+   "geo_opacities",
+   "geo_quat_which",
+   "geo_quat_abc",
+   "sh_dc",
+   "sh_basis",
+   "sh_basis_mean",
+   "sh_basis_comp",
+   "sh_coef_bits",
+   "sh_coef"
+  ],
+  "means_changed_frac": 0.0,
+  "means_max_abs": 0.0,
+  "sh_dc_changed_frac": 0.9999430850264043,
+  "sh_dc_max_abs": 9.599822044372559,
+  "sh_rest_changed_frac": 1.0,
+  "sh_rest_max_abs": 0.7682255506515503,
+  "scales_changed_frac": 0.0,
+  "scales_max_abs": 0.0,
+  "opacities_changed_frac": 0.9999892367098644,
+  "opacities_max_abs": 0.9992098212242126,
+  "quats_changed_frac": 1.0,
+  "quats_max_abs": 1.5771613121032715
+ },
+ "n": 6131954
+}

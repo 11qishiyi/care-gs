@@ -1,0 +1,2 @@
+-rw-r--r-- 1 root root 15302335 Nov 16 14:24 /workspace/res/m33/bonsai/gp6_6_6_c8_sh3_r16_b048_auto.gs1
+-rw-r--r-- 1 root root 15302336 Nov 16 14:25 /workspace/res/m33/bonsai/gp6_6_6_c8_sh3_r16_b048_legacy.gs1
