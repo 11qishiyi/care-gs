@@ -1,0 +1,6 @@
+bicycle f4m /workspace/res/m40/bicycle/f4m/gp6_6_6_c8_sh3_r16_b048_m40bicyclef4m_auto.gs1 76557737
+bicycle f256k /workspace/res/m40/bicycle/f256k/gp6_6_6_c8_sh3_r16_b048_m40bicyclef256k_auto.gs1 76598203
+stump f4m /workspace/res/m40/stump/f4m/gp6_6_6_c8_sh3_r16_b048_m40stumpf4m_auto.gs1 62591315
+stump f256k /workspace/res/m40/stump/f256k/gp6_6_6_c8_sh3_r16_b048_m40stumpf256k_auto.gs1 62649653
+bonsai f4m /workspace/res/m40/bonsai/f4m/gp6_6_6_c8_sh3_r16_b048_m40bonsaif4m_auto.gs1 15302360
+bonsai f256k /workspace/res/m40/bonsai/f256k/gp6_6_6_c8_sh3_r16_b048_m40bonsaif256k_auto.gs1 15297685

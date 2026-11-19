@@ -1,0 +1,52 @@
+[
+ {
+  "plan": "r16_b48",
+  "rank": 16,
+  "bits": 48,
+  "colour_bytes": 7.0,
+  "bits_used": 48,
+  "rel_rmse": 0.4810221699345896,
+  "rel_rmse_full": 0.506485729350428,
+  "mean_abs": 0.0486825117614551
+ },
+ {
+  "plan": "r24_b48",
+  "rank": 24,
+  "bits": 48,
+  "colour_bytes": 7.0,
+  "bits_used": 48,
+  "rel_rmse": 0.8668536743296456,
+  "rel_rmse_full": 0.8687365496805031,
+  "mean_abs": 0.07484567266826314
+ },
+ {
+  "plan": "r32_b48",
+  "rank": 32,
+  "bits": 48,
+  "colour_bytes": 7.0,
+  "bits_used": 48,
+  "rel_rmse": 1.1957907801075887,
+  "rel_rmse_full": 1.1948901359871937,
+  "mean_abs": 0.08693061187273124
+ },
+ {
+  "plan": "r8_b48",
+  "rank": 8,
+  "bits": 48,
+  "colour_bytes": 7.0,
+  "bits_used": 48,
+  "rel_rmse": 0.06553112688410745,
+  "rel_rmse_full": 0.5481905915692405,
+  "mean_abs": 0.006996895579127978
+ },
+ {
+  "plan": "r16_b64",
+  "rank": 16,
+  "bits": 64,
+  "colour_bytes": 9.0,
+  "bits_used": 64,
+  "rel_rmse": 0.2270218652702016,
+  "rel_rmse_full": 0.28734656788002044,
+  "mean_abs": 0.0224238887330446
+ }
+]

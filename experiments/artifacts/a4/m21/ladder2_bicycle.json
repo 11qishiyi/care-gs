@@ -1,0 +1,32 @@
+[
+ {
+  "file": "/workspace/res/m21/models/bicycle_c10_o8_sh3.gs1",
+  "step": "dc",
+  "planes": 0,
+  "frac": 0.553069235719342,
+  "bytes": 79947437,
+  "damaged_bytes": 275937930,
+  "n": 6131954,
+  "decode_s": 30.171,
+  "decode_ply_s": 45.394,
+  "bpp": 13.038,
+  "sh_rest_abs_mean": 0.0,
+  "sh_rest_abs_max": 0.0,
+  "ply": "/workspace/res/m21/ply2/bicycle_c10_o8_sh3_dc.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/bicycle_c10_o8_sh3.gs1",
+  "step": "full",
+  "planes": 3,
+  "frac": 1.0,
+  "bytes": 144549186,
+  "damaged_bytes": 0,
+  "n": 6131954,
+  "decode_s": 33.584,
+  "decode_ply_s": 47.888,
+  "bpp": 23.573,
+  "sh_rest_abs_mean": 0.0468798435369642,
+  "sh_rest_abs_max": 0.8823529411764706,
+  "ply": "/workspace/res/m21/ply2/bicycle_c10_o8_sh3_full.ply"
+ }
+]

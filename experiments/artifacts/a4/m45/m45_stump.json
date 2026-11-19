@@ -1,0 +1,18 @@
+{
+ "ply": "stump.ply",
+ "n": 4961797,
+ "load_s": 15.8,
+ "old_encodes_s": 28.0,
+ "geo_once_s": 7.2,
+ "sh_three_s": 14.0,
+ "new_phase_s": 21.2,
+ "phase_ratio": 0.755,
+ "geo_streams_identical": true,
+ "sh_streams_identical": true,
+ "layout_chosen": "bytes",
+ "per_prim_old": 58.5938,
+ "per_prim_new": 58.5938,
+ "build_s": 62.9,
+ "write_s": 1.8,
+ "bytes": 62649653
+}

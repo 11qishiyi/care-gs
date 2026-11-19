@@ -1,0 +1,62 @@
+[
+ {
+  "file": "/workspace/res/m21/models/stump_c8_o8_sh3_p.gs1",
+  "step": "dc",
+  "planes": 0,
+  "frac": 0.43083127423073686,
+  "bytes": 61642238,
+  "damaged_bytes": 669843855,
+  "n": 4961797,
+  "decode_s": 12.861,
+  "decode_ply_s": 25.527,
+  "bpp": 12.423,
+  "sh_rest_abs_mean": 0.0,
+  "sh_rest_abs_max": 0.0,
+  "ply": "/workspace/res/m21/ply/stump_c8_o8_sh3_p_dc.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/stump_c8_o8_sh3_p.gs1",
+  "step": "p2",
+  "planes": 1,
+  "frac": 0.5815761701254383,
+  "bytes": 83208702,
+  "damaged_bytes": 446561730,
+  "n": 4961797,
+  "decode_s": 22.258,
+  "decode_ply_s": 30.344,
+  "bpp": 16.77,
+  "sh_rest_abs_mean": 0.04523122032559425,
+  "sh_rest_abs_max": 0.7733030319213867,
+  "ply": "/workspace/res/m21/ply/stump_c8_o8_sh3_p_p2.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/stump_c8_o8_sh3_p.gs1",
+  "step": "p1",
+  "planes": 2,
+  "frac": 0.779762328517478,
+  "bytes": 111562396,
+  "damaged_bytes": 223280865,
+  "n": 4961797,
+  "decode_s": 23.241,
+  "decode_ply_s": 35.965,
+  "bpp": 22.484,
+  "sh_rest_abs_mean": 0.04279858141534542,
+  "sh_rest_abs_max": 0.9529411764705882,
+  "ply": "/workspace/res/m21/ply/stump_c8_o8_sh3_p_p1.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/stump_c8_o8_sh3_p.gs1",
+  "step": "p0",
+  "planes": 3,
+  "frac": 1.0,
+  "bytes": 143070911,
+  "damaged_bytes": 0,
+  "n": 4961797,
+  "decode_s": 28.528,
+  "decode_ply_s": 34.539,
+  "bpp": 28.834,
+  "sh_rest_abs_mean": 0.041224463347067995,
+  "sh_rest_abs_max": 1.0823529411764705,
+  "ply": "/workspace/res/m21/ply/stump_c8_o8_sh3_p_p0.ply"
+ }
+]

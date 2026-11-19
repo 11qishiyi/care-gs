@@ -1,0 +1,23 @@
+{
+ "cache": "/mnt/m35cache",
+ "files": [
+  {
+   "scene": "bicycle",
+   "present": true,
+   "bytes": 1520726124,
+   "sha256": "64d357cb25bd85f710f8551a18d830f8497277fbd8c5805adfd72ffe9ca78227"
+  },
+  {
+   "scene": "stump",
+   "present": true,
+   "bytes": 1230527188,
+   "sha256": "e9186b7ab8764680d88fee193efda0a1db437c5ebe437a889284d3163c2f8389"
+  },
+  {
+   "scene": "bonsai",
+   "present": true,
+   "bytes": 308716644,
+   "sha256": "a16af6d8815498ffbf9eb5d5ee93f5bcc9dca34c4e3eb6f7a796ef9e97c0d273"
+  }
+ ]
+}

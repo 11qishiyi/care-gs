@@ -1,0 +1,2 @@
+-rw-r--r-- 1 root root 62591311 Nov 16 14:09 /workspace/res/m33/stump/gp6_6_6_c8_sh3_r16_b048_auto.gs1
+-rw-r--r-- 1 root root 62591312 Nov 16 14:10 /workspace/res/m33/stump/gp6_6_6_c8_sh3_r16_b048_legacy.gs1

@@ -1,0 +1,4 @@
+bicycle    1520.73 MB  64d357cb25bd85f7
+stump      1230.53 MB  e9186b7ab8764680
+bonsai      308.72 MB  a16af6d8815498ff
+wrote /workspace/res/m35/m35_cache.json

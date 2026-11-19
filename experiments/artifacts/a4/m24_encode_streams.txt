@@ -1,0 +1,22 @@
+=== gp8_6_6_c9_sh3_r16_b048 ===
+  sh_dc            bits=  6.90->  3.76 MB  bytes= 18.40->  3.69 MB   keep bytes
+  sh_rest          bits=103.48-> 70.45 MB  bytes=275.94-> 64.64 MB   keep bytes
+  sh_scale         bits= 12.26->  8.19 MB  bytes= 12.26->  8.19 MB   keep bits
+  sh_hdr           bits=  0.00->  0.00 MB  bytes=  0.00->  0.00 MB   keep bits
+  stream            legacy raw/comp      auto raw/comp
+  cluster_off        20.70/  20.70     20.70/  20.70
+  sh_coef            36.79/  18.58     36.79/  18.58
+  geo_quat_abc       18.40/  18.11     18.40/  18.11
+  geo_scales         13.80/  12.50     13.80/  12.50
+  sh_scale            6.13/   4.36      6.13/   4.36
+  geo_opacities       4.60/   4.31      4.60/   4.31
+  sh_dc              18.40/   3.69     18.40/   3.69
+  geo_quat_which      1.53/   0.63      1.53/   0.63
+  cluster_hdr         0.57/   0.53      0.57/   0.53
+  sh_basis            0.00/   0.00      0.00/   0.00
+  sh_basis_mean       0.00/   0.00      0.00/   0.00
+  sh_basis_comp       0.00/   0.00      0.00/   0.00
+  geo_hdr             0.00/   0.00      0.00/   0.00
+  sh_coef_bits        0.00/   0.00      0.00/   0.00
+  sh_hdr              0.00/   0.00      0.00/   0.00
+  auto   83.41 MB   legacy   83.41 MB   saved  0.00 MB   13.60 B/prim

@@ -1,0 +1,3 @@
+There are no index cache(s) to remove.
+There are no index cache(s) to remove.
+-rw-r--r-- 1 root root 15297691 Nov 16 18:38 /workspace/res/m34/bonsai/gp6_6_6_c8_sh3_r16_b048_f0256k_auto.gs1

@@ -1,0 +1,29 @@
+{
+ "bicycle": {
+  "peak_m42": 11.66,
+  "peak_m43": 11.65,
+  "peak_ratio": 0.999,
+  "build_m42": 135.8,
+  "build_m43": 126.9,
+  "build_ratio": 0.934,
+  "same_md5": true
+ },
+ "stump": {
+  "peak_m42": 9.52,
+  "peak_m43": 9.49,
+  "peak_ratio": 0.997,
+  "build_m42": 156.3,
+  "build_m43": 89.9,
+  "build_ratio": 0.575,
+  "same_md5": true
+ },
+ "bonsai": {
+  "peak_m42": 2.92,
+  "peak_m43": 2.7,
+  "peak_ratio": 0.925,
+  "build_m42": 19.9,
+  "build_m43": 18.8,
+  "build_ratio": 0.945,
+  "same_md5": true
+ }
+}

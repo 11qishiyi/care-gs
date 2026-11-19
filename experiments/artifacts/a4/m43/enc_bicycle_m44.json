@@ -1,0 +1,14 @@
+{
+ "scene": "bicycle",
+ "variant": "m44",
+ "n": 6131954,
+ "spec": "gp6-6-6_c8_sh3",
+ "jobs": 4,
+ "load_s": 13.3,
+ "build_s": 108.9,
+ "write_s": 3.0,
+ "total_s": 125.2,
+ "bytes": 76598203,
+ "md5": "151dd603497c5186390467b4cbe28c2d",
+ "peak_rss_gb": 9.6
+}

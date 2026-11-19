@@ -1,0 +1,97 @@
+{
+ "ply": "/mnt/m35cache/bicycle.ply",
+ "spec": "gp6-6-6_c8_sh3",
+ "rows": [
+  {
+   "stage": "start",
+   "cur_mb": 379.6,
+   "peak_mb": 379.6,
+   "t": 0.0,
+   "note": ""
+  },
+  {
+   "stage": "load_model",
+   "cur_mb": 1760.8,
+   "peak_mb": 4263.2,
+   "t": 13.1,
+   "note": "n=6,131,954"
+  },
+  {
+   "stage": "attribute_arrays",
+   "cur_mb": 4521.9,
+   "peak_mb": 4755.8,
+   "t": 17.2,
+   "note": "rest=2.21 GB float64"
+  },
+  {
+   "stage": "morton_order",
+   "cur_mb": 4592.6,
+   "peak_mb": 4943.6,
+   "t": 23.9,
+   "note": ""
+  },
+  {
+   "stage": "encode_layout[bits]",
+   "cur_mb": 4784.9,
+   "peak_mb": 11758.1,
+   "t": 77.1,
+   "note": "175 MB streams"
+  },
+  {
+   "stage": "encode_layout[bytes]",
+   "cur_mb": 5148.8,
+   "peak_mb": 11932.3,
+   "t": 121.7,
+   "note": "359 MB streams"
+  },
+  {
+   "stage": "alphabet_choice",
+   "cur_mb": 5149.6,
+   "peak_mb": 11932.3,
+   "t": 157.9,
+   "note": "{'sh_dc': 'bytes', 'sh_rest': 'bytes', 'sh_scale': 'bits', 'sh_hdr': 'bits'}"
+  },
+  {
+   "stage": "rest_matrix",
+   "cur_mb": 6202.2,
+   "peak_mb": 11932.3,
+   "t": 162.7,
+   "note": "1.10 GB"
+  },
+  {
+   "stage": "basis_fit",
+   "cur_mb": 6612.7,
+   "peak_mb": 11932.3,
+   "t": 185.7,
+   "note": "basis=(16, 45)"
+  },
+  {
+   "stage": "quantise_alloc",
+   "cur_mb": 7045.6,
+   "peak_mb": 11932.3,
+   "t": 191.1,
+   "note": "codes 98.1 MB"
+  },
+  {
+   "stage": "pack_codes",
+   "cur_mb": 7101.9,
+   "peak_mb": 11932.3,
+   "t": 194.2,
+   "note": ""
+  },
+  {
+   "stage": "write_container",
+   "cur_mb": 7235.7,
+   "peak_mb": 11932.3,
+   "t": 197.6,
+   "note": "80,493,101 B"
+  },
+  {
+   "stage": "after_free",
+   "cur_mb": 5225.5,
+   "peak_mb": 11932.3,
+   "t": 197.7,
+   "note": ""
+  }
+ ]
+}

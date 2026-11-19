@@ -1,0 +1,15 @@
+ARM_A_f4
+[eval] PSNR train=18.35 cal=20.79
+[eval] PSNR train=19.06 cal=21.21
+[eval] PSNR train=19.10 cal=21.34
+[eval] PSNR train=19.14 cal=21.39
+[eval] PSNR train=19.15 cal=21.42
+DONE /workspace/res/m26/ft_f4_freeze/point_cloud.ply n=1532988 731s
+ARM_B_f2
+[eval] PSNR train=15.76 cal=20.70
+[eval] PSNR train=15.01 cal=21.12
+[eval] PSNR train=14.46 cal=21.26
+[eval] PSNR train=14.35 cal=21.31
+[eval] PSNR train=14.26 cal=21.33
+DONE /workspace/res/m26/ft_f2_freeze/point_cloud.ply n=1532988 2276s
+PRUNE

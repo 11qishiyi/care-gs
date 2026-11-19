@@ -1,0 +1,33 @@
+{
+ "src": "/workspace/res/m33/stump/gp6_6_6_c8_sh3_r16_b048_auto.gs1",
+ "dst": "/workspace/res/m33/stump/dmg/stump_trunc_75.gs1",
+ "frac": 0.75,
+ "bytes": 46944182,
+ "payload": 46941388,
+ "payload_total": 62588517,
+ "condition": "trunc_75",
+ "changed": {
+  "lost_bytes": 32076405,
+  "streams_with_lost_frames": [
+   "sh_dc",
+   "sh_basis",
+   "sh_basis_mean",
+   "sh_basis_comp",
+   "sh_coef_bits",
+   "sh_coef"
+  ],
+  "means_changed_frac": 0.0,
+  "means_max_abs": 0.0,
+  "sh_dc_changed_frac": 0.15467964529786285,
+  "sh_dc_max_abs": 6.9990949630737305,
+  "sh_rest_changed_frac": 1.0,
+  "sh_rest_max_abs": 0.8988263010978699,
+  "scales_changed_frac": 0.0,
+  "scales_max_abs": 0.0,
+  "opacities_changed_frac": 0.0,
+  "opacities_max_abs": 0.0,
+  "quats_changed_frac": 0.0,
+  "quats_max_abs": 0.0
+ },
+ "n": 4961797
+}

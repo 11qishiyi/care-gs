@@ -1,0 +1,32 @@
+[
+ {
+  "file": "/workspace/res/m21/models/stump_c10_o8_sh3.gs1",
+  "step": "dc",
+  "planes": 0,
+  "frac": 0.5503944709952281,
+  "bytes": 65432579,
+  "damaged_bytes": 223280865,
+  "n": 4961797,
+  "decode_s": 24.292,
+  "decode_ply_s": 36.687,
+  "bpp": 13.187,
+  "sh_rest_abs_mean": 0.0,
+  "sh_rest_abs_max": 0.0,
+  "ply": "/workspace/res/m21/ply2/stump_c10_o8_sh3_dc.ply"
+ },
+ {
+  "file": "/workspace/res/m21/models/stump_c10_o8_sh3.gs1",
+  "step": "full",
+  "planes": 3,
+  "frac": 1.0,
+  "bytes": 118880246,
+  "damaged_bytes": 0,
+  "n": 4961797,
+  "decode_s": 26.523,
+  "decode_ply_s": 36.321,
+  "bpp": 23.959,
+  "sh_rest_abs_mean": 0.041224463347067995,
+  "sh_rest_abs_max": 1.0823529411764705,
+  "ply": "/workspace/res/m21/ply2/stump_c10_o8_sh3_full.ply"
+ }
+]

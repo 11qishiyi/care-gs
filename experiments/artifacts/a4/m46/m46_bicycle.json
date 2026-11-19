@@ -1,0 +1,39 @@
+[
+ {
+  "ply": "bicycle.ply",
+  "jobs": 1,
+  "load_s": 20.3,
+  "geo_s": 8.9,
+  "colour_s": 17.4,
+  "phase_s": 26.3,
+  "layout": "bytes",
+  "streams_md5": "400a24b92fa80f881f36a44d101c9d6b",
+  "peak_rss_gb": 9.18
+ },
+ {
+  "ply": "bicycle.ply",
+  "jobs": 2,
+  "load_s": 20.3,
+  "geo_s": 8.9,
+  "colour_s": 10.3,
+  "phase_s": 19.3,
+  "layout": "bytes",
+  "streams_md5": "400a24b92fa80f881f36a44d101c9d6b",
+  "peak_rss_gb": 13.07,
+  "phase_ratio_vs_seq": 0.734,
+  "same_streams": true
+ },
+ {
+  "ply": "bicycle.ply",
+  "jobs": 4,
+  "load_s": 20.3,
+  "geo_s": 8.9,
+  "colour_s": 10.3,
+  "phase_s": 19.2,
+  "layout": "bytes",
+  "streams_md5": "400a24b92fa80f881f36a44d101c9d6b",
+  "peak_rss_gb": 13.07,
+  "phase_ratio_vs_seq": 0.73,
+  "same_streams": true
+ }
+]

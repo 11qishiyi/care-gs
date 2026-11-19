@@ -1,0 +1,426 @@
+{
+ "outcome": "regress_to_m1_claims",
+ "n_scenes": 4,
+ "criteria": {
+  "D1_coverage_dominance": {
+   "threshold_pp": 3.0,
+   "threshold_rates_needed": 3,
+   "rates_passing": 0,
+   "rates_total": 8,
+   "threshold_assets_agree": 3,
+   "verdict": false,
+   "passing_rates": [],
+   "per_rate": {
+    "1.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "2.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "3.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "5.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "7.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "9.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "12.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "16.0": {
+     "n_scenes": 0,
+     "passes": false
+    }
+   }
+  },
+  "E1_universal_dominance": {
+   "threshold_pp": 3.0,
+   "threshold_rates_needed": 2,
+   "rates_passing": 0,
+   "rates_total": 8,
+   "threshold_assets_agree": 3,
+   "verdict": false,
+   "passing_rates": [],
+   "per_rate": {
+    "1.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "2.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "3.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "5.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "7.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "9.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "12.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "16.0": {
+     "n_scenes": 0,
+     "passes": false
+    }
+   }
+  },
+  "D2_fidelity_not_worse": {
+   "tol": {
+    "psnr": 0.3,
+    "ssim": 0.005,
+    "lpips": 0.02
+   },
+   "rates_passing": 0,
+   "rates_total": 8,
+   "threshold_rates_needed": 3,
+   "verdict": false,
+   "per_rate": {
+    "1.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "2.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "3.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "5.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "7.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "9.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "12.0": {
+     "n_scenes": 0,
+     "passes": false
+    },
+    "16.0": {
+     "n_scenes": 0,
+     "passes": false
+    }
+   }
+  },
+  "D3_near_lossless_shelf": {
+   "max_drop_pp": 1.0,
+   "max_dpsnr": 0.3,
+   "rates_with_shelf": 2,
+   "threshold_rates_needed": 2,
+   "verdict": true,
+   "per_rate": {
+    "1.0": [],
+    "2.0": [
+     {
+      "scene": "bicycle_i7k",
+      "variant": "sh16_g16",
+      "drop_pp": -0.11830216939927438,
+      "d_psnr": 0.042388455443216344
+     },
+     {
+      "scene": "flowers_i7k",
+      "variant": "sh16_g16",
+      "drop_pp": -0.13636007419109425,
+      "d_psnr": 0.03237827895743095
+     },
+     {
+      "scene": "stump_i7k",
+      "variant": "sh16_g16",
+      "drop_pp": -0.5266674887946994,
+      "d_psnr": 0.14387394726194813
+     },
+     {
+      "scene": "treehill_i7k",
+      "variant": "sh16_g16",
+      "drop_pp": -0.04199244442252065,
+      "d_psnr": 0.004790960325767202
+     }
+    ],
+    "3.0": [
+     {
+      "scene": "bicycle_i7k",
+      "variant": "sh12_g16",
+      "drop_pp": -0.11831053560688227,
+      "d_psnr": 0.04238087776406729
+     },
+     {
+      "scene": "treehill_i7k",
+      "variant": "sh12_g16",
+      "drop_pp": -0.04200799152888268,
+      "d_psnr": 0.004809129842360704
+     }
+    ],
+    "5.0": [],
+    "7.0": [],
+    "9.0": [],
+    "12.0": [],
+    "16.0": []
+   }
+  },
+  "E2_degree_vs_bits": {
+   "window_bytes": [
+    25.0,
+    45.0
+   ],
+   "gap_pp": 0.5,
+   "per_scene": {
+    "bicycle_i7k": {
+     "degree": null,
+     "bits": null
+    },
+    "flowers_i7k": {
+     "degree": null,
+     "bits": null
+    },
+    "stump_i7k": {
+     "degree": null,
+     "bits": null
+    },
+    "treehill_i7k": {
+     "degree": null,
+     "bits": null
+    }
+   },
+   "n_scenes_with_both": 0,
+   "threshold_n": 3,
+   "winner": null,
+   "n_agree": 0,
+   "verdict": false
+  },
+  "E3_frontier_above_8x": {
+   "min_rate": 8.0,
+   "max_drop_pp": 1.0,
+   "max_dpsnr": 0.3,
+   "assets_with_member": 0,
+   "threshold_assets": 3,
+   "per_scene": {
+    "bicycle_i7k": {
+     "members": [],
+     "frontier_rate": 3.629894577913815
+    },
+    "flowers_i7k": {
+     "members": [],
+     "frontier_rate": 3.566452229779703
+    },
+    "stump_i7k": {
+     "members": [],
+     "frontier_rate": 3.561756317992705
+    },
+    "treehill_i7k": {
+     "members": [],
+     "frontier_rate": 3.6648369380407044
+    }
+   },
+   "verdict": false
+  }
+ },
+ "scenes": [
+  {
+   "scene": "bicycle_i7k",
+   "clean_coverage": 0.8984754197413426,
+   "clean_psnr": 22.180541237237357,
+   "rows": [
+    {
+     "variant": "sh16_g16",
+     "family": "qfp",
+     "rate": 2.152858033338044,
+     "drop_pp": -0.12,
+     "d_psnr": 0.042,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh12_g16",
+     "family": "qfp",
+     "rate": 2.681626988035596,
+     "drop_pp": -0.12,
+     "d_psnr": 0.042,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh8_g16",
+     "family": "qfp",
+     "rate": 3.629894577913815,
+     "drop_pp": -0.12,
+     "d_psnr": 0.043,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "p90",
+     "family": "prune",
+     "rate": 1.1111111111111112,
+     "drop_pp": -1.62,
+     "d_psnr": 0.409,
+     "ssim": null,
+     "lpips": null
+    }
+   ],
+   "comparisons": {}
+  },
+  {
+   "scene": "flowers_i7k",
+   "clean_coverage": 0.9005728755814866,
+   "clean_psnr": 18.368394823732356,
+   "rows": [
+    {
+     "variant": "sh16_g16",
+     "family": "qfp",
+     "rate": 2.0953769112384637,
+     "drop_pp": -0.14,
+     "d_psnr": 0.032,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh12_g16",
+     "family": "qfp",
+     "rate": 2.6124989052994856,
+     "drop_pp": -0.14,
+     "d_psnr": 0.032,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh8_g16",
+     "family": "qfp",
+     "rate": 3.566452229779703,
+     "drop_pp": -0.14,
+     "d_psnr": 0.032,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "p90",
+     "family": "prune",
+     "rate": 1.1111111111111112,
+     "drop_pp": -1.27,
+     "d_psnr": 0.293,
+     "ssim": null,
+     "lpips": null
+    }
+   ],
+   "comparisons": {}
+  },
+  {
+   "scene": "stump_i7k",
+   "clean_coverage": 0.898907264262399,
+   "clean_psnr": 24.42018705935861,
+   "rows": [
+    {
+     "variant": "sh16_g16",
+     "family": "qfp",
+     "rate": 2.054915419554866,
+     "drop_pp": -0.53,
+     "d_psnr": 0.144,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh12_g16",
+     "family": "qfp",
+     "rate": 2.576680572695929,
+     "drop_pp": -0.53,
+     "d_psnr": 0.144,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh8_g16",
+     "family": "qfp",
+     "rate": 3.561756317992705,
+     "drop_pp": -0.53,
+     "d_psnr": 0.144,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "p90",
+     "family": "prune",
+     "rate": 1.1111111111111112,
+     "drop_pp": -1.3,
+     "d_psnr": 0.357,
+     "ssim": null,
+     "lpips": null
+    }
+   ],
+   "comparisons": {}
+  },
+  {
+   "scene": "treehill_i7k",
+   "clean_coverage": 0.9025027278583909,
+   "clean_psnr": 16.089798489195417,
+   "rows": [
+    {
+     "variant": "sh16_g16",
+     "family": "qfp",
+     "rate": 2.162366799259153,
+     "drop_pp": -0.04,
+     "d_psnr": 0.005,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh12_g16",
+     "family": "qfp",
+     "rate": 2.6838519643061285,
+     "drop_pp": -0.04,
+     "d_psnr": 0.005,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "sh8_g16",
+     "family": "qfp",
+     "rate": 3.6648369380407044,
+     "drop_pp": -0.04,
+     "d_psnr": 0.005,
+     "ssim": null,
+     "lpips": null
+    },
+    {
+     "variant": "p90",
+     "family": "prune",
+     "rate": 1.1111111111111112,
+     "drop_pp": -0.64,
+     "d_psnr": -0.011,
+     "ssim": null,
+     "lpips": null
+    }
+   ],
+   "comparisons": {}
+  }
+ ]
+}

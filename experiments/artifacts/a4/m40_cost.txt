@@ -1,0 +1,6 @@
+gp6_6_6_c8_sh3_r16_b048_m40bicyclef4m_auto.gs1 file   76.56 MB  decode   7.88 s  peak RSS  1.96 GB  tensors 1447.14 MB  n=6,131,954
+gp6_6_6_c8_sh3_r16_b048_m40bicyclef256k_auto.gs1 file   76.60 MB  decode   7.84 s  peak RSS  1.96 GB  tensors 1447.14 MB  n=6,131,954
+gp6_6_6_c8_sh3_r16_b048_m40stumpf4m_auto.gs1 file   62.59 MB  decode   6.38 s  peak RSS  1.60 GB  tensors 1170.98 MB  n=4,961,797
+gp6_6_6_c8_sh3_r16_b048_m40stumpf256k_auto.gs1 file   62.65 MB  decode   6.44 s  peak RSS  1.60 GB  tensors 1170.98 MB  n=4,961,797
+gp6_6_6_c8_sh3_r16_b048_m40bonsaif4m_auto.gs1 file   15.30 MB  decode   1.57 s  peak RSS  0.47 GB  tensors 293.78 MB  n=1,244,819
+gp6_6_6_c8_sh3_r16_b048_m40bonsaif256k_auto.gs1 file   15.30 MB  decode   1.49 s  peak RSS  0.47 GB  tensors 293.78 MB  n=1,244,819

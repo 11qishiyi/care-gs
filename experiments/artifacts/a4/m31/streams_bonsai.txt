@@ -1,0 +1,18 @@
+gp6_6_6_c8_sh3_r16_b048_auto.gs1  file 15.30 MB  n=1,244,819
+stream                    raw MB   comp MB   share  b/prim
+geo_hdr                     0.00      0.00    0.0%   0.000
+cluster_hdr                 0.12      0.11    0.7%   0.088
+cluster_off                 3.73      3.72   24.3%   2.987
+sh_hdr                      0.00      0.00    0.0%   0.000
+sh_scale                    1.24      0.83    5.5%   0.670
+geo_scales                  2.80      2.41   15.8%   1.939
+geo_opacities               0.93      0.87    5.7%   0.701
+geo_quat_which              0.31      0.07    0.5%   0.056
+geo_quat_abc                2.80      2.76   18.1%   2.219
+sh_dc                       3.73      0.77    5.0%   0.619
+sh_basis                    0.00      0.00    0.0%   0.002
+sh_basis_mean               0.00      0.00    0.0%   0.000
+sh_basis_comp               0.00      0.00    0.0%   0.000
+sh_coef_bits                0.00      0.00    0.0%   0.000
+sh_coef                     7.47      3.74   24.5%   3.008
+TOTAL                      23.15     15.30  100.0%  12.291

@@ -1,0 +1,11 @@
+{
+ "n": 6131954,
+ "keep": 0.25,
+ "k": 1532988,
+ "kept_by_both": 415900,
+ "overlap_frac_of_k": 0.2713,
+ "spearman": 0.3981,
+ "imp_mass_kept_by_volume": 0.9929,
+ "vol_mass_kept_by_importance": 0.2357,
+ "imp_top_share_of_imp_mass": 1.0
+}

@@ -1,0 +1,13 @@
+stream                plain MB  delta MB  delta-plain   B/prim
+sh_coef                  36.79     36.79        +0.00   +0.000
+cluster_off              22.99     22.99        +0.00   +0.000
+sh_dc                    18.40     18.40        +0.00   +0.000
+geo_scales               18.40     18.40        +0.00   +0.000
+geo_quats                24.53      0.00       -24.53   -4.000
+sh_scale                 12.26     12.26        +0.00   +0.000
+geo_quat_abc              0.00     18.40       +18.40   +3.000
+geo_opacities             6.13      6.13        +0.00   +0.000
+geo_quat_which            0.00      1.53        +1.53   +0.250
+cluster_hdr               0.57      0.57        +0.00   +0.000
+TOTAL (listed)          140.08    135.48        -4.60   -0.750
+file sizes: 98.54 MB -> 93.57 MB

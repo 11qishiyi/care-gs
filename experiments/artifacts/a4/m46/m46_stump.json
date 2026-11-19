@@ -1,0 +1,39 @@
+[
+ {
+  "ply": "stump.ply",
+  "jobs": 1,
+  "load_s": 14.7,
+  "geo_s": 7.2,
+  "colour_s": 14.0,
+  "phase_s": 21.1,
+  "layout": "bytes",
+  "streams_md5": "68f5773e776933689065f02f258f3fed",
+  "peak_rss_gb": 7.48
+ },
+ {
+  "ply": "stump.ply",
+  "jobs": 2,
+  "load_s": 14.7,
+  "geo_s": 7.2,
+  "colour_s": 8.4,
+  "phase_s": 15.6,
+  "layout": "bytes",
+  "streams_md5": "68f5773e776933689065f02f258f3fed",
+  "peak_rss_gb": 10.98,
+  "phase_ratio_vs_seq": 0.739,
+  "same_streams": true
+ },
+ {
+  "ply": "stump.ply",
+  "jobs": 4,
+  "load_s": 14.7,
+  "geo_s": 6.8,
+  "colour_s": 8.3,
+  "phase_s": 15.2,
+  "layout": "bytes",
+  "streams_md5": "68f5773e776933689065f02f258f3fed",
+  "peak_rss_gb": 10.98,
+  "phase_ratio_vs_seq": 0.72,
+  "same_streams": true
+ }
+]

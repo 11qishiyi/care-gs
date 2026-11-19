@@ -1,0 +1,208 @@
+There are no index cache(s) to remove.
+There are no index cache(s) to remove.
+[
+ {
+  "plan": "gp6_6_6_c8_sh3_r16_b048_f0256k",
+  "rank": 16,
+  "bits": 48,
+  "n": 1244819,
+  "bytes_auto": 15297691,
+  "bytes_legacy": 15297691,
+  "bytes_per_prim": 12.289088614489335,
+  "choice": {
+   "sh_dc": "bytes",
+   "sh_rest": "bytes",
+   "sh_scale": "bits",
+   "sh_hdr": "bits"
+  },
+  "table": [
+   {
+    "stream": "sh_dc",
+    "candidates": {
+     "bits": {
+      "raw": 1400422,
+      "zstd": 834949
+     },
+     "bytes": {
+      "raw": 3734457,
+      "zstd": 770073
+     }
+    },
+    "chosen": "bytes",
+    "saved_vs_bits": 64876
+   },
+   {
+    "stream": "sh_rest",
+    "candidates": {
+     "bits": {
+      "raw": 21006321,
+      "zstd": 14689986
+     },
+     "bytes": {
+      "raw": 56016855,
+      "zstd": 13395497
+     }
+    },
+    "chosen": "bytes",
+    "saved_vs_bits": 1294489
+   },
+   {
+    "stream": "sh_scale",
+    "candidates": {
+     "bits": {
+      "raw": 2489638,
+      "zstd": 1592362
+     },
+     "bytes": {
+      "raw": 2489638,
+      "zstd": 1592362
+     }
+    },
+    "chosen": "bits",
+    "saved_vs_bits": 0
+   },
+   {
+    "stream": "sh_hdr",
+    "candidates": {
+     "bits": {
+      "raw": 8,
+      "zstd": 17
+     },
+     "bytes": {
+      "raw": 8,
+      "zstd": 17
+     }
+    },
+    "chosen": "bits",
+    "saved_vs_bits": 0
+   }
+  ],
+  "file": "/workspace/res/m34/bonsai/gp6_6_6_c8_sh3_r16_b048_f0256k_auto.gs1",
+  "file_legacy": null,
+  "saved": 0,
+  "streams_auto": {
+   "geo_hdr": {
+    "raw": 32,
+    "comp": 41
+   },
+   "cluster_hdr": {
+    "raw": 116712,
+    "comp": 109063
+   },
+   "cluster_off": {
+    "raw": 3734784,
+    "comp": 3664992
+   },
+   "sh_hdr": {
+    "raw": 4,
+    "comp": 13
+   },
+   "sh_scale": {
+    "raw": 1244819,
+    "comp": 837432
+   },
+   "geo_scales": {
+    "raw": 2800843,
+    "comp": 2418182
+   },
+   "geo_opacities": {
+    "raw": 933615,
+    "comp": 872660
+   },
+   "geo_quat_which": {
+    "raw": 311205,
+    "comp": 68811
+   },
+   "geo_quat_abc": {
+    "raw": 2800843,
+    "comp": 2762441
+   },
+   "sh_dc": {
+    "raw": 3734457,
+    "comp": 749126
+   },
+   "sh_basis": {
+    "raw": 2880,
+    "comp": 2735
+   },
+   "sh_basis_mean": {
+    "raw": 180,
+    "comp": 189
+   },
+   "sh_basis_comp": {
+    "raw": 64,
+    "comp": 73
+   },
+   "sh_coef_bits": {
+    "raw": 16,
+    "comp": 25
+   },
+   "sh_coef": {
+    "raw": 7468924,
+    "comp": 3807334
+   }
+  },
+  "streams_legacy": {
+   "geo_hdr": {
+    "raw": 32,
+    "comp": 41
+   },
+   "cluster_hdr": {
+    "raw": 116712,
+    "comp": 109063
+   },
+   "cluster_off": {
+    "raw": 3734784,
+    "comp": 3664992
+   },
+   "sh_hdr": {
+    "raw": 4,
+    "comp": 13
+   },
+   "sh_scale": {
+    "raw": 1244819,
+    "comp": 837432
+   },
+   "geo_scales": {
+    "raw": 2800843,
+    "comp": 2418182
+   },
+   "geo_opacities": {
+    "raw": 933615,
+    "comp": 872660
+   },
+   "geo_quat_which": {
+    "raw": 311205,
+    "comp": 68811
+   },
+   "geo_quat_abc": {
+    "raw": 2800843,
+    "comp": 2762441
+   },
+   "sh_dc": {
+    "raw": 3734457,
+    "comp": 749126
+   },
+   "sh_basis": {
+    "raw": 2880,
+    "comp": 2735
+   },
+   "sh_basis_mean": {
+    "raw": 180,
+    "comp": 189
+   },
+   "sh_basis_comp": {
+    "raw": 64,
+    "comp": 73
+   },
+   "sh_coef_bits": {
+    "raw": 16,
+    "comp": 25
+   },
+   "sh_coef": {
+    "raw": 7468924,
+    "comp": 3807334
+   }
+  }
+ }
+]
