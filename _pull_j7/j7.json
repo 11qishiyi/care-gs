@@ -1,0 +1,123 @@
+{
+ "protocol": "J7_PLAN.md",
+ "alpha": 0.1,
+ "keeps": [
+  0.9,
+  0.7,
+  0.5
+ ],
+ "scenes": [
+  {
+   "scene": "bicycle",
+   "q": 0.06083,
+   "clean_coverage": 0.9,
+   "n_primitives": 6131954,
+   "rows": [
+    {
+     "keep": 0.9,
+     "score": "opacity",
+     "n_primitives": 5518759,
+     "coverage": 0.9,
+     "coverage_min": 0.8066,
+     "loss_pp": -0.0
+    },
+    {
+     "keep": 0.9,
+     "score": "coverage-risk",
+     "n_primitives": 5518759,
+     "coverage": 0.8716,
+     "coverage_min": 0.8066,
+     "loss_pp": 2.84
+    },
+    {
+     "keep": 0.7,
+     "score": "opacity",
+     "n_primitives": 4292368,
+     "coverage": 0.8983,
+     "coverage_min": 0.8137,
+     "loss_pp": 0.17
+    },
+    {
+     "keep": 0.7,
+     "score": "coverage-risk",
+     "n_primitives": 4292368,
+     "coverage": 0.7954,
+     "coverage_min": 0.697,
+     "loss_pp": 10.46
+    },
+    {
+     "keep": 0.5,
+     "score": "opacity",
+     "n_primitives": 3065977,
+     "coverage": 0.8605,
+     "coverage_min": 0.7893,
+     "loss_pp": 3.95
+    },
+    {
+     "keep": 0.5,
+     "score": "coverage-risk",
+     "n_primitives": 3065977,
+     "coverage": 0.6842,
+     "coverage_min": 0.5396,
+     "loss_pp": 21.58
+    }
+   ]
+  },
+  {
+   "scene": "stump",
+   "q": 0.05748,
+   "clean_coverage": 0.9,
+   "n_primitives": 4961797,
+   "rows": [
+    {
+     "keep": 0.9,
+     "score": "opacity",
+     "n_primitives": 4465617,
+     "coverage": 0.9,
+     "coverage_min": 0.8528,
+     "loss_pp": -0.0
+    },
+    {
+     "keep": 0.9,
+     "score": "coverage-risk",
+     "n_primitives": 4465617,
+     "coverage": 0.8936,
+     "coverage_min": 0.8525,
+     "loss_pp": 0.64
+    },
+    {
+     "keep": 0.7,
+     "score": "opacity",
+     "n_primitives": 3473258,
+     "coverage": 0.8971,
+     "coverage_min": 0.8613,
+     "loss_pp": 0.29
+    },
+    {
+     "keep": 0.7,
+     "score": "coverage-risk",
+     "n_primitives": 3473258,
+     "coverage": 0.8623,
+     "coverage_min": 0.8018,
+     "loss_pp": 3.77
+    },
+    {
+     "keep": 0.5,
+     "score": "opacity",
+     "n_primitives": 2480898,
+     "coverage": 0.8272,
+     "coverage_min": 0.8083,
+     "loss_pp": 7.28
+    },
+    {
+     "keep": 0.5,
+     "score": "coverage-risk",
+     "n_primitives": 2480898,
+     "coverage": 0.7918,
+     "coverage_min": 0.7302,
+     "loss_pp": 10.82
+    }
+   ]
+  }
+ ]
+}

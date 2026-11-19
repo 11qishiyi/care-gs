@@ -1,0 +1,56 @@
+{
+ "cells": [
+  {
+   "scene": "bicycle",
+   "keep": 0.5,
+   "loss_cov_pp": 21.58,
+   "loss_opacity_pp": 3.95,
+   "ratio": 5.463,
+   "helps": false
+  },
+  {
+   "scene": "bicycle",
+   "keep": 0.7,
+   "loss_cov_pp": 10.46,
+   "loss_opacity_pp": 0.17,
+   "ratio": 61.529,
+   "helps": false
+  },
+  {
+   "scene": "bicycle",
+   "keep": 0.9,
+   "loss_cov_pp": 2.84,
+   "loss_opacity_pp": -0.0,
+   "ratio": null,
+   "helps": false
+  },
+  {
+   "scene": "stump",
+   "keep": 0.5,
+   "loss_cov_pp": 10.82,
+   "loss_opacity_pp": 7.28,
+   "ratio": 1.486,
+   "helps": false
+  },
+  {
+   "scene": "stump",
+   "keep": 0.7,
+   "loss_cov_pp": 3.77,
+   "loss_opacity_pp": 0.29,
+   "ratio": 13.0,
+   "helps": false
+  },
+  {
+   "scene": "stump",
+   "keep": 0.9,
+   "loss_cov_pp": 0.64,
+   "loss_opacity_pp": -0.0,
+   "ratio": null,
+   "helps": false
+  }
+ ],
+ "n_cells": 6,
+ "n_helps": 0,
+ "ratio_median": 13.0,
+ "verdict": "FAIL \u2014 the score is not the reason; the asymmetry is a property of the action family"
+}
