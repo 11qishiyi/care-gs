@@ -796,9 +796,11 @@ opacity, screen footprint and the proximity of their pixels to $q$, so that what
 away from the threshold. On the two cross-paper assets at three keep rates it is \emph{worse} than plain
 opacity in all six (scene, keep) cells --- median $13\times$ the coverage loss, none of them improving. The
 reason is instructive: a pixel far below $q$ is far below it because the model renders it well, and deleting
-the primitive that carries it can push that pixel across the threshold. What a deletion costs is the
-\emph{change} it induces, not the residual it finds, which is why the coverage-blind opacity score remains
-the strongest of the arms in Table~\ref{tab:prune}.
+the primitive that carries it can push that pixel across the threshold. Dropping the proximity term and keeping
+only opacity times footprint does not rescue the idea either --- it still loses to plain opacity at every keep
+rate ($1.2$--$11\times$) --- so what a deletion costs is the \emph{change} it induces, not the residual it
+finds nor the area it covers, and the coverage-blind opacity score remains the strongest of the arms in
+Table~\ref{tab:prune}.
 
 \input{tab_perceptual}
 

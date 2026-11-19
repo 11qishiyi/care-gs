@@ -28,7 +28,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "research", "code"))
 
-from j7_score import coverage_risk, select  # noqa: E402
+from j7_score import alpha_area, coverage_risk, select  # noqa: E402
 
 
 def render_view(sp, c2w, K, W, H, device):
@@ -93,6 +93,11 @@ def main(argv=None) -> int:
                     sp.scales.detach().float().cpu().numpy(),
                     sp.opacities.detach().float().cpu().numpy(),
                     sc["camtoworlds"][dep[0]], sc["Ks"][dep[0]], resid_by_view[dep[0]], q),
+                "alpha-area": alpha_area(
+                    sp.means.detach().float().cpu().numpy(),
+                    sp.scales.detach().float().cpu().numpy(),
+                    sp.opacities.detach().float().cpu().numpy(),
+                    sc["camtoworlds"][dep[0]], sc["Ks"][dep[0]]),
             }
             for name, sc_vec in scores.items():
                 idx = torch.as_tensor(select(np.asarray(sc_vec), keep), device=args.device)

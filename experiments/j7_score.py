@@ -139,3 +139,18 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
+
+
+def alpha_area(means: np.ndarray, scales: np.ndarray, opacities: np.ndarray,
+               c2w: np.ndarray, K: np.ndarray) -> np.ndarray:
+    """The ablation of `coverage_risk`: opacity times footprint, with the proximity-to-q term removed.
+
+    If this beats plain opacity, the earlier loss was the proximity term rather than the coverage idea; if it does
+    not, opacity is simply hard to beat. Zero for off-screen or behind-camera primitives, same as `coverage_risk`.
+    """
+    u, v, z = project_centres(np.asarray(means, np.float64), np.asarray(c2w, np.float64), np.asarray(K, np.float64))
+    focal = float(0.5 * (K[0, 0] + K[1, 1]))
+    A = footprint_area(np.asarray(scales, np.float64), z, focal)
+    s = np.asarray(opacities, np.float64) * A
+    inside = z > 0
+    return np.where(inside & np.isfinite(s), s, 0.0)

@@ -34,9 +34,13 @@ def score(manifest: dict) -> dict:
                 continue
             cov, base = arms["coverage-risk"], arms["opacity"]
             ratio = (cov["loss_pp"] / base["loss_pp"]) if base["loss_pp"] > 1e-9 else None
+            abl = arms.get("alpha-area")
+            ratio_a = (abl["loss_pp"] / base["loss_pp"]) if (abl and base["loss_pp"] > 1e-9) else None
             cells.append(dict(scene=sc["scene"], keep=keep,
                               loss_cov_pp=cov["loss_pp"], loss_opacity_pp=base["loss_pp"],
+                              loss_alpha_area_pp=(abl["loss_pp"] if abl else None),
                               ratio=None if ratio is None else round(ratio, 3),
+                              ratio_alpha_area=None if ratio_a is None else round(ratio_a, 3),
                               helps=bool(ratio is not None and ratio <= PASS_RATIO)))
     n_help = sum(1 for c in cells if c["helps"])
     need = min(4, len(cells))        # the plan asks for 4 of 6; fewer cells cannot ask for more than they have
@@ -58,11 +62,14 @@ def table(res: dict) -> str:
     lines = []
     for c in res["cells"]:
         r = "--" if c["ratio"] is None else f"{c['ratio']:.2f}"
+        ra = "--" if c.get("ratio_alpha_area") is None else f"{c['ratio_alpha_area']:.2f}"
+        aa = "--" if c.get("loss_alpha_area_pp") is None else f"{c['loss_alpha_area_pp']:.2f}"
         lines.append(f"{c['scene']} & {c['keep']:.1f} & {c['loss_opacity_pp']:.2f} & "
-                     f"{c['loss_cov_pp']:.2f} & {r} \\\\")
+                     f"{c['loss_cov_pp']:.2f} & {r} & {aa} & {ra} \\\\")
     return "\n".join([
-        "\\begin{tabular}{lrrrr}", "\\toprule",
-        "scene & keep & loss, opacity (pp) & loss, coverage-aware (pp) & ratio \\\\",
+        "\\begin{tabular}{lrrrrrr}", "\\toprule",
+        "scene & keep & opacity (pp) & coverage-aware (pp) & ratio & "
+        "$\\alpha\\times$area (pp) & ratio \\\\",
         "\\midrule", *lines, "\\bottomrule", "\\end{tabular}"])
 
 
