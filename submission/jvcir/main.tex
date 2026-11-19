@@ -791,6 +791,15 @@ Fisher score buying a higher quality ceiling ($+0.8$~dB). The LPIPS ordering agr
 the Fisher arm against $+0.096$ for the volume arm at half the bytes), so the score comparison is not an artefact of
 one metric.
 
+A sixth score was built for this paper, and it is the one a reviewer should ask about: rank the primitives by
+opacity, screen footprint and the proximity of their pixels to $q$, so that what gets deleted is what sits
+away from the threshold. It is \emph{worse} than plain opacity at every matched keep rate --- median
+$13\times$ the coverage loss over the six (scene, keep) cells, none of them improving. The reason is
+instructive: a pixel far below $q$ is far below it because the model renders it well, and deleting the
+primitive that carries it can push that pixel across the threshold. What a deletion costs is the
+\emph{change} it induces, not the residual it finds, which is why the coverage-blind opacity score remains
+the strongest of the six.
+
 \input{tab_perceptual}
 
 Table~\ref{tab:perceptual} closes the loop on the score question with a perceptual metric rather than PSNR. Half the
