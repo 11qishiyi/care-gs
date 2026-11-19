@@ -39,7 +39,7 @@ cd submission/jvcir && pdflatex main && bibtex main && pdflatex main && pdflatex
 cd ../.. && python tools/verify_jvcir.py       # the gate: 11 sections, exit 0 required
 ```
 
-The three **rendering** rounds (`J4`, `J5`, `J6`) need a CUDA GPU and the Mip-NeRF 360 assets; their scripts and
+In a **fresh clone** compile once before running the gate: the build check compares the PDF against its sources, and a checkout stamps every file with the same time.`n`nThe three **rendering** rounds (`J4`, `J5`, `J6`) need a CUDA GPU and the Mip-NeRF 360 assets; their scripts and
 their inputs are recorded in `experiments/J*_PLAN.md` and their outcomes — including the two criteria that failed —
 in `experiments/J*_RESULTS.md`. Two things cannot be rebuilt: the four `*_i7k` checkpoints (trained on rented nodes
 that no longer exist) and the original `stump` checkpoint (the public mirror now serves a copy with non-finite
