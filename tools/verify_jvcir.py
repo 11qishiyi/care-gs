@@ -300,6 +300,30 @@ def main() -> int:
         g.check(not missing, "Fig. 6 labels equal the render artifact", ", ".join(missing) or
                 f"{sum(len(s['arms']) - 1 for s in q['scenes'])} arm labels")
 
+    # ---- 12 production: would Elsevier's typesetter accept these files as they stand?
+    g.section("12 production")
+    widths = {}
+    for stem in stems:
+        pdf = FIGDIR / f"{stem}.pdf"
+        if pdf.exists():
+            try:
+                out = subprocess.run(["pdffonts", str(pdf)], capture_output=True, text=True, timeout=60).stdout
+                rows = [ln for ln in out.splitlines()[2:] if ln.strip()]
+                bad = [ln for ln in rows if " no " in ln[30:60] or ln.split()[-4:-3] == ["no"]]
+                not_embedded = [ln.split()[0] for ln in rows if len(ln.split()) > 5 and ln.split()[-4] == "no"]
+                g.check(not not_embedded, f"{stem}.pdf fonts embedded", ", ".join(not_embedded) or
+                        f"{len(rows)} font(s)" if rows else "no fonts (vector strokes)")
+            except FileNotFoundError:
+                g.check(True, f"{stem}.pdf fonts (pdffonts unavailable, skipped)")
+        png = FIGDIR / f"{stem}.png"
+        w = png_width(png) if png.exists() else 0
+        if w:
+            # a full-width figure is 13 cm = 5.118 in on the printed page
+            widths[stem] = round(w / 5.118)
+    if widths:
+        worst = min(widths.items(), key=lambda kv: kv[1])
+        g.check(worst[1] >= 300, "every raster figure is >= 300 dpi at 13 cm", f"worst {worst[0]} at {worst[1]} dpi")
+
     # ---- 11 references: breadth against the journal's own range, and locator integrity
     g.section("11 references")
     n_bib = len(re.findall(r"@\w+\{", bib))
