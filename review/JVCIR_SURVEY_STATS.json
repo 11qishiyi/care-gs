@@ -1,0 +1,568 @@
+{
+ "n_articles": 516,
+ "n_with_abstract": 33,
+ "per_year": {
+  "2025": {
+   "n": 239,
+   "refs_median": 51,
+   "refs_q1": 43,
+   "refs_q3": 63,
+   "refs_min": 20,
+   "refs_max": 266,
+   "oa_share": 0.243,
+   "named_title_share": 0.318
+  },
+  "2026": {
+   "n": 277,
+   "refs_median": 49,
+   "refs_q1": 38,
+   "refs_q3": 58,
+   "refs_min": 12,
+   "refs_max": 492,
+   "oa_share": 0.256,
+   "named_title_share": 0.354
+  }
+ },
+ "per_month": {
+  "2025-01": 14,
+  "2025-02": 19,
+  "2025-03": 16,
+  "2025-04": 18,
+  "2025-05": 17,
+  "2025-06": 18,
+  "2025-07": 29,
+  "2025-08": 15,
+  "2025-09": 15,
+  "2025-10": 24,
+  "2025-11": 26,
+  "2025-12": 28,
+  "2026-01": 33,
+  "2026-02": 16,
+  "2026-03": 34,
+  "2026-04": 24,
+  "2026-05": 20,
+  "2026-06": 32,
+  "2026-07": 26,
+  "2026-08": 27,
+  "2026-09": 31,
+  "2026-10": 26,
+  "2026-11": 8
+ },
+ "title_vocab": {
+  "3D / point cloud / mesh": 55,
+  "Gaussian / NeRF": 10,
+  "compression / coding": 26,
+  "quality assessment / perceptual": 22,
+  "efficient / lightweight / fast": 46,
+  "robust / generalizable": 19,
+  "survey / review / benchmark": 18,
+  "multi-modal / cross-modal": 33,
+  "diffusion / GAN / transformer": 76,
+  "low-light / underwater / remote sensing": 52
+ },
+ "abstract_vocab_subset": {
+  "PSNR": 0,
+  "SSIM": 0,
+  "LPIPS": 0,
+  "FID": 0,
+  "mAP": 4,
+  "BD-rate": 0,
+  "bitrate/ratio": 2,
+  "FPS": 1,
+  "FLOPs/params": 6,
+  "subjective/MOS": 1,
+  "ablation": 1,
+  "code/github": 8,
+  "dataset(s)": 23,
+  "speed/runtime": 5,
+  "memory": 4,
+  "3D/point cloud": 9,
+  "compression": 6
+ },
+ "topics_top15": [
+  {
+   "topic": "Image Enhancement Techniques",
+   "n": 55
+  },
+  {
+   "topic": "Advanced Neural Network Applications",
+   "n": 48
+  },
+  {
+   "topic": "Advanced Steganography and Watermarking Techniques",
+   "n": 31
+  },
+  {
+   "topic": "Human Pose and Action Recognition",
+   "n": 29
+  },
+  {
+   "topic": "Generative Adversarial Networks and Image Synthesis",
+   "n": 29
+  },
+  {
+   "topic": "Video Surveillance and Tracking Methods",
+   "n": 28
+  },
+  {
+   "topic": "3D Shape Modeling and Analysis",
+   "n": 26
+  },
+  {
+   "topic": "Digital Media Forensic Detection",
+   "n": 19
+  },
+  {
+   "topic": "Image and Video Quality Assessment",
+   "n": 19
+  },
+  {
+   "topic": "Advanced Image Processing Techniques",
+   "n": 18
+  },
+  {
+   "topic": "Video Coding and Compression Technologies",
+   "n": 16
+  },
+  {
+   "topic": "Emotion and Mood Recognition",
+   "n": 13
+  },
+  {
+   "topic": "Multimodal Machine Learning Applications",
+   "n": 13
+  },
+  {
+   "topic": "Visual Attention and Saliency Detection",
+   "n": 13
+  },
+  {
+   "topic": "Face recognition and analysis",
+   "n": 12
+  }
+ ],
+ "fields_top10": [
+  {
+   "field": "Computer Science",
+   "n": 475
+  },
+  {
+   "field": "Engineering",
+   "n": 28
+  },
+  {
+   "field": "Medicine",
+   "n": 5
+  },
+  {
+   "field": "Mathematics",
+   "n": 2
+  },
+  {
+   "field": "Physics and Astronomy",
+   "n": 2
+  },
+  {
+   "field": "Biochemistry, Genetics and Molecular Biology",
+   "n": 1
+  },
+  {
+   "field": "Dentistry",
+   "n": 1
+  },
+  {
+   "field": "Agricultural and Biological Sciences",
+   "n": 1
+  },
+  {
+   "field": "Neuroscience",
+   "n": 1
+  }
+ ],
+ "gs_papers": [
+  {
+   "doi": "10.1016/j.jvcir.2026.105015",
+   "date": "2026-10-29",
+   "title": "Large-scale reconstruction via LiDAR–inertial–visual Gaussian Splatting",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104996",
+   "date": "2026-10-05",
+   "title": "Advancing 3D Gaussian Splatting in inverse rendering through flashlight augmentation",
+   "refs": 31
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104986",
+   "date": "2026-10-01",
+   "title": "GeoIn-NeRF: NeRF Inpainting with Geometry-Appearance Prior and Balanced Score Distillation",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104978",
+   "date": "2026-09-25",
+   "title": "Improving 3D Gaussian splatting with reliability-guided densification and hierarchical semantic supervision",
+   "refs": 52
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104943",
+   "date": "2026-08-22",
+   "title": "A 3DGS-enhanced VGGT with pseudo-ground truth for few-resource 3D reconstruction",
+   "refs": 29
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104815",
+   "date": "2026-04-20",
+   "title": "KF-GS: Kalman filter-guided Gaussian splatting for real-time high-quality dynamic scene reconstruction",
+   "refs": 59
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104727",
+   "date": "2026-01-19",
+   "title": "eGoRG: GPU-accelerated depth estimation for immersive video applications based on graph cuts",
+   "refs": 44
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104682",
+   "date": "2025-12-16",
+   "title": "Depth error points optimization for 3D Gaussian Splatting in few-shot synthesis",
+   "refs": 50
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104602",
+   "date": "2025-11-21",
+   "title": "PatchNeRF: Patch-based Neural Radiance Fields for real time view synthesis in wide-scale scenes",
+   "refs": 39
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104586",
+   "date": "2025-09-23",
+   "title": "Knowledge NeRF: Few-shot novel view synthesis for dynamic articulated objects",
+   "refs": 48
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104572",
+   "date": "2025-08-27",
+   "title": "Survey: 3D watermarking techniques",
+   "refs": 195
+  }
+ ],
+ "gs_refs": {
+  "n": 11,
+  "refs_median": 44,
+  "refs_min": 29,
+  "refs_max": 195
+ },
+ "compression_papers": [
+  {
+   "doi": "10.1016/j.jvcir.2026.104999",
+   "date": "2026-10-16",
+   "title": "Efficient per-pixel continuous representation and reconstruction of multi-view images",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104995",
+   "date": "2026-10-07",
+   "title": "Content-adaptive Scharr-based CU64 partitioning for VVC intra coding with FPGA implementation",
+   "refs": 24
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104939",
+   "date": "2026-08-29",
+   "title": "Convolution sparse coding induced prior for hyperspectral image super resolution",
+   "refs": 63
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104854",
+   "date": "2026-06-03",
+   "title": "Space-Time Correlation Adaptive-Layered Optimization for Microimage Motion Search in Plenoptic video coding",
+   "refs": 37
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104653",
+   "date": "2025-11-29",
+   "title": "Accelerating inter-frame prediction in Versatile Video Coding via deep learning-based mode selection",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104629",
+   "date": "2025-11-06",
+   "title": "Fast adaptive QTMT partitioning for intra 360°video coding based on gradient boosted trees",
+   "refs": 56
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104541",
+   "date": "2025-07-25",
+   "title": "Single model learned image compression utilizing multiple scaling factors",
+   "refs": 36
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104433",
+   "date": "2025-03-13",
+   "title": "Joint reference frame synthesis and post filter enhancement for Versatile Video Coding",
+   "refs": 45
+  }
+ ],
+ "compression_refs": {
+  "n": 8,
+  "refs_median": 40,
+  "refs_min": 24,
+  "refs_max": 63
+ },
+ "quality_papers": [
+  {
+   "doi": "10.1016/j.jvcir.2026.105024",
+   "date": "2026-11-10",
+   "title": "No-reference image quality assessment based on multi-view semantic feature sensing",
+   "refs": 52
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105027",
+   "date": "2026-11-01",
+   "title": "Multimodal just noticeable difference modeling for colored point cloud compression",
+   "refs": 57
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104938",
+   "date": "2026-08-14",
+   "title": "No reference omnidirectional image quality assessment based on viewport and latitude-aware distortion adaptive correction",
+   "refs": 83
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104867",
+   "date": "2026-06-15",
+   "title": "Trans-SURNet: A linear transformer approach to model picture-wise JND distribution for SUR curve prediction",
+   "refs": 47
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104868",
+   "date": "2026-06-13",
+   "title": "QaMatch: Adaptive semi-supervised learning for no-reference image quality assessment",
+   "refs": 38
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104801",
+   "date": "2026-04-27",
+   "title": "Predicting image quality score distribution using deep neural networks",
+   "refs": 34
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104641",
+   "date": "2025-11-19",
+   "title": "Enhancing aesthetic image generation with reinforcement learning guided prompt optimization in stable diffusion",
+   "refs": 39
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104604",
+   "date": "2025-10-15",
+   "title": "MSFIQA: A multi-scale feature fusion network based on human visual perception for no-reference image quality assessment",
+   "refs": 62
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104571",
+   "date": "2025-08-26",
+   "title": "Taylor expansion-based Kolmogorov–Arnold network for blind image quality assessment",
+   "refs": 42
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104526",
+   "date": "2025-07-17",
+   "title": "Advancements in medical image quality assessment for spinal CT and MRI images",
+   "refs": 84
+  },
+  {
+   "doi": "10.1016/j.jvcir.2025.104519",
+   "date": "2025-06-16",
+   "title": "Self-supervised panoramic stitched image quality assessment based on contrastive learning",
+   "refs": 53
+  }
+ ],
+ "quality_refs": {
+  "n": 11,
+  "refs_median": 52,
+  "refs_min": 34,
+  "refs_max": 84
+ },
+ "newest_30": [
+  {
+   "doi": "10.1016/j.jvcir.2026.105024",
+   "date": "2026-11-10",
+   "title": "No-reference image quality assessment based on multi-view semantic feature sensing",
+   "refs": 52
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105023",
+   "date": "2026-11-07",
+   "title": "STF-NeRV: A Spatial–Temporal-Frequency alignment framework for implicit neural video representation",
+   "refs": 49
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105014",
+   "date": "2026-11-04",
+   "title": "StyleGAN encoders and skin color matching GAN for face anonymization",
+   "refs": 63
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105003",
+   "date": "2026-11-03",
+   "title": "Interactive next-frame prediction with pure transformers: Learning physical dynamics in visual environments",
+   "refs": 12
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105027",
+   "date": "2026-11-01",
+   "title": "Multimodal just noticeable difference modeling for colored point cloud compression",
+   "refs": 57
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105020",
+   "date": "2026-11-01",
+   "title": "RCSCAC-Net: a robust image tampering localization network for Gaussian-blurred forgery images",
+   "refs": 53
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105022",
+   "date": "2026-11-01",
+   "title": "Beyond image stitching: A novel formulation of image stitching based on geometric and photometric consistency",
+   "refs": 65
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105028",
+   "date": "2026-11-01",
+   "title": "HQR-Net: Hierarchical quaternion representation learning for lossless color image compression",
+   "refs": 20
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105021",
+   "date": "2026-10-30",
+   "title": "MDD-CR: End-to-end multimodal deepfake detection fusing spatio-temporal and spectrographic features",
+   "refs": 88
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105013",
+   "date": "2026-10-29",
+   "title": "Decoupling risk detection and captioning via dual-branch multi-scale spatial-temporal fusion for autonomous driving",
+   "refs": 54
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105015",
+   "date": "2026-10-29",
+   "title": "Large-scale reconstruction via LiDAR–inertial–visual Gaussian Splatting",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105012",
+   "date": "2026-10-29",
+   "title": "Semantic-invariant steganalysis for generative steganography via trace disentanglement and prototype-guided meta-learning",
+   "refs": 36
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105002",
+   "date": "2026-10-22",
+   "title": "Understanding and overcoming the breakdown of direct video embedding through pretrained representations",
+   "refs": 51
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105001",
+   "date": "2026-10-22",
+   "title": "Meta open set filtering for open set recognition",
+   "refs": 45
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105004",
+   "date": "2026-10-17",
+   "title": "Recent innovation in vision-based human activity recognition: a systematic survey",
+   "refs": 319
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104999",
+   "date": "2026-10-16",
+   "title": "Efficient per-pixel continuous representation and reconstruction of multi-view images",
+   "refs": 40
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104979",
+   "date": "2026-10-12",
+   "title": "DanceLongCam: High-speed stable long-sequence 3D dance camera movement synthesis",
+   "refs": 33
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104994",
+   "date": "2026-10-12",
+   "title": "DegFake: Fine-grained attribution of multimodal fake news under image degradation",
+   "refs": 33
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104998",
+   "date": "2026-10-11",
+   "title": "A Draft–Verifier speculative sampling framework for accelerating diffusion-based super-resolution",
+   "refs": 34
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.105000",
+   "date": "2026-10-10",
+   "title": "LDFSR: a lightweight diffusion model with dynamic feature fusion for image super-resolution",
+   "refs": 56
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104987",
+   "date": "2026-10-08",
+   "title": "Adversarial Domain Adaptation and Self-Supervised Refinement for Event Sensory Data",
+   "refs": 74
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104997",
+   "date": "2026-10-08",
+   "title": "FSR-Net: Detail-preserving remote sensing image segmentation via frequency decoupling and semantic guidance",
+   "refs": 46
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104995",
+   "date": "2026-10-07",
+   "title": "Content-adaptive Scharr-based CU64 partitioning for VVC intra coding with FPGA implementation",
+   "refs": 24
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104984",
+   "date": "2026-10-06",
+   "title": "Remote sensing image dehazing network via multi-level sensing and dynamic routing",
+   "refs": 60
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104992",
+   "date": "2026-10-06",
+   "title": "Quality-aware low-light image enhancement",
+   "refs": 60
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104990",
+   "date": "2026-10-05",
+   "title": "Global-information-guided big five personality prediction model",
+   "refs": 45
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104991",
+   "date": "2026-10-05",
+   "title": "ODS-Net: An orthogonal dual-domain synergistic network for motion deblurring of underground conveyor belts",
+   "refs": 35
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104993",
+   "date": "2026-10-05",
+   "title": "MSFD-Stega: High-fidelity, high-efficiency multi-scale frequency image steganography via Stable Diffusion",
+   "refs": 55
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104996",
+   "date": "2026-10-05",
+   "title": "Advancing 3D Gaussian Splatting in inverse rendering through flashlight augmentation",
+   "refs": 31
+  },
+  {
+   "doi": "10.1016/j.jvcir.2026.104988",
+   "date": "2026-10-03",
+   "title": "DAR-Net: Resolving visual and semantic ambiguity for open-vocabulary camouflaged object segmentation",
+   "refs": 62
+  }
+ ]
+}
