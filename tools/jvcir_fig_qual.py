@@ -32,8 +32,14 @@ ARM_NAMES = {"clean": "clean", "p50": "prune 50% (Fisher)"}
 ERR_GAIN = 8
 
 
+MIN_PX = 330          # 330 px at the ~1.1 in panel width is 300 dpi on the printed page
+
+
 def load(path: Path) -> np.ndarray:
-    return np.asarray(Image.open(path).convert("RGB"), dtype=np.float32) / 255.0
+    img = Image.open(path).convert("RGB")
+    if img.width < MIN_PX:
+        img = img.resize((MIN_PX, MIN_PX), Image.LANCZOS)
+    return np.asarray(img, dtype=np.float32) / 255.0
 
 
 def pretty(name: str, arm: dict) -> str:
@@ -100,7 +106,7 @@ def main() -> None:
         axes[r, 0].set_ylabel(f"{sc['scene']}\nview {sc['view_index']}\nrank {sc['view_rank']}/{sc['n_held_out']}",
                               fontsize=5.6, rotation=90, labelpad=2.0)
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT / "fig6_qualitative.pdf", bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(OUT / "fig6_qualitative.pdf", dpi=300, bbox_inches="tight", pad_inches=0.02)
     fig.savefig(OUT / "fig6_qualitative.png", dpi=300, bbox_inches="tight", pad_inches=0.02)
     A4.mkdir(parents=True, exist_ok=True)
     (A4 / "j5_fig_qual.json").write_text(json.dumps(man, indent=1), encoding="utf-8")

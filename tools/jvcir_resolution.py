@@ -122,7 +122,9 @@ def main() -> None:
         "\\begin{tabular}{rrrr}", "\\toprule",
         "$\\delta$ (pp) & decisions taken & accuracy (\\%) & false accepts \\\\",
         "\\midrule", *lines2, "\\bottomrule", "\\end{tabular}"])
-    (out_dir / "tab_abstain.tex").write_text(tex2 + "\n", encoding="utf-8")
+    # tab_abstain.tex is no longer written: the model-based abstention table is superseded by the measured
+    # single-pass pair (tab_singlepass.tex / tab_singlepass_abstain.tex), and an un-input file in the submission
+    # directory makes the package look like it carries a second, contradictory set of results.
 
     print("(a) split-averaged estimate, by distance from the tolerance")
     print(f"{'bucket':18s} {'cells':>6s} {'pairs':>6s} {'accuracy':>9s} {'false acc':>10s}")
@@ -143,7 +145,7 @@ def main() -> None:
         if a["eps"] in (1.0, 2.0):
             print(f"  eps={a['eps']:.1f} delta={a['delta']:.0f}  E[decided]={a['expected_decided']:.1f}/{a['of']} "
                   f" E[false accept]={a['expected_false_accept']:.3f}")
-    print(f"\nwrote {A4/'j5_resolution.json'}, {SUB/'tab_resolution.tex'}, {SUB/'tab_abstain.tex'}")
+    print(f"\nwrote {A4/'j5_resolution.json'}, {SUB/'tab_resolution.tex'}")
 
 
 if __name__ == "__main__":

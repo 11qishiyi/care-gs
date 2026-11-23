@@ -199,13 +199,13 @@ def main() -> int:
     res = subprocess.run([sys.executable, "tools/jvcir_resolution.py", "--out-dir", str(res_tmp)],
                          capture_output=True, text=True, cwd=ROOT)
     res_drift = []
-    for name in ("tab_resolution.tex", "tab_abstain.tex"):
+    for name in ("tab_resolution.tex",):
         fresh_f, disk_f = res_tmp / name, SUB / name
         if res.returncode != 0 or not fresh_f.exists() or fresh_f.read_text(encoding="utf-8") != disk_f.read_text(encoding="utf-8"):
             res_drift.append(name)
         fresh_f.unlink(missing_ok=True)
     res_tmp.rmdir()
-    g.check(not res_drift, "resolution tables regenerate byte-identically", ", ".join(res_drift) or "2 tables")
+    g.check(not res_drift, "resolution table regenerates byte-identically", ", ".join(res_drift) or "1 table")
 
     # the single-pass tables are regenerated from the pulled J6 audit; they can only be checked when the pull exists
     pull = ROOT / "_pull_j6" / "audit_single.json"

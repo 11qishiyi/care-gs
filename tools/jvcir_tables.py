@@ -198,7 +198,7 @@ def tab_gap(j3: dict) -> str:
     L = [r"\begin{table}[t]", r"\centering", r"\small", *HEAD,
          r"\caption{Our best row at or below each published file size. Positive gap = we are behind. The "
          r"published numbers are transcribed in \texttt{experiments/published\_3dgs.json}; the 0.55 dB protocol "
-         r"bias measured in M16 is stated, not folded in.}",
+         r"bias measured in Section 4.1 is stated, not folded in.}",
          r"\label{tab:gap}",
          r"\begin{tabular}{llrrrrr}", r"\toprule",
          r"scene & method & their file & their PSNR & our file & our PSNR & gap (dB) \\", r"\midrule"]
