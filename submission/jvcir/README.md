@@ -71,8 +71,8 @@ them), **prose** (no duplicated paragraph; the gap range and the matched-decibel
 from the artifacts) and **references** (at least the journal's 2026 lower quartile of 38; `verify_refs.py`
 resolves every DOI/arXiv id with `--net`).
 
-## The two author actions before upload
+## Author actions before upload
 
-1. Deposit `deposit_jvcir.zip` (or the GitHub release) and paste the Zenodo DOI + repository URL into the two
-   `\TBD{}` slots in `main.tex`.
+1. The deposit is already in place (GitHub release `v1.0.0` + Software Heritage snapshot, both named in the
+   manuscript); if a citable DOI is wanted later it can be added at proof without changing the claim.
 2. Fill Elsevier's declarations tool for the competing-interest `.docx` (the text is already in the manuscript).

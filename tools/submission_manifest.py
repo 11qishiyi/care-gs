@@ -57,8 +57,8 @@ def main() -> int:
         lines.append(f"| {slot} | `{rel}` | {size} | `{digest}` | {mark} | {note} |")
 
     lines += ["", "## Author actions that no script can do", "",
-              "1. Paste the Zenodo DOI into the one remaining `\\TBD{}` slot: `python tools/fill_doi.py --doi ...`.",
-              "2. Upload the declaration `.docx` (or paste the same text into Elsevier's declarations tool).", ""]
+              "1. Upload the declaration `.docx` (or paste the same text into the declarations tool).", ""]
+
     OUT.write_text("\n".join(lines), encoding="utf-8")
 
     width = max(len(s) for s, *_ in rows)
