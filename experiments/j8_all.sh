@@ -25,8 +25,15 @@ code=$(curl -sSL --max-time 60 -r 0-1048575 -o /tmp/g.bin -w '%{http_code}' "$LO
 bytes=$(stat -c %s /tmp/g.bin 2>/dev/null || echo 0)
 log "gate: cas http=$code bytes=$bytes"
 if [ "$code" != "206" ] || [ "$bytes" -lt 1000000 ]; then
-  log "gate FAILED"; echo 3 > /root/j8.done; exit 3
+  log "gate FAILED (no 206)"; echo 3 > /root/j8.done; exit 3
 fi
+# Throughput gate: the 2026-11-23 round died at 100 KB/s, where 1.52 GB is five hours. Refuse to start below 700 KB/s.
+t0=$(date +%s)
+curl -sSL --max-time 60 -r 0-8388607 -o /tmp/s.bin "$LOC"
+dt=$(( $(date +%s) - t0 + 1 ))
+kbs=$(( $(stat -c %s /tmp/s.bin) / dt / 1024 ))
+log "gate: throughput ${kbs} KB/s"
+if [ "$kbs" -lt 700 ]; then log "gate FAILED (slow)"; echo 4 > /root/j8.done; exit 4; fi
 
 log "deps"
 python3 -m pip install -q packaging rich jaxtyping ninja plyfile zstandard scikit-image pillow \
