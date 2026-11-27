@@ -324,6 +324,13 @@ def main() -> int:
         worst = min(widths.items(), key=lambda kv: kv[1])
         g.check(worst[1] >= 300, "every raster figure is >= 300 dpi at 13 cm", f"worst {worst[0]} at {worst[1]} dpi")
 
+    # ---- 13 the J9/J8 generalisation numbers, recomputed from their artifacts
+    g.section("13 generalisation")
+    chk = subprocess.run([sys.executable, "tools/check_j9_j8.py"], capture_output=True, text=True)
+    failed = [ln.strip() for ln in chk.stdout.splitlines() if ln.strip().startswith("[FAIL]")]
+    g.check(chk.returncode == 0 and not failed, "J9/J8 numbers match their artifacts",
+            "; ".join(failed) if failed else f"{chk.stdout.count('[PASS]')} checks")
+
     # ---- 11 references: breadth against the journal's own range, and locator integrity
     g.section("11 references")
     n_bib = len(re.findall(r"@\w+\{", bib))
