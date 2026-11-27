@@ -419,6 +419,16 @@
     },
     {
       "scene": "stump",
+      "method": "PCGS",
+      "their_mb": 13.49,
+      "their_psnr": 26.61,
+      "ours_mb": 5.89,
+      "ours_psnr": 16.63,
+      "gap_db": 9.98,
+      "src": "experiments/artifacts/a4/sota_table.md"
+    },
+    {
+      "scene": "stump",
       "method": "HAC",
       "their_mb": 18.11,
       "their_psnr": 26.58,
