@@ -40,6 +40,7 @@ def main(argv=None) -> int:
     ap.add_argument("--factor", type=int, default=1)
     ap.add_argument("--cal-frac", type=float, default=0.5)
     ap.add_argument("--bits", default="8,6,4")
+    ap.add_argument("--reduction", default="mean", choices=("mean", "max"))
     ap.add_argument("--out", default="/root/res/j9")
     ap.add_argument("--device", default="cuda")
     args = ap.parse_args(argv)
@@ -88,7 +89,8 @@ def main(argv=None) -> int:
                 with torch.no_grad():
                     img = render(splats, c2w[v].unsqueeze(0), K[v].unsqueeze(0), W, H)["colors"][0]
                 img = img.float().cpu().numpy()
-                e = np.abs(img - gt[v]).mean(-1)
+                e = np.abs(img - gt[v])
+                e = e.mean(-1) if args.reduction == "mean" else e.max(-1)
                 out["abs"].append(quantile_table(e))
                 out["sq"].append(quantile_table((e ** 2).astype(np.float32)))
                 out["psnr"].append(float(10 * np.log10(1.0 / max(float((e ** 2).mean()), 1e-12))))
@@ -119,14 +121,14 @@ def main(argv=None) -> int:
             del sp_v
             torch.cuda.empty_cache()
 
-        np.savez_compressed(os.path.join(args.out, f"{scene}.npz"),
+        np.savez_compressed(os.path.join(args.out, f"{scene}_{args.reduction}.npz"),
                             levels=levels, views=np.array(dep),
                             **{f"{k}__abs": np.stack(v["abs"]) for k, v in rows.items()},
                             **{f"{k}__sq": np.stack(v["sq"]) for k, v in rows.items()})
         manifest["scenes"].append(dict(scene=scene, n=n, views=len(dep), width=W, height=H,
                                        psnr={k: round(float(np.mean(v["psnr"])), 3) for k, v in rows.items()},
                                        n_variants={k: v["n"] for k, v in rows.items()}))
-        with open(os.path.join(args.out, "j9_manifest.json"), "w", encoding="utf-8") as fh:
+        with open(os.path.join(args.out, f"j9_manifest_{args.reduction}.json"), "w", encoding="utf-8") as fh:
             json.dump(manifest, fh, indent=1)
         del sp
         torch.cuda.empty_cache()

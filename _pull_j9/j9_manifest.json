@@ -1,0 +1,64 @@
+{
+ "protocol": "J9_PLAN.md",
+ "levels_n": 2000,
+ "scenes": [
+  {
+   "scene": "bicycle",
+   "n": 6131954,
+   "views": 13,
+   "width": 1236,
+   "height": 822,
+   "psnr": {
+    "clean": 27.214,
+    "prune50": 25.658,
+    "prune30": 20.465,
+    "quant8": 27.214,
+    "prune50+quant8": 25.659,
+    "quant6": 27.208,
+    "prune50+quant6": 25.649,
+    "quant4": 27.15,
+    "prune50+quant4": 25.582
+   },
+   "n_variants": {
+    "clean": 6131954,
+    "prune50": 3065977,
+    "prune30": 1839586,
+    "quant8": 6131954,
+    "prune50+quant8": 3065977,
+    "quant6": 6131954,
+    "prune50+quant6": 3065977,
+    "quant4": 6131954,
+    "prune50+quant4": 3065977
+   }
+  },
+  {
+   "scene": "bonsai",
+   "n": 1244819,
+   "views": 19,
+   "width": 780,
+   "height": 520,
+   "psnr": {
+    "clean": 30.038,
+    "prune50": 28.443,
+    "prune30": 25.889,
+    "quant8": 30.038,
+    "prune50+quant8": 28.442,
+    "quant6": 30.037,
+    "prune50+quant6": 28.437,
+    "quant4": 29.965,
+    "prune50+quant4": 28.344
+   },
+   "n_variants": {
+    "clean": 1244819,
+    "prune50": 622410,
+    "prune30": 373446,
+    "quant8": 1244819,
+    "prune50+quant8": 622410,
+    "quant6": 1244819,
+    "prune50+quant6": 622410,
+    "quant4": 1244819,
+    "prune50+quant4": 622410
+   }
+  }
+ ]
+}

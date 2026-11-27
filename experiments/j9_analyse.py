@@ -57,6 +57,32 @@ def analyse_scene(npz: np.lib.npyio.NpzFile, alpha: float, functional: str = "ab
     return out
 
 
+
+def composed(scenes: dict) -> dict:
+    """Does pruning add to quantisation when the two are composed? (test (e) of J9_PLAN.md)
+
+    For every scene and tolerance, compare `prune50+quantB` against `quantB` alone: the difference is what the deletion
+    contributes on top of the quantisation that was already paid for.
+    """
+    out = {}
+    for name, s in scenes.items():
+        per_alpha = {}
+        for a in ALPHAS:
+            key = f"a{a}_abs"
+            if key not in s:
+                continue
+            for k in s[key]:
+                if "+" not in k:
+                    continue
+                pure = k.split("+")[1]
+                if pure not in s[key]:
+                    continue
+                per_alpha[k] = dict(with_prune_pp=s[key][k]["loss_pp"], quant_alone_pp=s[key][pure]["loss_pp"],
+                                    added_pp=round(s[key][k]["loss_pp"] - s[key][pure]["loss_pp"], 3))
+        if per_alpha:
+            out[name] = per_alpha
+    return out
+
 def verdicts(scenes: dict) -> dict:
     """Apply C1-C4 from J9_PLAN.md."""
     res = {}
@@ -103,6 +129,7 @@ def verdicts(scenes: dict) -> dict:
                     good += 1
         c3[name] = dict(cells=cells, separated_all_views=good)
     res["C3_per_view"] = c3
+    res["composed"] = composed(scenes)
     return res
 
 

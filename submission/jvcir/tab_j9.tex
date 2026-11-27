@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.2pt}
+\caption{The same comparison at six tolerances, on scenes the frontier figure does not use for its headline. \emph{Least} geometric is the most forgiving deletion; \emph{worst} attribute is the least forgiving quantisation or {SH} truncation; the two families overlap only if the first number is not strictly above the second. Losses in coverage points at the clean model's $(1-\alpha)$ quantile.}
+\label{tab:j9}
+\begin{tabular}{llrrr}
+\toprule
+scene & $\alpha$ & least geometric (pp) & worst attribute (pp) & separated \\
+\midrule
+bicycle & 0.01 & +0.56 & +0.01 & yes \\
+bicycle & 0.02 & +1.02 & +0.02 & yes \\
+bicycle & 0.05 & +2.18 & +0.05 & yes \\
+bicycle & 0.1 & +3.61 & +0.09 & yes \\
+bicycle & 0.2 & +5.70 & +0.23 & yes \\
+bicycle & 0.3 & +7.20 & +0.44 & yes \\
+bonsai & 0.01 & -0.04 & +0.01 & \\textbf{no} \\
+bonsai & 0.02 & +0.08 & +0.01 & yes \\
+bonsai & 0.05 & +1.52 & +0.03 & yes \\
+bonsai & 0.1 & +5.61 & +0.03 & yes \\
+bonsai & 0.2 & +16.03 & +0.17 & yes \\
+bonsai & 0.3 & +22.13 & +0.94 & yes \\
+\bottomrule
+\end{tabular}
+\end{table}
