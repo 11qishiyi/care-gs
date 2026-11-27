@@ -1,0 +1,121 @@
+{
+ "rows": [
+  {
+   "family": "quantisation (container)",
+   "keep": 1.0,
+   "rate": 17.352941176470587,
+   "coverage_pp": 0.0
+  },
+  {
+   "family": "prune + container (bicycle)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 3.611
+  },
+  {
+   "family": "prune + container (bonsai)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 5.61
+  },
+  {
+   "family": "prune+quant composition (bicycle)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 3.61
+  },
+  {
+   "family": "prune+quant composition (bicycle)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 3.804
+  },
+  {
+   "family": "prune+quant composition (bonsai)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 5.61
+  },
+  {
+   "family": "prune+quant composition (bonsai)",
+   "keep": 0.5,
+   "rate": 34.705882352941174,
+   "coverage_pp": 5.885
+  },
+  {
+   "family": "prune + container (bicycle)",
+   "keep": 0.3,
+   "rate": 57.84313725490196,
+   "coverage_pp": 24.423
+  },
+  {
+   "family": "prune + container (bonsai)",
+   "keep": 0.3,
+   "rate": 57.84313725490196,
+   "coverage_pp": 12.741
+  }
+ ],
+ "admissible_at": {
+  "1": [],
+  "2": [],
+  "5": [
+   {
+    "family": "prune + container (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.611
+   },
+   {
+    "family": "prune+quant composition (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.61
+   },
+   {
+    "family": "prune+quant composition (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.804
+   }
+  ],
+  "10": [
+   {
+    "family": "prune + container (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.611
+   },
+   {
+    "family": "prune + container (bonsai)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 5.61
+   },
+   {
+    "family": "prune+quant composition (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.61
+   },
+   {
+    "family": "prune+quant composition (bicycle)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 3.804
+   },
+   {
+    "family": "prune+quant composition (bonsai)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 5.61
+   },
+   {
+    "family": "prune+quant composition (bonsai)",
+    "keep": 0.5,
+    "rate": 34.705882352941174,
+    "coverage_pp": 5.885
+   }
+  ]
+ },
+ "note": "per-primitive cost charged to every encoded arm; the entropy coder is at order-0 on quantised alphabets (Table 3), so per-row costs add and the derivation is an upper bound on pruning's rate advantage"
+}

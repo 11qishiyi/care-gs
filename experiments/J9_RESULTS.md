@@ -92,4 +92,44 @@ prune30 = −22.08。prune30 量级一致；prune50 相差 1.3 pp，来源是**�
 |---|---|
 | 实例 | 2150556（A30，¥2.35/h），00:00 起 |
 | 数据 | bicycle 1.52 GB PLY 全量、bonsai 309 MB、counter 238 图 |
-| 失败记录 | 首次运行在测量阶段因 `common.py` 未随包上传而 `ModuleNotFoundError`；补传后重跑成功。数据阶段 flowers 因**镜像里没有该场景**被跳过（可用场景：bicycle/bonsai/counter/garden/kitchen/room/stump，无 flowers/treehill） |
+| 失败记录 | 首次运行在测量阶段因 `common.py` 未随包上传而 `ModuleNotFoundError`；补传后重跑成功。数据阶段 flowers 因**镜像里没有该场景**被跳过（可用场景：bicycle/bonsai/counter/garden/kitchen/room/stump，无 flowers/treehill） |## 9 J8 率轴：把容器记给剪枝（2026-11-28 02:0x）
+
+审稿人 A 的异议是"剪枝臂没有编码"。这一轮把**两族都按容器的实测 13.60 B/primitive 记账**
+（`experiments/j8_rate.py`），而不是只给剪枝记删除：
+
+| 臂 | 码率 | 覆盖率损失（α=0.1） |
+|---|---|---|
+| 量化（容器，全模型） | **17.35×** | **0.00 pp** |
+| prune50 + 容器（bicycle） | 34.71× | 3.61 pp |
+| prune50 + 容器（bonsai） | 34.71× | 5.61 pp |
+| prune30 + 容器（bicycle） | 57.84× | 24.42 pp |
+| prune30 + 容器（bonsai） | 57.84× | 12.74 pp |
+
+**两个结论，方向相反**：
+
+1. **ε=1 pp 的断言活下来了**：在 1 pp 与 2 pp 上，剪枝族**仍无可行臂**（0 个）；5 pp 时有 3 个，10 pp 时有 6 个。
+   所以"剪枝在 1 pp 内不可行"不是"没给编码器"的假象。
+2. **"剪枝到不了 1.3×"这个说法死了**：记上容器它到 **34.7×**，只是要付 3.6–5.6 pp。
+   正确表述是：**删除在"容差已经花掉"的区域买码率**，而不是"删不出来"。
+
+**方法边界（必须随数字一起说）**：这是**推导**不是重新编码。可推导的理由是我们自己的实测——容器九个流里有六个
+raw≈coded（Table 3），说明熵编码在量化字母表上已到 order-0、不能跨行 pooling，所以按行成本可加。这个假设让
+本表成为**剪枝码率优势的上界**。
+
+## 10 C4：第二个新场景拿不到（镜像限制，非选择）
+
+公开镜像 `dylanebert/3dgs` 里**只有 bicycle / bonsai / stump 有 `point_cloud.ply`**；counter / garden / kitchen /
+room 只有 `.splat`（该格式不带 SH，量化臂无从施加，不适用），`alexmkwizu/gaussian_training_datasets` 里也**没有
+flowers / treehill 的图像**。
+
+| 场景 | 有 PLY | 有图像 | 本轮可用 |
+|---|---|---|---|
+| bicycle | ✓ | ✓ | ✓ |
+| bonsai | ✓ | ✓ | ✓ |
+| stump | ✓（但 §4.1 记录公开副本损坏） | ✓ | ✗ |
+| counter / garden / kitchen / room | ✗（仅 .splat） | ✓ | ✗ |
+| flowers / treehill | ✗ | ✗ | ✗ |
+
+因此 **C4 只满足 1 个新场景（bonsai）**，目标里写的"至少 2 个"没有达到。这不是没跑，是**公开资产不存在**。
+可选的补救是：用 `.splat` 场景做一次"从已量化基底出发"的比较——但它把量化臂的可用范围压掉了，会污染规律检验，
+所以我没做，并在论文 §5.4 里只用 bicycle+bonsai。

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.4pt}
+\caption{The rate axis, with \emph{both} families charged the container's measured $13.60$~B/primitive rather than deletion alone (which is what Fig.~\ref{fig:frontier}A charges the pruning arms). Rates are against the fp32 asset; coverage loss is measured at $\alpha=0.1$ on the same views as Table~\ref{tab:j9}. The quantisation row is the shipped container; the pruning rows are the same container with half and with $70\%$ of the primitives deleted before it.}
+\label{tab:j8}
+\begin{tabular}{lrr}
+\toprule
+arm & rate ($\times$) & coverage loss (pp) \\
+\midrule
+quantisation (container) & 17.4 & +0.00 \\
+prune + container (bicycle) & 34.7 & +3.61 \\
+prune + container (bonsai) & 34.7 & +5.61 \\
+prune+quant composition (bicycle) & 34.7 & +3.61 \\
+prune+quant composition (bicycle) & 34.7 & +3.80 \\
+prune+quant composition (bonsai) & 34.7 & +5.61 \\
+prune+quant composition (bonsai) & 34.7 & +5.88 \\
+prune + container (bicycle) & 57.8 & +24.42 \\
+prune + container (bonsai) & 57.8 & +12.74 \\
+\bottomrule
+\end{tabular}
+\end{table}
