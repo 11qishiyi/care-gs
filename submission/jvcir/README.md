@@ -10,7 +10,7 @@ and the reproducible corpus statistics in [`review/JVCIR_SURVEY_2026-11.md`](../
 
 | file | what it is | how it is produced |
 |---|---|---|
-| `main.tex` | manuscript (elsarticle, `preprint,number,3p`), 22 pages | hand-written; tables and figures `\input`/`\includegraphics` |
+| `main.tex` | manuscript (elsarticle, `preprint,number,3p`), 23 pages | hand-written; tables and figures `\input`/`\includegraphics` |
 | `main.pdf` | compiled manuscript | `pdflatex → bibtex → pdflatex ×2` |
 | `refs.bib` | 48 entries: 3DGS + compression, 2026 certificate work, 14 from this journal, statistics | locators only where verified; `python tools/verify_refs.py` resolves every one |
 | `highlights.txt` | 5 bullets, all ≤ 85 characters | `tools/jvcir_compliance.py` checks |
