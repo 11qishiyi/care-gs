@@ -65,6 +65,46 @@ def main() -> int:
         except FileNotFoundError:
             print("  [SKIP] pdffonts unavailable")
 
+
+    # ---- article structure (guide: "Article structure", "Title page", "References")
+    fm = tex[tex.find("\\begin{frontmatter}"):tex.find("\\end{frontmatter}")]
+    item("\\corref{" in fm and "\\cortext[" in fm, "corresponding author marked (\\corref + \\cortext)")
+    item(bool(re.search(r"\\ead\{", fm)), "corresponding e-mail present")
+    item(bool(re.search(r"China|,\s*[A-Z][a-z]+,?\s*[A-Z]{2}", fm)), "affiliation names a country")
+
+    numbered = re.findall(r"\\section\{([^}]+)\}", tex)
+    item(len(numbered) >= 3, "numbered sections", f"{len(numbered)} sections")
+    abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", tex, re.S)
+    item(abstract is not None and "\\cite" not in abstract.group(1), "no citations inside the abstract")
+    item(not re.search(r"(?:in|see|of)\s+the\s+text", tex, re.I), "no 'in the text' cross-references")
+
+    # every figure and table label cited, including the generated table files
+    labels = re.findall(r"\\label\{((?:fig|tab):[^}]+)\}", tex)
+    for f in sorted(SUB.glob("tab_*.tex")):
+        labels += re.findall(r"\\label\{((?:fig|tab):[^}]+)\}", f.read_text(encoding="utf-8"))
+    refs = set(re.findall(r"\\(?:ref|eqref)\{([^}]+)\}", tex))
+    uncited = sorted(set(labels) - refs)
+    item(not uncited, "every figure and table is cited in the text", ", ".join(uncited) or f"{len(set(labels))} objects")
+
+    # British or American, not both (guide: "Language and editing services")
+    brit = sum(len(re.findall(r"\b" + w + r"\b", tex, re.I)) for w in
+               ("quantisation", "colour", "behaviour", "analyse", "modelling", "labelled", "favour"))
+    amer = sum(len(re.findall(r"\b" + w + r"\b", tex, re.I)) for w in
+               ("quantization", "color", "behavior", "analyze", "modeling", "labeled", "favor"))
+    item(not (brit and amer), "one spelling convention throughout", f"{brit} British / {amer} American")
+
+    # preprints must carry a DOI (guide: "Reference to preprints")
+    bib = (SUB / "refs.bib").read_text(encoding="utf-8")
+    arx = re.findall(r"arXiv preprint arXiv:(\d{4}\.\d{4,5})", bib)
+    with_doi = sum(1 for a in arx if f"10.48550/arXiv.{a}" in bib)
+    item(with_doi == len(arx), "every arXiv preprint carries its DOI", f"{with_doi}/{len(arx)}")
+
+    # graphical abstract (guide: at least 1328 px wide, longest side horizontal)
+    ga = FIG / "graphical_abstract.png"
+    if ga.exists():
+        w, h = Image.open(ga).size
+        item(w >= 1328 and w > h, "graphical abstract >= 1328 px wide and landscape", f"{w}x{h}")
+
     # text hygiene
     item("\\underline" not in tex, "no underlined text")
     item("\\sout" not in tex and "\\st{" not in tex, "no strikethrough")
