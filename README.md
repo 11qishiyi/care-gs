@@ -1,6 +1,6 @@
-# CARE-GS — reproduction repository
+# CARE-GS — reproduction data and code
 
-Code, derived tables, figures and the manuscript for
+Deposit for
 
 > **CARE-GS: coverage-aware rate reduction for 3D Gaussian Splatting assets**
 > Tianji Su, Ningbo University — submitted to the *Journal of Visual Communication and Image Representation*
@@ -10,17 +10,21 @@ re-compressed by whoever receives it, does the guarantee survive — and can the
 issuer?** The answer is that the *action family* decides (quantisation keeps it, pruning does not), and that a
 recipient can audit the carrier for the price of one render pass.
 
+This repository is the research-data deposit for that paper. It holds the measurements, the code that produced
+them and the code that turns them into the published tables and figures. The manuscript itself is not archived
+here; it is published by the journal.
+
 ## What is here
 
 | path | what it is |
 |---|---|
-| `submission/jvcir/` | the manuscript (`main.tex`), bibliography, every generated table, the highlights file, the cover letter and the submission checklist |
-| `figures_j/` | the six figures, as vector PDF and 300 dpi PNG, each produced by a script in `tools/` |
-| `tools/` | table and figure generators, the compliance helper, the reference verifier and the submission gate |
-| `experiments/` | the measurement scripts, their results notes (`J1`–`J6`), and the artifact JSON every number in the paper is regenerated from |
-| `review/` | the venue survey, the gap analyses, the design notes and the citation-verification output |
-| `_pull_j5/`, `_pull_j6/` | the small pulled artifacts two figures and two tables are built from (magnification patches, per-split audit pairs) |
+| `experiments/` | the measurement scripts, their results notes (`J1`–`J9`), and the artifact JSON every number in the paper is regenerated from (`experiments/artifacts/a4/`) |
+| `tools/` | table and figure generators, the reference verifier and the submission gate |
+| `submission/jvcir/tab_*.tex` | the 17 generated tables, with their generators listed in `submission/jvcir/README.md` |
+| `figures_j/` | the six figures and the graphical abstract, as vector PDF and 300 dpi PNG, each produced by a script in `tools/` |
+| `_pull_j5/`, `_pull_j6/`, `_pull_j7/`, `_pull_j9/` | the pulled artifacts the qualitative figure and three tables are built from (magnification patches, per-split audit pairs, quantile dumps) |
 | `research/code/calib/` | the renderer wrappers and COLMAP I/O the measurement scripts import |
+| `results_v120/` | a single derived audit bound that the deposit also carries |
 
 ## Reproduce
 
@@ -28,38 +32,34 @@ Everything that produces a **number in the paper** runs on CPU from the artifact
 
 ```bash
 python experiments/j3_ablations.py --check     # every printed number traced to its artifact
-python tools/jvcir_tables.py                   # the 13 artifact-backed tables
-python tools/jvcir_resolution.py               # the audit-resolution tables
-python tools/j6_singlepass_analyse.py          # the measured single-pass tables (needs _pull_j6)
-python tools/jvcir_fig_frontier.py             # Fig. 2
-python tools/jvcir_fig_audit.py                # Fig. 3
-python tools/jvcir_fig_decibel.py              # Fig. 4
-python tools/jvcir_fig_qual.py                 # Fig. 6 (needs _pull_j5)
-cd submission/jvcir && pdflatex main && bibtex main && pdflatex main && pdflatex main
-cd ../.. && python tools/verify_jvcir.py       # the gate: 11 sections, exit 0 required
+python tools/jvcir_tables.py                   # the 11 j1/j2/j3-driven tables
+python tools/jvcir_resolution.py               # tab_resolution.tex
+python tools/j6_singlepass_analyse.py          # tab_singlepass.tex, tab_singlepass_abstain.tex
+python experiments/j8_rate.py                  # tab_j8.tex
+python experiments/j9_tables.py                # tab_j9.tex
+python experiments/j4_report.py                # tab_viewlevel.tex  (reads _pull_j4/)
 ```
 
-In a **fresh clone** compile once before running the gate: the build check compares the PDF against its sources, and a checkout stamps every file with the same time.`n`nThe three **rendering** rounds (`J4`, `J5`, `J6`) need a CUDA GPU and the Mip-NeRF 360 assets; their scripts and
-their inputs are recorded in `experiments/J*_PLAN.md` and their outcomes — including the two criteria that failed —
-in `experiments/J*_RESULTS.md`. Two things cannot be rebuilt: the four `*_i7k` checkpoints (trained on rented nodes
-that no longer exist) and the original `stump` checkpoint (the public mirror now serves a copy with non-finite
-scales). Both are stated in the manuscript.
+and the figures the same way:
 
-## What to read first
+```bash
+python tools/jvcir_fig_framework.py  && python tools/jvcir_fig_frontier.py
+python tools/jvcir_fig_viewlevel.py  && python tools/jvcir_fig_audit.py
+python tools/jvcir_fig_decibel.py    && python tools/jvcir_fig_qual.py
+python tools/jvcir_fig_graphical.py
+```
 
-- `submission/jvcir/main.pdf` — the paper.
-- `review/JVCIR_BEST_PRACTICE_2026-11-18.md` — what this journal actually publishes, measured on 514 articles,
-  and exactly where this manuscript sits against it.
-- `experiments/J5_RESULTS.md`, `experiments/J6_RESULTS.md` — the two rounds that report failures rather than wins.
+Regenerated files come out byte-identical to the ones committed; if one does not, that artifact and that table have
+drifted.
 
-## Verification, not decoration
+`tools/verify_jvcir.py` is the submission gate. It cross-checks a manuscript against the tables and artifacts, so it
+runs in the author's working copy (it needs the manuscript source, which is not part of this deposit).
 
-`tools/verify_jvcir.py` is not a linter. It regenerates every table byte-identically from the artifacts, checks that
-the range quoted in the prose equals the range computed from the data, checks that the figure labels equal the
-render manifest, checks that no paragraph appears twice, and checks that every DOI and arXiv identifier resolves to
-the title it claims to be. A number that cannot be traced is treated as a defect.
+## Citing
 
-## Licence and citation
+`CITATION.cff` names the paper. Released as tag `v1.1.0`; a copy of the deposit archive is attached to that release.
 
-Code: MIT (`LICENSE`). Manuscript text and figures: CC BY 4.0. If you use the artifacts, cite the paper; the
-machine-readable citation is in `CITATION.cff`.
+## License
+
+Code: MIT (`LICENSE`). The rendered patches under `_pull_j5/` and the table artifacts are derived from the
+Mip-NeRF 360 captures (Barron et al., CVPR 2022), used under that dataset's terms.

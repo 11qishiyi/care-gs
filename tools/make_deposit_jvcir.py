@@ -105,11 +105,10 @@ FIGURES = ["figures_j/fig1_framework.pdf", "figures_j/fig1_framework.png",
            "figures_j/fig4_decibel.pdf", "figures_j/fig4_decibel.png",
            "figures_j/graphical_abstract.pdf", "figures_j/graphical_abstract.png",
            "figures_j/fig6_qualitative.pdf", "figures_j/fig6_qualitative.png"]
-DOCS = ["submission/jvcir/main.tex", "submission/jvcir/refs.bib", "submission/jvcir/highlights.txt",
-        "submission/jvcir/README.md", "submission/jvcir/CHECKLIST.md", "submission/jvcir/COVER_LETTER.md",
-        "submission/jvcir/REBUTTAL_FAQ.md", "review/CARE_GS_GAP_2026-11-18.md",
-        "review/JVCIR_BEST_PRACTICE_2026-11-18.md", "review/JVCIR_SURVEY_2026-11.md", "review/JVCIR_GAP_2026-11-19.md",
-        "review/REFS_VERIFY.json", "experiments/J5_PLAN.md", "experiments/J5_RESULTS.md",
+# The deposit carries the research data and what is needed to regenerate the tables and figures from it.
+# The manuscript, the bibliography, the cover letter, the submission checklist and the venue-survey notes are
+# submission paperwork, not research data, so they are deliberately not archived here.
+DOCS = ["submission/jvcir/README.md", "experiments/J5_PLAN.md", "experiments/J5_RESULTS.md",
         "experiments/J6_RESULTS.md"]
 
 
