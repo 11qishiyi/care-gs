@@ -70,7 +70,8 @@ def main() -> int:
     fm = tex[tex.find("\\begin{frontmatter}"):tex.find("\\end{frontmatter}")]
     item("\\corref{" in fm and "\\cortext[" in fm, "corresponding author marked (\\corref + \\cortext)")
     item(bool(re.search(r"\\ead\{", fm)), "corresponding e-mail present")
-    item(bool(re.search(r"China|,\s*[A-Z][a-z]+,?\s*[A-Z]{2}", fm)), "affiliation names a country")
+    item(bool(re.search(r"China", fm)) and bool(re.search(r"\d{5,6}", fm)),
+         "affiliation has a postal address and a country")
 
     numbered = re.findall(r"\\section\{([^}]+)\}", tex)
     item(len(numbered) >= 3, "numbered sections", f"{len(numbered)} sections")
