@@ -50,7 +50,7 @@ def main() -> int:
         if not pdf.exists():
             item(False, f"{stem}: vector version present")
             continue
-        info = subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True).stdout
+        info = subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True, encoding="utf-8", errors="replace").stdout
         m = re.search(r"Page size:\s+([\d.]+) x", info)
         dpi = round(px / (float(m.group(1)) / 72.27)) if m else 0
         item(dpi >= 300, f"{stem}: raster >= 300 dpi at printed width", f"{dpi} dpi, {px} px")

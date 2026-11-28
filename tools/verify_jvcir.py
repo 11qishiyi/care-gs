@@ -275,7 +275,7 @@ def main() -> int:
     g.section("7 provenance")
     proc = subprocess.run([sys.executable, "experiments/j3_ablations.py", "--check"],
                           capture_output=True, text=True, cwd=ROOT)
-    g.check(proc.returncode == 0, "j3 ablation provenance", (proc.stdout.strip().splitlines() or [""])[0])
+    g.check(proc.returncode == 0, "j3 ablation provenance", ((proc.stdout or '').strip().splitlines() or [''])[0])
 
     # ---- 8 build
     g.section("8 build")
@@ -395,17 +395,17 @@ def main() -> int:
 
     # ---- 13 the J9/J8 generalisation numbers, recomputed from their artifacts
     g.section("13 generalisation")
-    chk = subprocess.run([sys.executable, "tools/check_j9_j8.py"], capture_output=True, text=True)
-    failed = [ln.strip() for ln in chk.stdout.splitlines() if ln.strip().startswith("[FAIL]")]
+    chk = subprocess.run([sys.executable, "tools/check_j9_j8.py"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    failed = [ln.strip() for ln in (chk.stdout or '').splitlines() if ln.strip().startswith("[FAIL]")]
     g.check(chk.returncode == 0 and not failed, "J9/J8 numbers match their artifacts",
-            "; ".join(failed) if failed else f"{chk.stdout.count('[PASS]')} checks")
+            "; ".join(failed) if failed else f"{(chk.stdout or '').count('[PASS]')} checks")
 
     # ---- 14 the guide's writing-and-formatting rules (file format, artwork, declarations)
     g.section("14 guide format")
-    fmt = subprocess.run([sys.executable, "tools/check_guide_format.py"], capture_output=True, text=True)
-    bad = [ln.strip() for ln in fmt.stdout.splitlines() if ln.strip().startswith("[FAIL]")]
+    fmt = subprocess.run([sys.executable, "tools/check_guide_format.py"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    bad = [ln.strip() for ln in (fmt.stdout or '').splitlines() if ln.strip().startswith("[FAIL]")]
     g.check(fmt.returncode == 0 and not bad, "the package meets the guide's format rules",
-            "; ".join(bad) if bad else f"{fmt.stdout.count('[PASS]')} checks")
+            "; ".join(bad) if bad else f"{(fmt.stdout or '').count('[PASS]')} checks")
 
     # ---- 11 references: breadth against the journal's own range, and locator integrity
     g.section("11 references")
@@ -420,7 +420,7 @@ def main() -> int:
         g.check(n_bib >= 30, "reference count", f"{n_bib} entries (survey stats missing)")
     refs_cmd = [sys.executable, "tools/verify_refs.py"] + ([] if args.net else ["--offline"])
     refs = subprocess.run(refs_cmd, capture_output=True, text=True, cwd=ROOT)
-    tail = (refs.stdout.strip().splitlines() or [""])[-1]
+    tail = ((refs.stdout or '').strip().splitlines() or [''])[-1]
     g.check(refs.returncode == 0, "reference locators", tail[:90])
 
     print()
