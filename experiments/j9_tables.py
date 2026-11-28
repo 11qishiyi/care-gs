@@ -25,6 +25,9 @@ def main() -> int:
     scenes = d["scenes"]
     rows = []
     for scene in sorted(scenes):
+        # the report keys carry the functional suffix (`bicycle_max`); print the scene name and keep the
+        # functional in the caption, so the table has no underscore to escape
+        label = scene.replace('_max', '').replace('_mean', '')
         for alpha in ALPHAS:
             key = f"a{alpha}_abs"
             cell = scenes[scene].get(key)
@@ -36,7 +39,7 @@ def main() -> int:
                 continue
             best_geo = min(geo.values())
             worst_attr = max(attr.values())
-            rows.append((scene, alpha, best_geo, worst_attr, best_geo > worst_attr))
+            rows.append((label, alpha, best_geo, worst_attr, best_geo > worst_attr))
 
     L = [r"\begin{table}[t]", r"\centering", r"\small", r"\setlength{\tabcolsep}{3.2pt}",
          r"\caption{The same comparison at six tolerances, on scenes the frontier figure does not use for its"

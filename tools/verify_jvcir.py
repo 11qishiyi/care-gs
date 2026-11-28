@@ -318,11 +318,23 @@ def main() -> int:
         png = FIGDIR / f"{stem}.png"
         w = png_width(png) if png.exists() else 0
         if w:
-            # a full-width figure is 13 cm = 5.118 in on the printed page
-            widths[stem] = round(w / 5.118)
+            widths[stem] = w                     # pixels, for the dpi-at-printed-width check below
     if widths:
-        worst = min(widths.items(), key=lambda kv: kv[1])
-        g.check(worst[1] >= 300, "every raster figure is >= 300 dpi at 13 cm", f"worst {worst[0]} at {worst[1]} dpi")
+        # the journal's artwork rule is 300 dpi at the size the figure is printed, not at an assumed width
+        dpi_at_size = {}
+        for stem, px in widths.items():
+            pdf = FIGDIR / f"{stem}.pdf"
+            try:
+                info = subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True, timeout=60).stdout
+                m = re.search(r"Page size:\s+([\d.]+) x", info)
+                if m:
+                    dpi_at_size[stem] = round(px / (float(m.group(1)) / 72.27))
+            except FileNotFoundError:
+                pass
+        if dpi_at_size:
+            worst = min(dpi_at_size.items(), key=lambda kv: kv[1])
+            g.check(worst[1] >= 300, "every raster figure is >= 300 dpi at its printed width",
+                    f"worst {worst[0]} at {worst[1]} dpi")
 
     # ---- 13 the J9/J8 generalisation numbers, recomputed from their artifacts
     g.section("13 generalisation")
@@ -330,6 +342,13 @@ def main() -> int:
     failed = [ln.strip() for ln in chk.stdout.splitlines() if ln.strip().startswith("[FAIL]")]
     g.check(chk.returncode == 0 and not failed, "J9/J8 numbers match their artifacts",
             "; ".join(failed) if failed else f"{chk.stdout.count('[PASS]')} checks")
+
+    # ---- 14 the guide's writing-and-formatting rules (file format, artwork, declarations)
+    g.section("14 guide format")
+    fmt = subprocess.run([sys.executable, "tools/check_guide_format.py"], capture_output=True, text=True)
+    bad = [ln.strip() for ln in fmt.stdout.splitlines() if ln.strip().startswith("[FAIL]")]
+    g.check(fmt.returncode == 0 and not bad, "the package meets the guide's format rules",
+            "; ".join(bad) if bad else f"{fmt.stdout.count('[PASS]')} checks")
 
     # ---- 11 references: breadth against the journal's own range, and locator integrity
     g.section("11 references")
