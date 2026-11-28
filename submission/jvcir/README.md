@@ -1,7 +1,7 @@
 # JVCIR submission package — map and reproduction
 
-**Rebuilt 2026-11-18 (rounds 2–3). `python tools/verify_jvcir.py` → PASS (exit 0), 22 pages, 6 figures, 15 tables,
-48 references, 11 gate sections.**
+**Rebuilt 2026-11-28 (rounds 2–4). `python tools/verify_jvcir.py` → PASS (exit 0), 25 pages, 6 figures, 17 tables,
+51 references, 11 gate sections.**
 
 The survey this package is built against: [`review/JVCIR_BEST_PRACTICE_2026-11-18.md`](../../review/JVCIR_BEST_PRACTICE_2026-11-18.md)
 (what the journal actually publishes, measured on 514 articles from 2025–2026, plus eight full-text deep reads),
@@ -28,6 +28,8 @@ and the reproducible corpus statistics in [`review/JVCIR_SURVEY_2026-11.md`](../
 | `tab_gap.tex` | our best row vs published operating points | ← `artifacts/a4/sota_table.md` |
 | `tab_resolution.tex` | audit verdict bucketed by distance from the tolerance | `tools/jvcir_resolution.py` ← `artifacts/a4/j2_audit_decision.json` |
 | `tab_abstain.tex` | what a single audit pass buys as the abstention band widens | same |
+| `tab_j8.tex` | rate axis with both families charged the container's bytes | `experiments/j8_rate.py` ← `artifacts/a4/j9_report_mean.json` |
+| `tab_j9.tex` | six tolerances × three scenes, per-channel max | `experiments/j9_tables.py` ← `artifacts/a4/j9_report_max3.json` |
 | `COVER_LETTER.md` | cover letter: fit, position, the honestly computed gap, reviewer profiles | hand-written |
 | `CHECKLIST.md` | the journal's 15 hard items and the two author actions | hand-written |
 
@@ -73,6 +75,6 @@ resolves every DOI/arXiv id with `--net`).
 
 ## Author actions before upload
 
-1. The deposit is already in place (GitHub release `v1.0.0` + Software Heritage snapshot, both named in the
+1. The deposit is already in place (GitHub release `v1.1.0` + Software Heritage snapshot, both named in the
    manuscript); if a citable DOI is wanted later it can be added at proof without changing the claim.
 2. Fill Elsevier's declarations tool for the competing-interest `.docx` (the text is already in the manuscript).

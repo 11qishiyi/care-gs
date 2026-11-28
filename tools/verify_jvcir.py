@@ -15,6 +15,10 @@ Checks, in order (any failure exits 1):
                      the matched-decibel claim equals the value in the figure's artifact
  11. refs            the bibliography is at least as broad as the journal's 2026 lower quartile, and
                      every locator resolves (`--net`; the structural part always runs)
+ 12. production      vector PDF + embedded fonts + >= 300 dpi raster at the printed width
+ 13. generalisation  the J9/J8 numbers equal their artifacts (tools/check_j9_j8.py)
+ 14. guide format    the journal's 33 artwork/format rules (tools/check_guide_format.py)
+ 15. figure type     the smallest font drawn inside every figure is >= 6 pt at \\linewidth
 
 Usage:
     python tools/verify_jvcir.py
@@ -93,6 +97,38 @@ def png_width(path: Path) -> int:
         return struct.unpack(">I", raw[16:20])[0]
     except Exception:  # noqa: BLE001
         return 0
+
+
+LINEWIDTH_IN = 468.0 / 72.0  # elsarticle 3p text width, as measured in main.log
+
+
+def _min_type_pt(pdf: Path) -> float:
+    """Smallest font size drawn in a matplotlib figure PDF, expressed at \\linewidth.
+
+    Matplotlib writes `BT /F1 7.4 Tf`; the operand is the size in the figure's own points, so
+    scaling by LINEWIDTH_IN / page_width_in gives the size the reader sees.
+    """
+    import zlib
+
+    raw = pdf.read_bytes()
+    page = re.search(rb"/MediaBox\s*\[\s*([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)", raw)
+    if not page:
+        return 0.0
+    width_in = float(page.group(3)) / 72.27
+    sizes: list[float] = []
+    for m in re.finditer(rb"stream\r?\n", raw):
+        start = m.end()
+        end = raw.find(b"endstream", start)
+        if end < 0:
+            continue
+        try:
+            data = zlib.decompress(raw[start:end])
+        except Exception:  # noqa: BLE001
+            continue
+        sizes += [float(x) for x in re.findall(rb"/\w+\s+([\d.]+)\s+Tf", data)]
+    if not sizes or width_in <= 0:
+        return 0.0
+    return min(sizes) * (LINEWIDTH_IN / width_in)
 
 
 def paragraphs(tex: str) -> list[str]:
@@ -335,6 +371,27 @@ def main() -> int:
             worst = min(dpi_at_size.items(), key=lambda kv: kv[1])
             g.check(worst[1] >= 300, "every raster figure is >= 300 dpi at its printed width",
                     f"worst {worst[0]} at {worst[1]} dpi")
+
+    # ---- 15 the type inside each figure has to survive the reduction to \linewidth
+    # Elsevier asks for >= 6 pt at the printed size. A figure drawn on a 7.1 in canvas is reduced to
+    # 6.5 in, so a 7 pt label prints at 6.4 pt; before this check the gate measured dpi against the
+    # figure's own page box and never measured type at all, which let 4.5 pt labels pass.
+    g.section("15 figure type size")
+    type_at_size = {}
+    for stem in stems:
+        pdf = FIGDIR / f"{stem}.pdf"
+        if not pdf.exists():
+            continue
+        try:
+            size_pt = _min_type_pt(pdf)
+            if size_pt:
+                type_at_size[stem] = round(size_pt, 1)
+        except Exception:
+            pass
+    if type_at_size:
+        worst = min(type_at_size.items(), key=lambda kv: kv[1])
+        g.check(worst[1] >= 6.0, "smallest type in every figure is >= 6 pt at \\linewidth",
+                f"worst {worst[0]} at {worst[1]} pt")
 
     # ---- 13 the J9/J8 generalisation numbers, recomputed from their artifacts
     g.section("13 generalisation")

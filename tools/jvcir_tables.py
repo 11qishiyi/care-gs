@@ -75,7 +75,8 @@ def tab_bits(j3: dict) -> str:
 def tab_frontier(j1: dict) -> str:
     L = [r"\begin{table}[t]", r"\centering", r"\small", *HEAD,
          r"\caption{Largest measured rate whose coverage loss stays within a tolerance $\varepsilon$, with the "
-         r"configuration that achieves it. ``none'' in the last column means no pruning configuration on that "
+         r"configuration that achieves it; a negative drop is a coverage loss. ``none'' in the last column means no "
+         r"pruning configuration on that "
          r"asset is admissible at that tolerance, so the empty column at $\varepsilon \le 1$ pp is a statement "
          r"about admissibility, not about tuning.}",
          r"\label{tab:frontier}",
@@ -102,7 +103,7 @@ def tab_frontier(j1: dict) -> str:
 def tab_collision(j1: dict) -> str:
     L = [r"\begin{table}[t]", r"\centering", r"\small", *HEAD,
          r"\caption{Matched-rate collision at $\varepsilon = 1$ pp: at the rate the planner chooses, what the "
-         r"fidelity-first and the pruning-first choice cost in coverage.}",
+         r"fidelity-first and the pruning-first choice cost in coverage; a negative drop is a coverage loss.}",
          r"\label{tab:collision}",
          r"\begin{tabular}{lrrllrr}", r"\toprule",
          r"asset & rate & planner & drop & fidelity-first & its drop & prune-first drop \\", r"\midrule"]

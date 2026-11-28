@@ -28,7 +28,7 @@ CONT_BPP = 13.60          # container bytes per primitive, measured (Table 3, A6
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--j9", default="experiments/artifacts/a4/j9_report.json")
+    ap.add_argument("--j9", default="experiments/artifacts/a4/j9_report_mean.json")
     ap.add_argument("--out", default="submission/jvcir")
     a = ap.parse_args()
 
@@ -49,7 +49,7 @@ def main() -> int:
         cell = s.get("a0.1_abs", {})
         for arm, keep in (("prune50+quant8", 0.5), ("prune50+quant4", 0.5)):
             if arm in cell:
-                rows.append(dict(family=f"prune+quant composition ({scene})", keep=keep,
+                rows.append(dict(family=f"{arm} composition ({scene})", keep=keep,
                                  rate=FP32_BPP / (keep * CONT_BPP),
                                  coverage_pp=cell[arm]["loss_pp"]))
 
@@ -66,12 +66,14 @@ def main() -> int:
          r" rather than deletion alone (which is what Fig.~\ref{fig:frontier}A charges the pruning arms). Rates are"
          r" against the fp32 asset; coverage loss is measured at $\alpha=0.1$ on the same views as"
          r" Table~\ref{tab:j9}. The quantisation row is the shipped container; the pruning rows are the same container"
-         r" with half and with $70\%$ of the primitives deleted before it.}",
+         r" with half and with $70\%$ of the primitives deleted before it; the composition rows apply the container's"
+         r" 8-bit and 4-bit quantiser to the half-pruned model, so they differ from the half-pruning rows only in the"
+         r" quantiser they add.}",
          r"\label{tab:j8}",
          r"\begin{tabular}{lrr}", r"\toprule",
          r"arm & rate ($\times$) & coverage loss (pp) \\", r"\midrule"]
     for r in rows:
-        L.append(f"{r['family'].replace('_', chr(92) + '_')} & {r['rate']:.1f} & {r['coverage_pp']:+.2f} \\\\")
+        L.append(f"{r['family'].replace('_', chr(92) + '_')} & {r['rate']:.2f} & {r['coverage_pp']:+.2f} \\\\")
     L += [r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]
     out = Path(a.out) / "tab_j8.tex"
     out.write_text("\n".join(L), encoding="utf-8", newline="\n")

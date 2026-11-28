@@ -20,8 +20,8 @@ MANUSCRIPT = "CARE-GS: coverage-aware rate reduction for 3D Gaussian Splatting a
 AUTHOR = ("Tianji Su\nNingbo University, No. 818 Fenghua Road, Jiangbei District, Ningbo 315211, Zhejiang, China\n"
           "71736850@qq.com")
 BODY = [
-    "The author declares that he has no known competing financial interests or personal relationships that could have "
-    "appeared to influence the work reported in this paper.",
+    "The author declares no known competing financial interests or personal relationships that could have appeared to "
+    "influence the work reported in this paper. "
     "This statement covers, for the single author, all of the interests the journal asks about: employment, "
     "consultancies, stock ownership, honoraria, paid expert testimony, patent applications or registrations, grants or "
     "other funding, and affiliation with the journal as an editor or advisory board member. None applies.",

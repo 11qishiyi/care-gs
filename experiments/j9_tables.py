@@ -17,7 +17,7 @@ ALPHAS = (0.01, 0.02, 0.05, 0.1, 0.2, 0.3)
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--report", default="experiments/artifacts/a4/j9_report.json")
+    ap.add_argument("--report", default="experiments/artifacts/a4/j9_report_max3.json")
     ap.add_argument("--out", default="submission/jvcir")
     a = ap.parse_args()
 

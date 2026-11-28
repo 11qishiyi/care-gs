@@ -18,6 +18,14 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
+
 A4 = Path("experiments/artifacts/a4")
 OUT = Path("figures_j")
 COLOURS = {"bicycle": "#1f4e79", "stump": "#c0392b"}
@@ -25,7 +33,7 @@ COLOURS = {"bicycle": "#1f4e79", "stump": "#c0392b"}
 
 def main() -> None:
     d = json.loads((A4 / "j4_report.json").read_text(encoding="utf-8"))
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.7), gridspec_kw={"width_ratios": [1.15, 1]})
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 3.0), gridspec_kw={"width_ratios": [1.15, 1]})
 
     for sc in d["scenes"]:
         rows = [r for r in sc["rows"] if r["rate"]]
@@ -39,21 +47,25 @@ def main() -> None:
         ax2.plot(x, [r["gap_pp"] for r in rows], color=c, lw=1.2, marker="o", ms=3, label=sc["scene"])
 
     ax1.axhline(0.90, color="#555555", lw=0.6, ls=":")
-    ax1.text(1.05, 0.905, "nominal coverage", fontsize=5.2, color="#444444")
-    ax1.set_xlabel("rate ($\\times$ vs fp32 PLY)", fontsize=6.2)
-    ax1.set_ylabel("coverage of the shipped $q$", fontsize=6.2)
+    ax1.text(1.05, 0.952, "nominal coverage", fontsize=7.5, color="#444444", va="bottom")
+    ax1.set_xlabel("rate ($\\times$ vs fp32 PLY)", fontsize=8.8)
+    ax1.set_ylabel("coverage of the shipped $q$", fontsize=8.8)
     ax1.set_ylim(0.0, 1.0)
     ax1.set_xscale("log")
-    ax1.tick_params(labelsize=5.4, length=2)
-    ax1.legend(fontsize=4.8, frameon=False, loc="lower left", ncol=1)
-    ax1.set_title("A  the same $q$, re-measured per pixel and per view", fontsize=6.4, loc="left")
+    ax1.set_xticks([1, 2, 5, 10])
+    ax1.set_xticklabels(["1", "2", "5", "10"])
+    ax1.tick_params(labelsize=7.7, length=2.6)
+    ax1.legend(fontsize=7.2, frameon=False, loc="lower left", ncol=1)
+    ax1.set_title("A  the same $q$, per pixel and per view", fontsize=9.1, loc="left")
 
-    ax2.set_xlabel("rate ($\\times$ vs fp32 PLY)", fontsize=6.2)
-    ax2.set_ylabel("pixel coverage $-$ view coverage (pp)", fontsize=6.2)
+    ax2.set_xlabel("rate ($\\times$ vs fp32 PLY)", fontsize=8.8)
+    ax2.set_ylabel("pixel coverage $-$ view coverage (pp)", fontsize=8.8)
     ax2.set_xscale("log")
-    ax2.tick_params(labelsize=5.4, length=2)
-    ax2.legend(fontsize=5.2, frameon=False)
-    ax2.set_title("B  what a pixel-level certificate does not say", fontsize=6.4, loc="left")
+    ax2.set_xticks([1, 2, 5, 10])
+    ax2.set_xticklabels(["1", "2", "5", "10"])
+    ax2.tick_params(labelsize=7.7, length=2.6)
+    ax2.legend(fontsize=7.5, frameon=False)
+    ax2.set_title("B  what a pixel-level certificate does not say", fontsize=9.1, loc="left")
 
     for ax in (ax1, ax2):
         ax.spines["top"].set_visible(False)

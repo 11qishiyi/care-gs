@@ -21,6 +21,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
 import numpy as np
 from matplotlib.patches import Rectangle
 from PIL import Image
@@ -52,7 +60,7 @@ def main() -> None:
     arms = list(man["scenes"][0]["arms"].keys())
     ncol = 2 + len(arms)
     nrow = 2 * len(man["scenes"])
-    fig, axes = plt.subplots(nrow, ncol, figsize=(7.3, 1.28 * nrow + 0.45),
+    fig, axes = plt.subplots(nrow, ncol, figsize=(7.3, 1.06 * nrow + 1.15),
                              gridspec_kw={"width_ratios": [0.9] + [0.62] * (ncol - 1)})
     if nrow == 1:
         axes = np.asarray([axes])
@@ -83,7 +91,7 @@ def main() -> None:
             a.set_xticks([]); a.set_yticks([])
             for s in a.spines.values():
                 s.set_linewidth(0.4); s.set_color("#888888")
-            a.set_title(lab, fontsize=5.6 if c == 0 else 5.2, pad=1.5)
+            a.set_title(lab, fontsize=7.8 if c == 0 else 7.4, pad=2.0)
             e = axes[r + 1, c + 1]
             if c == 0:                      # GT has no error against itself
                 e.axis("off")
@@ -94,17 +102,17 @@ def main() -> None:
             for s in e.spines.values():
                 s.set_linewidth(0.4); s.set_color("#888888")
         axes[r + 1, 0].axis("off")
-        axes[r + 1, 0].text(0.98, 0.62, "error against", fontsize=5.0, ha="right", va="center",
+        axes[r + 1, 0].text(0.98, 0.62, "error against", fontsize=7.2, ha="right", va="center",
                             color="#333333")
-        axes[r + 1, 0].text(0.98, 0.42, "the clean render", fontsize=5.0, ha="right", va="center",
+        axes[r + 1, 0].text(0.98, 0.40, "the clean render", fontsize=7.2, ha="right", va="center",
                             color="#333333")
-        axes[r + 1, 0].text(0.98, 0.18, f"×{ERR_GAIN}", fontsize=5.6, ha="right", va="center",
+        axes[r + 1, 0].text(0.98, 0.18, f"×{ERR_GAIN}", fontsize=7.8, ha="right", va="center",
                             color="#333333")
 
-    fig.subplots_adjust(left=0.004, right=0.996, top=0.93, bottom=0.012, wspace=0.03, hspace=0.30)
+    fig.subplots_adjust(left=0.004, right=0.996, top=0.915, bottom=0.012, wspace=0.03, hspace=-0.06)
     for r, sc in enumerate(man["scenes"]):
         axes[r, 0].set_ylabel(f"{sc['scene']}\nview {sc['view_index']}\nrank {sc['view_rank']}/{sc['n_held_out']}",
-                              fontsize=5.6, rotation=90, labelpad=2.0)
+                              fontsize=7.4, rotation=90, labelpad=3.0)
     OUT.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT / "fig6_qualitative.pdf", dpi=300, bbox_inches="tight", pad_inches=0.02)
     fig.savefig(OUT / "fig6_qualitative.png", dpi=300, bbox_inches="tight", pad_inches=0.02)

@@ -19,6 +19,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
 import numpy as np
 
 A4 = Path("experiments/artifacts/a4")
@@ -36,7 +44,7 @@ def main() -> None:
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.85), gridspec_kw={"width_ratios": [1.25, 1]})
 
     # ---------------- panel A: loss vs rate, both families
-    bins = np.logspace(np.log10(1.0), np.log10(30.0), 13)
+    bins = np.logspace(np.log10(1.0), np.log10(26.0), 8)
     centres = np.sqrt(bins[:-1] * bins[1:])
     for fam, colour, label in (("prune", C_PRUNE, "pruning (deleting primitives)"),
                                ("qfp", C_QFP, "quantisation (this container)")):
@@ -48,23 +56,27 @@ def main() -> None:
             ax1.scatter([p[0] for p in pts], [p[1] for p in pts], s=7, color=colour, alpha=0.30,
                         linewidths=0, zorder=3)
         xs, ys = np.asarray(xs), np.asarray(ys)
-        med = []
-        for lo_b, hi_b in zip(bins[:-1], bins[1:]):
+        cx, med = [], []
+        for lo_b, hi_b, c in zip(bins[:-1], bins[1:], centres):
             sel = (xs >= lo_b) & (xs < hi_b)
-            med.append(float(np.median(ys[sel])) if sel.any() else np.nan)
-        ax1.plot(centres, med, color=colour, lw=1.1, marker="o", ms=2.6, label=label, zorder=4)
+            if sel.any():
+                cx.append(c)
+                med.append(float(np.median(ys[sel])))
+        ax1.plot(cx, med, color=colour, lw=1.1, marker="o", ms=3.0, label=label, zorder=4)
 
     ax1.axhspan(0, EPS, color="#888888", alpha=0.16, zorder=0)
     ax1.axhline(EPS, color="#555555", lw=0.6, ls="--", zorder=1)
-    ax1.text(13.2, 4.2, r"tolerance $\varepsilon = 1$ pp", fontsize=5.4, color="#444444")
+    ax1.plot([], [], color="#555555", lw=0.6, ls="--", label=r"tolerance $\varepsilon = 1$ pp")
     ax1.set_xscale("log")
-    ax1.set_xlabel("measured rate ($\\times$ vs fp32 PLY)", fontsize=6.2)
-    ax1.set_ylabel("coverage loss (pp)", fontsize=6.2)
-    ax1.set_ylim(-0.6, 26)
+    ax1.set_xticks([1, 2, 5, 10, 20])
+    ax1.set_xticklabels(["1", "2", "5", "10", "20"])
+    ax1.set_xlabel("measured rate ($\\times$ vs fp32 PLY)", fontsize=8.8)
+    ax1.set_ylabel("coverage loss (pp)", fontsize=8.8)
+    ax1.set_ylim(-1.5, 52)
     ax1.set_xlim(1.0, 26)
-    ax1.tick_params(labelsize=5.4, length=2)
-    ax1.legend(fontsize=5.2, frameon=False, loc="upper left")
-    ax1.set_title("A  the admissible set is set by the action family", fontsize=6.4, loc="left")
+    ax1.tick_params(labelsize=7.7, length=2.6)
+    ax1.legend(fontsize=7.5, frameon=False, loc="upper left", handlelength=1.8, borderaxespad=0.2)
+    ax1.set_title("A  the admissible set is set by the action family", fontsize=9.1, loc="left")
 
     # ---------------- panel B: pruning dose--response
     variants = sorted({r["variant"] for sc in scenes.values() for r in sc["rows"]
@@ -82,15 +94,14 @@ def main() -> None:
     ax2.axhline(EPS, color="#555555", lw=0.6, ls="--")
     ax2.set_xscale("log")
     ax2.set_xticks(fr)
-    ax2.set_xticklabels([f"{k}%" for k in fr], fontsize=5.2)
-    ax2.set_xlabel("primitives retained", fontsize=6.2)
-    ax2.set_ylabel("coverage loss (pp)", fontsize=6.2)
-    ax2.set_ylim(-0.6, 28)
+    ax2.set_xticklabels([f"{k}%" for k in fr], fontsize=7.4, rotation=30, ha="right", rotation_mode="anchor")
+    ax2.set_xlabel("primitives retained", fontsize=8.8)
+    ax2.set_ylabel("coverage loss (pp)", fontsize=8.8)
+    ax2.set_ylim(-1.5, 58)
     ax2.set_xlim(fr[0] * 0.85, fr[-1] * 1.15)
-    ax2.tick_params(labelsize=5.4, length=2)
-    ax2.set_title("B  deleting primitives: median and IQR, six assets", fontsize=6.4, loc="left")
-    ax2.text(fr[0], 0.55, "no pruning setting is inside the tolerance",
-             fontsize=5.0, color="#444444")
+    ax2.tick_params(labelsize=7.7, length=2.6)
+    ax2.set_title("B  deleting primitives: median and IQR", fontsize=9.1, loc="left")
+    ax2.text(fr[0] * 1.02, EPS + 1.6, r"$\varepsilon = 1$ pp", fontsize=7.7, color="#444444", va="bottom")
 
     for ax in (ax1, ax2):
         ax.spines["top"].set_visible(False)

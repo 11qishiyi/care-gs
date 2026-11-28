@@ -19,25 +19,25 @@
    "coverage_pp": 5.61
   },
   {
-   "family": "prune+quant composition (bicycle)",
+   "family": "prune50+quant8 composition (bicycle)",
    "keep": 0.5,
    "rate": 34.705882352941174,
    "coverage_pp": 3.61
   },
   {
-   "family": "prune+quant composition (bicycle)",
+   "family": "prune50+quant4 composition (bicycle)",
    "keep": 0.5,
    "rate": 34.705882352941174,
    "coverage_pp": 3.804
   },
   {
-   "family": "prune+quant composition (bonsai)",
+   "family": "prune50+quant8 composition (bonsai)",
    "keep": 0.5,
    "rate": 34.705882352941174,
    "coverage_pp": 5.61
   },
   {
-   "family": "prune+quant composition (bonsai)",
+   "family": "prune50+quant4 composition (bonsai)",
    "keep": 0.5,
    "rate": 34.705882352941174,
    "coverage_pp": 5.885
@@ -66,13 +66,13 @@
     "coverage_pp": 3.611
    },
    {
-    "family": "prune+quant composition (bicycle)",
+    "family": "prune50+quant8 composition (bicycle)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 3.61
    },
    {
-    "family": "prune+quant composition (bicycle)",
+    "family": "prune50+quant4 composition (bicycle)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 3.804
@@ -92,25 +92,25 @@
     "coverage_pp": 5.61
    },
    {
-    "family": "prune+quant composition (bicycle)",
+    "family": "prune50+quant8 composition (bicycle)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 3.61
    },
    {
-    "family": "prune+quant composition (bicycle)",
+    "family": "prune50+quant4 composition (bicycle)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 3.804
    },
    {
-    "family": "prune+quant composition (bonsai)",
+    "family": "prune50+quant8 composition (bonsai)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 5.61
    },
    {
-    "family": "prune+quant composition (bonsai)",
+    "family": "prune50+quant4 composition (bonsai)",
     "keep": 0.5,
     "rate": 34.705882352941174,
     "coverage_pp": 5.885

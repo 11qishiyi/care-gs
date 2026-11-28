@@ -23,6 +23,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
 import numpy as np
 
 A4 = Path("experiments/artifacts/a4")
@@ -48,7 +56,7 @@ def main() -> None:
         for sc in scenes.values():
             for r in sc["rows"]:
                 if r.get("family") == fam:
-                    xs.append(-r["d_psnr"])
+                    xs.append(r["d_psnr"])
                     ys.append(-r["drop_pp"])
         ax1.scatter(xs, ys, s=11, color=colour, alpha=0.55, linewidths=0, label=label, zorder=3)
 
@@ -64,8 +72,8 @@ def main() -> None:
                     if best is None or gap > best["d_pp"]:
                         best = {"scene": name, "a": a["variant"], "b": b["variant"],
                                 "d_db": abs(a["d_psnr"] - b["d_psnr"]), "d_pp": gap,
-                                "xa": -a["d_psnr"], "ya": -a["drop_pp"],
-                                "xb": -b["d_psnr"], "yb": -b["drop_pp"]}
+                                "xa": a["d_psnr"], "ya": -a["drop_pp"],
+                                "xb": b["d_psnr"], "yb": -b["drop_pp"]}
     if best:
         ax1.annotate("", xy=(best["xb"], best["yb"]), xytext=(best["xa"], best["ya"]),
                      arrowprops=dict(arrowstyle="<->", lw=0.8, color="#333333"), zorder=5)
@@ -74,19 +82,19 @@ def main() -> None:
         mx = (best["xa"] + best["xb"]) / 2
         my = (best["ya"] + best["yb"]) / 2
         ax1.annotate(f"{best['d_db']:.2f} dB apart,\n{best['d_pp']:.1f} pp apart\n({best['scene']})",
-                     xy=(mx, my), xytext=(0.42, 15.0), fontsize=5.0, color="#333333",
+                     xy=(mx, my), xytext=(0.52, 6.4), fontsize=7.3, color="#333333",
                      va="center", arrowprops=dict(arrowstyle="-", lw=0.5, color="#777777",
                                                shrinkA=0, shrinkB=2), zorder=7)
 
     ax1.axhline(EPS, color="#555555", lw=0.6, ls="--", zorder=1)
-    ax1.text(1.57, EPS + 0.45, r"tolerance $\varepsilon = 1$ pp", fontsize=5.2, color="#444444", ha="right", va="bottom")
-    ax1.set_xlabel("PSNR loss against the clean model (dB)", fontsize=6.2)
-    ax1.set_ylabel("coverage loss (pp)", fontsize=6.2)
-    ax1.set_xlim(-0.45, 1.6)
-    ax1.set_ylim(-1.2, 24)
-    ax1.tick_params(labelsize=5.4, length=2)
-    ax1.legend(fontsize=5.2, frameon=False, loc="upper left", handletextpad=0.3, borderpad=0.1)
-    ax1.set_title("A  the same decibel loss, different coverage", fontsize=6.4, loc="left")
+    ax1.text(1.62, 2.6, r"tolerance $\varepsilon = 1$ pp", fontsize=7.5, color="#444444", ha="right", va="bottom")
+    ax1.set_xlabel("PSNR loss against the clean model (dB)", fontsize=8.8)
+    ax1.set_ylabel("coverage loss (pp)", fontsize=8.8)
+    ax1.set_xlim(-0.35, 1.65)
+    ax1.set_ylim(-0.6, 9.6)
+    ax1.tick_params(labelsize=7.7, length=2.6)
+    ax1.legend(fontsize=7.5, frameon=False, loc="upper left", handletextpad=0.3, borderpad=0.1)
+    ax1.set_title("A  the same decibel loss, different coverage", fontsize=9.1, loc="left")
     ax1.spines["top"].set_visible(False)
     ax1.spines["right"].set_visible(False)
 
@@ -100,13 +108,16 @@ def main() -> None:
     ax2.vlines(x, lo, hi, color="#9aa7b4", lw=1.0, zorder=2)
     ax2.scatter(x, med, s=22, color=C_QFP, zorder=3)
     for xi, m in zip(x, med):
-        ax2.text(xi, m * 1.16, f"{m:.2f}", fontsize=4.8, ha="center", color="#1f4e79")
+        ax2.text(xi, m * 1.14, f"{m:.2f}", fontsize=7.2, ha="center", color="#1f4e79")
     ax2.set_yscale("log")
+    ax2.set_yticks([1, 3, 10, 30])
+    ax2.set_yticklabels(["1", "3", "10", "30"])
+    ax2.set_ylim(0.7, 60)
     ax2.set_xticks(x)
-    ax2.set_xticklabels([n.replace("_i7k", "\\i7k") for n in names], fontsize=5.0, rotation=18)
-    ax2.set_ylabel("coverage points per dB", fontsize=6.2)
-    ax2.tick_params(labelsize=5.4, length=2)
-    ax2.set_title("B  the exchange rate is asset-dependent", fontsize=6.4, loc="left")
+    ax2.set_xticklabels([n.replace("_i7k", " (7k)") for n in names], fontsize=7.4, rotation=0)
+    ax2.set_ylabel("coverage points per dB", fontsize=8.8)
+    ax2.tick_params(labelsize=7.7, length=2.6)
+    ax2.set_title("B  the exchange rate is asset-dependent", fontsize=9.1, loc="left")
     ax2.spines["top"].set_visible(False)
     ax2.spines["right"].set_visible(False)
 

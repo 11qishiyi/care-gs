@@ -23,6 +23,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
 import numpy as np
 
 A4 = Path("experiments/artifacts/a4")
@@ -68,22 +76,22 @@ def main() -> None:
         ax.axvline(EPS, color="#555555", lw=0.6, ls="--", zorder=1)
         ax.set_xlim(lo, hi)
         ax.set_ylim(lo, 22)
-        ax.set_xlabel("measured loss, all held-out views (pp)", fontsize=6.2)
-        ax.tick_params(labelsize=5.4, length=2)
-        ax.set_title(label, fontsize=6.4, loc="left")
+        ax.set_xlabel("measured loss, all held-out views (pp)", fontsize=8.8)
+        ax.tick_params(labelsize=7.7, length=2.6)
+        ax.set_title(label, fontsize=9.1, loc="left")
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
 
     axes[0].errorbar(truth, audit, yerr=bar, fmt="none", ecolor="#1f4e79", elinewidth=0.5, capsize=0.8,
                      alpha=0.5, zorder=2)
-    axes[0].set_ylabel("loss predicted by the rule (pp)", fontsize=6.2)
-    axes[0].legend(fontsize=5.2, frameon=False, loc="upper left", handletextpad=0.3, borderpad=0.1)
-    axes[0].text(8.6, EPS + 1.15, "empty: the audit\nnever lands here",
-                 fontsize=5.0, color="#7b241c", va="bottom")
-    axes[1].text(EPS + 9.0, EPS + 0.45, "accepted by the rule,\nbut the asset misses\nthe tolerance",
-                 fontsize=5.0, color="#7b241c", va="bottom")
+    axes[0].set_ylabel("loss predicted by the rule (pp)", fontsize=8.8)
+    axes[0].legend(fontsize=7.5, frameon=False, loc="upper left", handletextpad=0.3, borderpad=0.1)
+    axes[0].text(4.2, -1.7, "empty: the audit\nnever lands here",
+                 fontsize=7.4, color="#7b241c", va="center", ha="left")
+    axes[1].text(3.4, -1.7, "accepted by the rule,\nbut the asset misses $\\varepsilon$",
+                 fontsize=7.4, color="#7b241c", va="center", ha="left")
     for ax in axes:
-        ax.text(hi - 2.6, EPS + 0.30, r"$\varepsilon = 1$ pp", fontsize=5.2, color="#444444", ha="right")
+        ax.text(hi - 1.0, EPS + 0.55, r"$\varepsilon = 1$ pp", fontsize=7.5, color="#444444", ha="right")
 
     fig.tight_layout(pad=0.3)
     OUT.mkdir(parents=True, exist_ok=True)

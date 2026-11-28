@@ -32,6 +32,7 @@ CODE = [
     "tools/verify_refs.py",
     "tools/jvcir_fig_qual.py",
     "tools/jvcir_resolution.py",
+    "tools/make_release_tree.py",
     "tools/j6_singlepass_analyse.py",
     "tools/j6_sigma_sensitivity.py",
     "experiments/casget.sh",
@@ -47,6 +48,12 @@ CODE = [
     "experiments/j4_report.py",
     "experiments/j4_sweep.sh",
     "experiments/j4_go.sh",
+    # J8/J9: the rate axis and the tolerance sweep behind Table 12 and Table 13
+    "experiments/j8_rate.py",
+    "experiments/j9_analyse.py",
+    "experiments/j9_tables.py",
+    "experiments/j9_dump_quantiles.py",
+    "tools/check_j9_j8.py",
     "tools/make_deposit_jvcir.py",
 ]
 DATA = [
@@ -81,6 +88,14 @@ DATA = [
     "_pull_j4/m1_manifest.json",
     "experiments/PAPER_NUMBERS.md",
     "experiments/published_3dgs.json",
+    # J8/J9 artifacts: the inputs of Table 12 (rate axis) and Table 13 (tolerance sweep)
+    "experiments/artifacts/a4/j8_rate.json",
+    "experiments/artifacts/a4/j9_report_mean.json",
+    "experiments/artifacts/a4/j9_report_max3.json",
+    "experiments/J8_PLAN.md",
+    "experiments/J8_RESULTS.md",
+    "experiments/J9_PLAN.md",
+    "experiments/J9_RESULTS.md",
 ]
 TABLES = sorted(str(p) for p in Path("submission/jvcir").glob("tab_*.tex"))
 FIGURES = ["figures_j/fig1_framework.pdf", "figures_j/fig1_framework.png",
@@ -93,7 +108,7 @@ FIGURES = ["figures_j/fig1_framework.pdf", "figures_j/fig1_framework.png",
 DOCS = ["submission/jvcir/main.tex", "submission/jvcir/refs.bib", "submission/jvcir/highlights.txt",
         "submission/jvcir/README.md", "submission/jvcir/CHECKLIST.md", "submission/jvcir/COVER_LETTER.md",
         "submission/jvcir/REBUTTAL_FAQ.md", "review/CARE_GS_GAP_2026-11-18.md",
-        "review/JVCIR_BEST_PRACTICE_2026-11-18.md", "review/JVCIR_SURVEY_2026-11.md",
+        "review/JVCIR_BEST_PRACTICE_2026-11-18.md", "review/JVCIR_SURVEY_2026-11.md", "review/JVCIR_GAP_2026-11-19.md",
         "review/REFS_VERIFY.json", "experiments/J5_PLAN.md", "experiments/J5_RESULTS.md",
         "experiments/J6_RESULTS.md"]
 
@@ -115,7 +130,7 @@ def main() -> None:
 
     prov = {
         "bundle": "CARE-GS (JVCIR submission) deposit",
-        "built": "2026-11-18",
+        "built": "2026-11-28",
         "note": "numbers in the manuscript are regenerated from data/ by code/ and checked by "
                 "code/verify_jvcir.py; each entry below carries a content hash",
         "files": {k: {"sha256_16": sha(v), "bytes": v.stat().st_size} for k, v in sorted(entries.items())},

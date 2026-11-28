@@ -2,21 +2,21 @@
 \centering
 \small
 \setlength{\tabcolsep}{3.4pt}
-\caption{The rate axis, with \emph{both} families charged the container's measured $13.60$~B/primitive rather than deletion alone (which is what Fig.~\ref{fig:frontier}A charges the pruning arms). Rates are against the fp32 asset; coverage loss is measured at $\alpha=0.1$ on the same views as Table~\ref{tab:j9}. The quantisation row is the shipped container; the pruning rows are the same container with half and with $70\%$ of the primitives deleted before it.}
+\caption{The rate axis, with \emph{both} families charged the container's measured $13.60$~B/primitive rather than deletion alone (which is what Fig.~\ref{fig:frontier}A charges the pruning arms). Rates are against the fp32 asset; coverage loss is measured at $\alpha=0.1$ on the same views as Table~\ref{tab:j9}. The quantisation row is the shipped container; the pruning rows are the same container with half and with $70\%$ of the primitives deleted before it; the composition rows apply the container's 8-bit and 4-bit quantiser to the half-pruned model, so they differ from the half-pruning rows only in the quantiser they add.}
 \label{tab:j8}
 \begin{tabular}{lrr}
 \toprule
 arm & rate ($\times$) & coverage loss (pp) \\
 \midrule
-quantisation (container) & 17.4 & +0.00 \\
-prune + container (bicycle) & 34.7 & +3.61 \\
-prune + container (bonsai) & 34.7 & +5.61 \\
-prune+quant composition (bicycle) & 34.7 & +3.61 \\
-prune+quant composition (bicycle) & 34.7 & +3.80 \\
-prune+quant composition (bonsai) & 34.7 & +5.61 \\
-prune+quant composition (bonsai) & 34.7 & +5.88 \\
-prune + container (bicycle) & 57.8 & +24.42 \\
-prune + container (bonsai) & 57.8 & +12.74 \\
+quantisation (container) & 17.35 & +0.00 \\
+prune + container (bicycle) & 34.71 & +3.61 \\
+prune + container (bonsai) & 34.71 & +5.61 \\
+prune50+quant8 composition (bicycle) & 34.71 & +3.61 \\
+prune50+quant4 composition (bicycle) & 34.71 & +3.80 \\
+prune50+quant8 composition (bonsai) & 34.71 & +5.61 \\
+prune50+quant4 composition (bonsai) & 34.71 & +5.88 \\
+prune + container (bicycle) & 57.84 & +24.42 \\
+prune + container (bonsai) & 57.84 & +12.74 \\
 \bottomrule
 \end{tabular}
 \end{table}

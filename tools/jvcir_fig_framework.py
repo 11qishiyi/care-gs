@@ -17,11 +17,19 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+# Elsevier asks for Times/Arial in artwork; STIX keeps the mathtext in the same serif family.
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Times New Roman", "STIXGeneral", "DejaVu Serif"],
+    "mathtext.fontset": "stix",
+    "axes.unicode_minus": False,
+})
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 OUT = Path("figures_j")
-W, H = 7.2, 3.9
-FS = 5.6
+W, H = 7.2, 4.15
+FS = 6.6
 
 C_ISSUER = "#dbe8f7"
 C_FILE = "#f6e3c5"
@@ -92,7 +100,7 @@ def main() -> None:
     box(ax, 1, "comparison", "measured loss\n$\\Delta$ coverage (pp)", C_CERT)
     box(ax, 2, "comparison", "decision\nship iff $\\Delta \\leq \\varepsilon$", C_PLAN, bold=True)
     box(ax, 3, "comparison", "envelope\nloss $\\leq$ KS $+$ slack", C_CERT)
-    box(ax, 4, "comparison", "re-certify\n2 views, +53--122%", C_CERT)
+    box(ax, 4, "comparison", "re-certify\nrecalibrate $q$, 2 views", C_CERT)
     for i in range(4):
         harrow(ax, i, "comparison")
     lane_label(ax, "comparison", "reconciliation  (no new labels, no issuer pipeline)", "#6b2f6b")
@@ -107,7 +115,7 @@ def main() -> None:
     xdec = x2
     xpr = X0 + 4 * (BW + GAP) + BW
     ybot = ROWS["comparison"]
-    ymid = 0.055
+    ymid = 0.062
     ypr = ROWS["issuer"] + BH / 2
     path = [(xdec, ybot), (xdec, ymid), (0.992, ymid), (0.992, ypr), (xpr, ypr)]
     for (x0, y0), (x1, y1) in zip(path[:-2], path[1:-1]):
@@ -115,13 +123,13 @@ def main() -> None:
     ax.add_patch(FancyArrowPatch(path[-2], path[-1], arrowstyle="-|>", mutation_scale=6, linewidth=0.7,
                                  linestyle="--", color=EDGE, shrinkA=0.0, shrinkB=1.0, zorder=1))
 
-    ax.text(0.5, 0.015,
+    ax.text(0.5, 0.012,
             "the planner is admissible only because the audit needs nothing the recipient does not already hold",
             fontsize=FS - 0.4, ha="center", style="italic", color="#333333")
 
     OUT.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT / "fig1_framework.pdf", bbox_inches="tight", pad_inches=0.02)
-    fig.savefig(OUT / "fig1_framework.png", dpi=300, bbox_inches="tight", pad_inches=0.02)
+    fig.savefig(OUT / "fig1_framework.png", dpi=360, bbox_inches="tight", pad_inches=0.02)
     print(f"wrote {OUT/'fig1_framework.pdf'} and .png")
 
 
